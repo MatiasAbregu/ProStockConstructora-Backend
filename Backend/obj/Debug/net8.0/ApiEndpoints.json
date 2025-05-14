@@ -1,0 +1,64 @@
+[
+  {
+    "ContainingType": "Backend.Controllers.ControladorPrueba",
+    "Method": "Saludar",
+    "RelativePath": "api/ControladorPrueba",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.ControladorPrueba",
+    "Method": "PostJSON",
+    "RelativePath": "api/ControladorPrueba",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuario",
+        "Type": "Backend.Models.Usuario",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.ControladorPrueba",
+    "Method": "SaludarConParametros",
+    "RelativePath": "api/ControladorPrueba/{nombre}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "nombre",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.ControladorPrueba",
+    "Method": "EnviarJSON",
+    "RelativePath": "api/ControladorPrueba/json",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Backend.Controllers.ControladorPrueba",
+    "Method": "EnviarObjeto",
+    "RelativePath": "api/ControladorPrueba/objeto",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]
