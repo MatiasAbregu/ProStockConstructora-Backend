@@ -1,64 +1,48 @@
 [
   {
-    "ContainingType": "Backend.Controllers.ControladorPrueba",
-    "Method": "Saludar",
-    "RelativePath": "api/ControladorPrueba",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Backend.Controllers.ControladorPrueba",
-    "Method": "PostJSON",
-    "RelativePath": "api/ControladorPrueba",
+    "ContainingType": "Backend.Controllers.ControladorUsuario",
+    "Method": "CrearUsuario",
+    "RelativePath": "api/usuario/crear",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "usuario",
-        "Type": "Backend.Models.Usuario",
+        "Type": "Backend.DTO.DTOs_Usuarios.CrearUsuarioDTO",
         "IsRequired": true
       }
     ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Backend.Controllers.ControladorPrueba",
-    "Method": "SaludarConParametros",
-    "RelativePath": "api/ControladorPrueba/{nombre}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
+    "ReturnTypes": [
       {
-        "Name": "nombre",
         "Type": "System.String",
-        "IsRequired": true
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
       }
-    ],
-    "ReturnTypes": []
+    ]
   },
   {
-    "ContainingType": "Backend.Controllers.ControladorPrueba",
-    "Method": "EnviarJSON",
-    "RelativePath": "api/ControladorPrueba/json",
+    "ContainingType": "Backend.Controllers.ControladorUsuario",
+    "Method": "ObtenerTodosLosAdministradores",
+    "RelativePath": "api/usuario/obtener-administradores",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "Backend.Controllers.ControladorPrueba",
-    "Method": "EnviarObjeto",
-    "RelativePath": "api/ControladorPrueba/objeto",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Backend.DTO.DTOs_Usuarios.VerAdministradorDTO, Backend.DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
