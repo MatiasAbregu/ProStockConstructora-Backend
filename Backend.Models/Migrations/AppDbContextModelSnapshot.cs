@@ -35,11 +35,9 @@ namespace Backend.BD.Migrations
                         .HasColumnType("varchar(20)");
 
                     b.Property<string>("Celular")
-                        .IsRequired()
                         .HasColumnType("varchar(80)");
 
                     b.Property<string>("Email")
-                        .IsRequired()
                         .HasColumnType("varchar(120)");
 
                     b.Property<bool>("Estado")
@@ -54,6 +52,9 @@ namespace Backend.BD.Migrations
                         .HasColumnType("varchar(150)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CUIT")
+                        .IsUnique();
 
                     b.ToTable("Empresa");
                 });
@@ -182,25 +183,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "c3eb8626-6e84-435d-bf14-aba307a81186",
+                            Id = "93a0d1e6-3a24-42a4-8254-ad3c6820cd7f",
                             Name = "Superadministrador",
                             NormalizedName = "Superadministrador"
                         },
                         new
                         {
-                            Id = "50980b49-7265-44ce-b638-23be12cfac5c",
+                            Id = "82093117-c500-4edc-acad-4b52fa062ad2",
                             Name = "Administrador",
                             NormalizedName = "Administrador"
                         },
                         new
                         {
-                            Id = "57a0726e-2a69-478f-b39b-f69658616b77",
+                            Id = "40d34d1e-4ecf-449f-8197-044756116e08",
                             Name = "JefeDeDeposito",
                             NormalizedName = "JefeDeDeposito"
                         },
                         new
                         {
-                            Id = "dfca01f9-2e50-4e79-bf04-551ed39e2a3c",
+                            Id = "e960b851-5072-4b7f-acf5-7254f121d58f",
                             Name = "JefeDeObra",
                             NormalizedName = "JefeDeObra"
                         });

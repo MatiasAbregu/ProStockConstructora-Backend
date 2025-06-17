@@ -12,7 +12,7 @@ namespace Backend.DTO.DTOs_Usuarios
         public string NombreUsuario { get; set; }
         public string Email { get; set; }
         public string Telefono { get; set; }
-        public bool Estado {  get; set; }
+        public string Estado {  get; set; }
 
         public int EmpresaId { get; set; }
         public string NombreEmpresa { get; set; }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Backend.BD.Modelos
 {
+    [Index(nameof(CUIT), IsUnique = true)]
     public class Empresa
     {
         [Key]
@@ -29,14 +31,25 @@ namespace Backend.BD.Modelos
         [Required(ErrorMessage = "El estado es obligatorio: 0 es inactivo / 1 es activo.")]
         public bool Estado { get; set; }
 
-
         [Column(TypeName = "varchar(80)")]
-        [Required(ErrorMessage = "El celular es obligatorio.")]
-        public string Celular { get; set; }
+        public string? Celular { get; set; }
 
         [EmailAddress(ErrorMessage = "El email no es válido.")]
         [Column(TypeName = "varchar(120)")]
-        [Required(ErrorMessage = "El email es obligatorio.")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
+
+        public Empresa() { }
+
+        public Empresa(int id, string nombreEmpresa, string cUIT, string razonSocial, bool estado = true, 
+            string? celular = null, string? email = null)
+        {
+            Id = id;
+            NombreEmpresa = nombreEmpresa;
+            CUIT = cUIT;
+            RazonSocial = razonSocial;
+            Estado = estado;
+            Celular = celular;
+            Email = email;
+        }
     }
 }

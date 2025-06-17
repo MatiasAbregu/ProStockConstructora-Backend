@@ -29,11 +29,12 @@ namespace Backend.Repositorios.Servicios
             List<string> AdminIDs = (await gestorUsuarios.GetUsersInRoleAsync("Administrador")).Select(u => u.Id).ToList();
             List<string> SuperAdminIDs =
                 (await gestorUsuarios.GetUsersInRoleAsync("Superadministrador")).Select(u => u.Id).ToList();
+            List<string> TodosLosIds = AdminIDs.Union(SuperAdminIDs).ToList();
 
             List<VerAdministradorDTO> usuarios = [];
 
             foreach (Usuario u in
-                baseDeDatos.Usuarios.Where(u => AdminIDs.Union(SuperAdminIDs).Contains(u.Id)).Include(u => u.Empresa))
+                baseDeDatos.Usuarios.Where(u => TodosLosIds.Contains(u.Id)).Include(u => u.Empresa).ToList())
             {
                 usuarios.Add(new VerAdministradorDTO()
                 {
@@ -41,7 +42,7 @@ namespace Backend.Repositorios.Servicios
                     NombreUsuario = u.UserName,
                     Email = u.Email,
                     Telefono = u.PhoneNumber,
-                    Estado = u.Estado,
+                    Estado = u.Estado ? "Activo" : "Inactivo",
                     EmpresaId = u.EmpresaId,
                     NombreEmpresa = u.Empresa.NombreEmpresa
                 }

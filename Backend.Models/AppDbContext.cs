@@ -13,6 +13,7 @@ namespace Backend.BD
 {
     public class AppDbContext : IdentityDbContext<Usuario>
     {
+        public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
 

@@ -62,8 +62,18 @@ builder.Services.AddAuthentication(options =>
     };
 });
 
+// Configurando CORS para aceptar petición del frontend jajaja
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("CORS", policy =>
+    {
+        policy.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
+
 builder.Services.AddScoped<ITokenServicio, TokenServicio>();
 builder.Services.AddScoped<ISesionServicio, SesionServicio>();
+builder.Services.AddScoped<IEmpresaServicio, EmpresaServicio>();
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
 
 var app = builder.Build();
@@ -82,5 +92,7 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.UseCors("CORS");
 
 app.Run();
