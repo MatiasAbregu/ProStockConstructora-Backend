@@ -12,7 +12,7 @@ namespace Backend.Repositorios.Implementaciones
     public interface IUsuarioServicio
     {
         // GETs
-        public Task<List<VerAdministradorDTO>> ObtenerTodosLosAdministradores();
+        public Task<(bool, List<VerAdministradorDTO>)> ObtenerTodosLosAdministradores();
         public Task<List<Usuario>> ObtenerTodosLosAdministradoresDeEmpresa(string nombreEmpresa);
         public Task<List<Usuario>> ObtenerUsuariosPorEmpresa();
         public Task<List<Usuario>> ObtenerUsuariosPorCategoria(); // Obra o Rol

@@ -1,6 +1,37 @@
 [
   {
     "ContainingType": "Backend.Controllers.ControladorEmpresa",
+    "Method": "ActualizarEmpresa",
+    "RelativePath": "api/empresa/actualizar/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "e",
+        "Type": "Backend.BD.Modelos.Empresa",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.ControladorEmpresa",
     "Method": "CrearEmpresa",
     "RelativePath": "api/empresa/crear",
     "HttpMethod": "POST",
@@ -27,9 +58,9 @@
   },
   {
     "ContainingType": "Backend.Controllers.ControladorEmpresa",
-    "Method": "ObtenerEmpresaPorId",
-    "RelativePath": "api/empresa/obtener-empresa/{id}",
-    "HttpMethod": "GET",
+    "Method": "EstablecerEstado",
+    "RelativePath": "api/empresa/estado/{id}",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -41,7 +72,7 @@
     ],
     "ReturnTypes": [
       {
-        "Type": "Backend.DTO.DTOs_Empresas.VerEmpresaDTO",
+        "Type": "System.String",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -72,9 +103,55 @@
     ]
   },
   {
+    "ContainingType": "Backend.Controllers.ControladorEmpresa",
+    "Method": "ObtenerEmpresasParaAsociar",
+    "RelativePath": "api/empresa/obtener-empresas-para-asociar",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[Backend.DTO.DTOs_Empresas.EmpresaAsociarDTO, Backend.DTO, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.ControladorEmpresa",
+    "Method": "ObtenerEmpresaPorId",
+    "RelativePath": "api/empresa/obtener-empresas/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "Backend.DTO.DTOs_Empresas.VerEmpresaDTO",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "Backend.Controllers.ControladorUsuario",
     "Method": "CrearUsuario",
-    "RelativePath": "api/usuario/crear",
+    "RelativePath": "api/usuario/crear-administrador",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

@@ -13,7 +13,7 @@ namespace Backend.DTO.DTOs_Usuarios
         public string Rol { get; set; }
         public int EmpresaId { get; set; }
         public string? Email { get; set; } = null;
-        public string? Telefono { get; set; } = null;
+        public string? Celular { get; set; } = null;
  
     }
 }
