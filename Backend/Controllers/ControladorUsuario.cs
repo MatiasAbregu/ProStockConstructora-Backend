@@ -23,10 +23,13 @@ namespace Backend.Controllers
         [HttpGet("obtener-administradores")]
         public async Task<ActionResult<List<VerAdministradorDTO>>> ObtenerTodosLosAdministradores()
         {
-            return Ok(await usuarioServicio.ObtenerTodosLosAdministradores());
+            ValueTuple<bool, List<VerAdministradorDTO>> res = await usuarioServicio.ObtenerTodosLosAdministradores();
+
+            if (res.Item1) return StatusCode(200, res.Item2);
+            else return StatusCode(500, "Error al cargar los datos desde el servidor.");
         }
 
-        [HttpPost("crear")]
+        [HttpPost("crear-administrador")]
         public async Task<ActionResult<string>> CrearUsuario([FromBody] CrearUsuarioDTO usuario)
         {
             IdentityResult resultado = await usuarioServicio.CrearUsuario(usuario);

@@ -32,11 +32,11 @@ namespace Backend.BD.Modelos
         public bool Estado { get; set; }
 
         [Column(TypeName = "varchar(80)")]
-        public string? Celular { get; set; }
+        public string? Celular { get; set; } = null;
 
         [EmailAddress(ErrorMessage = "El email no es válido.")]
         [Column(TypeName = "varchar(120)")]
-        public string? Email { get; set; }
+        public string? Email { get; set; } = null;
 
         public Empresa() { }
 
