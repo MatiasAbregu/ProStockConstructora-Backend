@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.BD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250617201843_Base-de-Datos-V2-bien-hecha")]
-    partial class BasedeDatosV2bienhecha
+    [Migration("20250624042137_provinciaid")]
+    partial class provinciaid
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -268,6 +268,8 @@ namespace Backend.BD.Migrations
                         .HasColumnType("longtext");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EmpresaId");
 
                     b.ToTable("Obras");
                 });
@@ -525,6 +527,10 @@ namespace Backend.BD.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CodigoUbicacion")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<string>("Descripcion")
                         .IsRequired()
                         .HasColumnType("longtext");
@@ -536,9 +542,15 @@ namespace Backend.BD.Migrations
                     b.Property<int>("ObraId")
                         .HasColumnType("int");
 
+                    b.Property<int>("ProvinciaId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("ObraId");
+                    b.HasIndex("ObraId")
+                        .IsUnique();
+
+                    b.HasIndex("ProvinciaId");
 
                     b.ToTable("Ubicaciones");
                 });
@@ -643,25 +655,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "49951948-60a4-4d94-b95e-0243bb01b8f6",
+                            Id = "e8b8050e-5ce3-4f84-b3b4-b98fc05bddb5",
                             Name = "Superadministrador",
                             NormalizedName = "Superadministrador"
                         },
                         new
                         {
-                            Id = "3144558e-7297-434e-8b98-9ec142f80735",
+                            Id = "3a6944b8-6157-4bf7-9bd9-8a990428777e",
                             Name = "Administrador",
                             NormalizedName = "Administrador"
                         },
                         new
                         {
-                            Id = "91596656-1201-4f17-95d7-abe5da50ee0a",
+                            Id = "4d20b0a9-e49a-4d73-ab6a-4d7f346b69eb",
                             Name = "JefeDeDeposito",
                             NormalizedName = "JefeDeDeposito"
                         },
                         new
                         {
-                            Id = "035c613b-6af0-43f9-881f-022091096341",
+                            Id = "0fc5b617-6cb3-4387-bab3-d4b0af7e1d2e",
                             Name = "JefeDeObra",
                             NormalizedName = "JefeDeObra"
                         });
@@ -871,6 +883,17 @@ namespace Backend.BD.Migrations
                     b.Navigation("TipoMaterial");
                 });
 
+            modelBuilder.Entity("Backend.BD.Modelos.Obra", b =>
+                {
+                    b.HasOne("Backend.BD.Modelos.Empresa", "Empresa")
+                        .WithMany()
+                        .HasForeignKey("EmpresaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Empresa");
+                });
+
             modelBuilder.Entity("Backend.BD.Modelos.ObraXUsuario", b =>
                 {
                     b.HasOne("Backend.BD.Modelos.Obra", "Obra")
@@ -880,7 +903,7 @@ namespace Backend.BD.Migrations
                         .IsRequired();
 
                     b.HasOne("Backend.BD.Models.Usuario", "Usuario")
-                        .WithMany()
+                        .WithMany("obras")
                         .HasForeignKey("UsuarioId1");
 
                     b.Navigation("Obra");
@@ -983,12 +1006,20 @@ namespace Backend.BD.Migrations
             modelBuilder.Entity("Backend.BD.Modelos.Ubicacion", b =>
                 {
                     b.HasOne("Backend.BD.Modelos.Obra", "Obra")
+                        .WithOne("Ubicacion")
+                        .HasForeignKey("Backend.BD.Modelos.Ubicacion", "ObraId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Backend.BD.Modelos.Provincia", "Provincia")
                         .WithMany()
-                        .HasForeignKey("ObraId")
+                        .HasForeignKey("ProvinciaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Obra");
+
+                    b.Navigation("Provincia");
                 });
 
             modelBuilder.Entity("Backend.BD.Models.Usuario", b =>
@@ -1053,10 +1084,18 @@ namespace Backend.BD.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Backend.BD.Modelos.Obra", b =>
+                {
+                    b.Navigation("Ubicacion")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Backend.BD.Models.Usuario", b =>
                 {
                     b.Navigation("RefreshToken")
                         .IsRequired();
+
+                    b.Navigation("obras");
                 });
 #pragma warning restore 612, 618
         }

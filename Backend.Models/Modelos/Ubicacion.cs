@@ -9,17 +9,19 @@ namespace Backend.BD.Modelos
     public class Ubicacion
     {
         public int Id { get; set; }
+        public string CodigoUbicacion { get; set; } 
         public string NombreUbicacion { get; set; }
         public string Descripcion { get; set; }
-        public int ObraId { get; set; } // Foreign key to Obra
-        public Obra Obra { get; set; } // Navigation property to Obra
+        public int ProvinciaId { get; set; } // Foreign key to Provincia
+        public Provincia Provincia { get; set; } // Navigation property to Provincia
         public Ubicacion() { }
-        public Ubicacion(int id, string nombreUbicacion, string descripcion, int obraId)
+        public Ubicacion(int id, string codigoUbicacion, string nombreUbicacion, string descripcion, int provinciaId)
         {
             Id = id;
+            CodigoUbicacion = codigoUbicacion;
             NombreUbicacion = nombreUbicacion;
             Descripcion = descripcion;
-            ObraId = obraId;
+            ProvinciaId = provinciaId;
         }
     }
 }
