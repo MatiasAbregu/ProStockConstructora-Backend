@@ -13,11 +13,13 @@ namespace Backend.BD.Modelos
         public string NumeroDocumento { get; set; } // Name of the document
         public string Emisor { get; set; } // Issuer of the document
         public string Descripcion { get; set; } // Description of the document
+        public int TipoDocumentoId { get; set; } // Foreign key to TipoDocumento
+        public TipoDocumento TipoDocumento { get; set; } // Navigation property to TipoDocumento
         public DateTime FechaEmitido { get; set; } // Creation date of the document
         public int ObraId { get; set; } // Foreign key to Obra
         public Obra Obra { get; set; } // Navigation property to Obra
         public Documentos() { }
-        public Documentos(int id, string numeroDocumento, string emisor, string descripcion, DateTime fechaEmitido, int obraId)
+        public Documentos(int id, string numeroDocumento, string emisor, string descripcion, DateTime fechaEmitido, int obraId, int tipoDocumentoId)
         {
             Id = id;
             NumeroDocumento = numeroDocumento;
@@ -25,6 +27,7 @@ namespace Backend.BD.Modelos
             Descripcion = descripcion;
             FechaEmitido = fechaEmitido;
             ObraId = obraId;
+            TipoDocumentoId = tipoDocumentoId;
         }
     }
 }
