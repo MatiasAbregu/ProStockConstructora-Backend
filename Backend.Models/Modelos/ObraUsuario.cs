@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.BD.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,7 @@ namespace Backend.BD.Modelos
 
         public int ObraId { get; set; }
 
-        public required string Usuario { get; set; }
+        public required Guid UsuarioId { get; set; }
+        public Usuario Usuario { get; set; }
     } 
 }
