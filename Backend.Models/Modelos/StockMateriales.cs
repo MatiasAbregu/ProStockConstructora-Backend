@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Backend.BD.Modelos
 {
-    public class StockMaquinas
+    public class StockMateriales
     {
         [Key]
         public int Id { get; set; }
         public int Cantidad { get; set; }
-        public DateTime FechaIngreso { get; set; }
-        // Foreign Key Maquinas
-        [ForeignKey("MaquinaId")]
-        public int MaquinaId { get; set; }
-        public Maquinas Maquina { get; set; }
+
+        [ForeignKey("MaterialesId")]
+        public int MaterialesId { get; set; }
+        public Materiales Material { get; set; }
+
     }
 }
