@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Backend.Repositorios")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Backend.DTO")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7705208b803db6f4084b84ad8ba375cb8bd7dda")]
-[assembly: System.Reflection.AssemblyProductAttribute("Backend.Repositorios")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Backend.Repositorios")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1482d015a135c05e1774d58ccd8537b660894e3c")]
+[assembly: System.Reflection.AssemblyProductAttribute("Backend.DTO")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Backend.DTO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
