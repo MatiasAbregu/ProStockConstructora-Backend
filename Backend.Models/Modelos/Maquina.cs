@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace Backend.BD.Modelos
 {
-    public class Ubicaciones
+    public class Maquina
     {
         [Key]
         public int Id { get; set; }
-        public string CodigoUbicacion { get; set; }
-        public string Domicilio { get; set; }
-        public int ProvinciaId { get; set; }
+        public string Nombre { get; set; }
+        public string Marca { get; set; }
+        public string Modelo { get; set; }
     }
 }
