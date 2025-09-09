@@ -176,6 +176,26 @@
   },
   {
     "ContainingType": "Backend.Controllers.ControladorUsuario",
+    "Method": "Hola",
+    "RelativePath": "api/usuario/iniciar-sesion",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "Backend.Controllers.ControladorUsuario",
     "Method": "ObtenerTodosLosAdministradores",
     "RelativePath": "api/usuario/obtener-administradores",
     "HttpMethod": "GET",
