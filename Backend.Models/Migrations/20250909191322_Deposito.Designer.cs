@@ -4,6 +4,7 @@ using Backend.BD;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.BD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250909191322_Deposito")]
+    partial class Deposito
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,25 +24,6 @@ namespace Backend.BD.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
-
-            modelBuilder.Entity("Backend.BD.Modelos.Deposito", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ObraId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TipoDeposito")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Depositos");
-                });
 
             modelBuilder.Entity("Backend.BD.Modelos.Empresa", b =>
                 {
@@ -228,25 +212,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "948f4be2-7682-4711-a805-211b13e384ec",
+                            Id = "bf40144a-5860-4484-b6ab-682266ca8541",
                             Name = "Superadministrador",
                             NormalizedName = "Superadministrador"
                         },
                         new
                         {
-                            Id = "331e1f45-f164-4db8-9f27-16eb3f24d102",
+                            Id = "c17bfa78-61b7-44c5-b4a6-f6ee926bafff",
                             Name = "Administrador",
                             NormalizedName = "Administrador"
                         },
                         new
                         {
-                            Id = "20764f04-b6f9-47bd-b4e0-dd030663e1cb",
+                            Id = "56ef6b4f-84f8-451b-b017-9db08c6ec22b",
                             Name = "JefeDeDeposito",
                             NormalizedName = "JefeDeDeposito"
                         },
                         new
                         {
-                            Id = "dca0cd29-2886-4a96-8b33-d769441d5d5e",
+                            Id = "1c306e31-3aa6-4734-9f3e-fce6aca71890",
                             Name = "JefeDeObra",
                             NormalizedName = "JefeDeObra"
                         });

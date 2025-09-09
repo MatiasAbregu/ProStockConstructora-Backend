@@ -4,6 +4,7 @@ using Backend.BD;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.BD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250909185444_Obra")]
+    partial class Obra
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -21,25 +24,6 @@ namespace Backend.BD.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
-
-            modelBuilder.Entity("Backend.BD.Modelos.Deposito", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("ObraId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TipoDeposito")
-                        .HasColumnType("longtext");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Depositos");
-                });
 
             modelBuilder.Entity("Backend.BD.Modelos.Empresa", b =>
                 {
@@ -76,32 +60,6 @@ namespace Backend.BD.Migrations
                         .IsUnique();
 
                     b.ToTable("Empresa");
-                });
-
-            modelBuilder.Entity("Backend.BD.Modelos.Obra", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<int>("EmpresaId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Estado")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("NombreObra")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("UbicacionId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Obras");
                 });
 
             modelBuilder.Entity("Backend.BD.Modelos.RefreshToken", b =>
@@ -228,25 +186,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "948f4be2-7682-4711-a805-211b13e384ec",
+                            Id = "19feb170-2371-4be7-bc2a-260d67c3b8fb",
                             Name = "Superadministrador",
                             NormalizedName = "Superadministrador"
                         },
                         new
                         {
-                            Id = "331e1f45-f164-4db8-9f27-16eb3f24d102",
+                            Id = "cb30e974-83d7-4780-9851-617b50aac95f",
                             Name = "Administrador",
                             NormalizedName = "Administrador"
                         },
                         new
                         {
-                            Id = "20764f04-b6f9-47bd-b4e0-dd030663e1cb",
+                            Id = "122a4c37-d936-4ff4-807a-ffc67ad528d8",
                             Name = "JefeDeDeposito",
                             NormalizedName = "JefeDeDeposito"
                         },
                         new
                         {
-                            Id = "dca0cd29-2886-4a96-8b33-d769441d5d5e",
+                            Id = "cb84bd11-d5e6-418e-a8d1-75ffeaa275d9",
                             Name = "JefeDeObra",
                             NormalizedName = "JefeDeObra"
                         });
