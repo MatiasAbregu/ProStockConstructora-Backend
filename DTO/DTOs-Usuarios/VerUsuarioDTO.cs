@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Backend.DTO.DTOs_Usuarios
 {
-    internal class VerUsuarioDTO
+    public class VerUsuarioDTO
     {
     }
 }

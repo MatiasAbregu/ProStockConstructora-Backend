@@ -44,13 +44,19 @@ namespace Backend.Controllers
                 }
                 return BadRequest("¡No se pudo crear el usuario!");
             }
-            
+
         }
 
-        //[HttpGet("iniciar-sesion")]
-        //public string Hola()
+        //[HttpGet("obtener-usuarios/{id}")]
+        //public async Task<ActionResult<List<VerUsuarioDTO>>> ObtenerUsuariosDeEmpresa()
         //{
-        //    return "hola";
+
         //}
+
+        [HttpGet("iniciar-sesion")]
+        public string Hola()
+        {
+            return "hola";
+        }
     }
 }

@@ -23,9 +23,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Configurando Identity para que los usuarios tengan roles
-builder.Services.AddIdentity<Usuario, IdentityRole>()
-        .AddEntityFrameworkStores<AppDbContext>()
-        .AddDefaultTokenProviders();
+builder.Services.AddIdentity<Usuario, IdentityRole>().AddEntityFrameworkStores<AppDbContext>();
 
 // Y configurandolo para que no ponga restricciones en las contraseñas
 builder.Services.Configure<IdentityOptions>(options => 

@@ -1,5 +1,4 @@
 ﻿using Backend.BD;
-using Backend.BD.Migrations;
 using Backend.BD.Modelos;
 using Backend.BD.Models;
 using Backend.DTO.DTOs_Empresas;

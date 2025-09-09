@@ -20,7 +20,6 @@ namespace Backend.BD.Models
         public Empresa Empresa { get; set; }
 
         public RefreshToken RefreshToken { get; set; }
-        public List<ObraXUsuario> obras { get; set; } 
 
         public Usuario() { }
 
