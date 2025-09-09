@@ -1,20 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "AqET+8UXDps=",
   "success": true,
   "projectFilePath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
-=======
-<<<<<<< HEAD
-  "dgSpecHash": "+gM28qgbbTc=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-=======
-  "dgSpecHash": "ETZwRjeU2so=",
-  "success": true,
-  "projectFilePath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
->>>>>>> c8bc03251d95a18e194ec54c403629ef8bde536b
->>>>>>> 74b5eb4cc62a78ccceb5abe14875a097c331aac3
   "expectedPackageFiles": [],
   "logs": []
 }
