@@ -22,6 +22,25 @@ namespace Backend.BD.Migrations
 
             MySqlModelBuilderExtensions.AutoIncrementColumns(modelBuilder);
 
+            modelBuilder.Entity("Backend.BD.Modelos.Deposito", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ObraId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TipoDeposito")
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Depositos");
+                });
+
             modelBuilder.Entity("Backend.BD.Modelos.Empresa", b =>
                 {
                     b.Property<int>("Id")
@@ -57,6 +76,32 @@ namespace Backend.BD.Migrations
                         .IsUnique();
 
                     b.ToTable("Empresa");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.Obra", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("EmpresaId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Estado")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("NombreObra")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("UbicacionId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Obras");
                 });
 
             modelBuilder.Entity("Backend.BD.Modelos.RefreshToken", b =>
@@ -183,25 +228,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "9360fc67-239b-4905-99ef-b995170deeff",
+                            Id = "948f4be2-7682-4711-a805-211b13e384ec",
                             Name = "Superadministrador",
                             NormalizedName = "Superadministrador"
                         },
                         new
                         {
-                            Id = "1c201591-0aa8-425f-8741-7e4e66782503",
+                            Id = "331e1f45-f164-4db8-9f27-16eb3f24d102",
                             Name = "Administrador",
                             NormalizedName = "Administrador"
                         },
                         new
                         {
-                            Id = "81199a65-f786-41d1-bde4-e1686490c8fb",
+                            Id = "20764f04-b6f9-47bd-b4e0-dd030663e1cb",
                             Name = "JefeDeDeposito",
                             NormalizedName = "JefeDeDeposito"
                         },
                         new
                         {
-                            Id = "94a3ab26-1b37-4662-ac63-9584d5e2f8e3",
+                            Id = "dca0cd29-2886-4a96-8b33-d769441d5d5e",
                             Name = "JefeDeObra",
                             NormalizedName = "JefeDeObra"
                         });

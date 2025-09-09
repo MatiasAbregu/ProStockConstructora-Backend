@@ -13,6 +13,9 @@ namespace Backend.BD
 {
     public class AppDbContext : IdentityDbContext<Usuario>
     {
+        public DbSet<ObraUsuario> ObraUsuarios { get; set; }
+        public DbSet<Deposito> Depositos { get; set; }
+        public DbSet<Obra> Obras { get; set; }
         public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<RefreshToken> RefreshTokens { get; set; }
