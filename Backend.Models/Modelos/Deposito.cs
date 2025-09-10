@@ -15,5 +15,8 @@ namespace Backend.BD.Modelos
         public string? TipoDeposito { get; set; }
         [Required(ErrorMessage = "La obra del deposito es obligatorio.")]
         public int ObraId { get; set; }
+        public Obra Obra { get; set; }
+        public int UbicacionId { get; set; }
+        public Ubicacion Ubicacion { get; set; }
     }
 }

@@ -24,6 +24,8 @@ namespace Backend.BD
         public DbSet<UnidadMedida> UnidadMedidas { get; set; }
         public DbSet<TipoMaterial> TipoMateriales { get; set; }
         public DbSet<Stock> Stocks { get; set; }
+        public DbSet<MaterialesyMaquinas> MaterialesyMaquinas { get; set; }
+
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 

@@ -15,5 +15,6 @@ namespace Backend.BD.Modelos
         public string Domicilio { get; set; }
         public int ProvinciaId { get; set; }
         public Provincia Provincia { get; set; }
+
     }
 }
