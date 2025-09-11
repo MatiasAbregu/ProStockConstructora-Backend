@@ -7,12 +7,10 @@ using System.Threading.Tasks;
 
 namespace Backend.BD.Modelos
 {
-    
-    public class TipoMateriales
+    public class TipoMaterial
     {
         [Key]
         public int Id { get; set; }
-
         public string Nombre { get; set; }
     }
 }
