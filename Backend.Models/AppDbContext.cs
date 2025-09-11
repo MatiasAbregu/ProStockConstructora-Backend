@@ -18,7 +18,7 @@ namespace Backend.BD
         public DbSet<Obra> Obras { get; set; }
         public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<Tokens> RefreshTokens { get; set; }
         public DbSet<Maquina> Maquinas { get; set; }
         public DbSet<StockMaquina> StockMaquinas { get; set; }
         public DbSet<Ubicacion> Ubicaciones { get; set; } 

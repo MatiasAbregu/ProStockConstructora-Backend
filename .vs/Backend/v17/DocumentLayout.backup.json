@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend.models\\modelos\\obrausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\obrausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend.models\\modelos\\deposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\deposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\repositorios\\servicios\\sesionservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\sesionservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\repositorios\\servicios\\tokenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\tokenservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend.models\\modelos\\obra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\obra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
@@ -34,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 275,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,84 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ObraUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\ObraUsuario.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\ObraUsuario.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\ObraUsuario.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\ObraUsuario.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T20:27:29.806Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Deposito.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\Deposito.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\Deposito.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\Deposito.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\Deposito.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T20:22:46.945Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Obra.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\Obra.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\Obra.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\Obra.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\Obra.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T20:22:07.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TokenServicio.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\TokenServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Servicios\\TokenServicio.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\TokenServicio.cs",
-              "RelativeToolTip": "Repositorios\\Servicios\\TokenServicio.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T18:35:23.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SesionServicio.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\SesionServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Servicios\\SesionServicio.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\SesionServicio.cs",
-              "RelativeToolTip": "Repositorios\\Servicios\\SesionServicio.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACMAAABAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T18:34:21.87Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\AppDbContext.cs",
-              "RelativeToolTip": "Backend.Models\\AppDbContext.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAAwCQAAAA6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T17:44:12.578Z",
-              "EditorCaption": ""
             }
           ]
         }

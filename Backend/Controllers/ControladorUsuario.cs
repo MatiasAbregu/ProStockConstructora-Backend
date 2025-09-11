@@ -46,17 +46,5 @@ namespace Backend.Controllers
             }
 
         }
-
-        //[HttpGet("obtener-usuarios/{id}")]
-        //public async Task<ActionResult<List<VerUsuarioDTO>>> ObtenerUsuariosDeEmpresa()
-        //{
-
-        //}
-
-        [HttpGet("iniciar-sesion")]
-        public string Hola()
-        {
-            return "hola";
-        }
     }
 }

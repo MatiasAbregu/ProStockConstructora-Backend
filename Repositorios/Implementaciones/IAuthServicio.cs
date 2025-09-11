@@ -7,9 +7,9 @@ using Backend.DTO.DTOs_Usuarios;
 
 namespace Backend.Repositorios.Implementaciones
 {
-    public interface ISesionServicio
+    public interface IAuthServicio
     {
-        public Task<AutenticacionDTO> IniciarSesion(InicioSesionDTO usuario);
+        public Task<ValueTuple<bool, string, TokenDTO>> IniciarSesion(InicioSesionDTO usuarioDTO);
         public Task<string> CerrarSesion(string UsuarioId, string RefreshToken);
     }
 }

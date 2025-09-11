@@ -78,6 +78,31 @@ namespace Backend.BD.Migrations
                     b.ToTable("Empresa");
                 });
 
+            modelBuilder.Entity("Backend.BD.Modelos.Maquina", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Marca")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Modelo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Maquinas");
+                });
+
             modelBuilder.Entity("Backend.BD.Modelos.Obra", b =>
                 {
                     b.Property<int>("Id")
@@ -104,13 +129,81 @@ namespace Backend.BD.Migrations
                     b.ToTable("Obras");
                 });
 
-            modelBuilder.Entity("Backend.BD.Modelos.RefreshToken", b =>
+            modelBuilder.Entity("Backend.BD.Modelos.ObraUsuario", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ObraId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("UsuarioId1")
+                        .HasColumnType("varchar(255)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsuarioId1");
+
+                    b.ToTable("ObraUsuarios");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.Provincia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(80)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Provincias");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.StockMaquina", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("FechaIngreso")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("MaquinaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaquinaId");
+
+                    b.ToTable("StockMaquinas");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.Tokens", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreadoEn")
+                        .HasColumnType("datetime(6)");
 
                     b.Property<string>("Token")
                         .IsRequired()
@@ -120,12 +213,41 @@ namespace Backend.BD.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
+                    b.Property<DateTime>("VenceEn")
+                        .HasColumnType("datetime(6)");
+
                     b.HasKey("Id");
 
                     b.HasIndex("UsuarioId")
                         .IsUnique();
 
                     b.ToTable("RefreshTokens");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.Ubicacion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CodigoUbicacion")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Domicilio")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("ProvinciaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProvinciaId");
+
+                    b.ToTable("Ubicaciones");
                 });
 
             modelBuilder.Entity("Backend.BD.Models.Usuario", b =>
@@ -228,25 +350,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "948f4be2-7682-4711-a805-211b13e384ec",
+                            Id = "d05912f1-c483-4006-aca0-0a6c76ea429c",
                             Name = "Superadministrador",
                             NormalizedName = "Superadministrador"
                         },
                         new
                         {
-                            Id = "331e1f45-f164-4db8-9f27-16eb3f24d102",
+                            Id = "81fc0257-bfd4-4c04-b64c-7cf1af58596e",
                             Name = "Administrador",
                             NormalizedName = "Administrador"
                         },
                         new
                         {
-                            Id = "20764f04-b6f9-47bd-b4e0-dd030663e1cb",
+                            Id = "637dab76-e99c-4e43-a106-ceaad02fa42d",
                             Name = "JefeDeDeposito",
                             NormalizedName = "JefeDeDeposito"
                         },
                         new
                         {
-                            Id = "dca0cd29-2886-4a96-8b33-d769441d5d5e",
+                            Id = "454abbbd-9dc2-4a78-a36f-dfb7ebe04cd6",
                             Name = "JefeDeObra",
                             NormalizedName = "JefeDeObra"
                         });
@@ -358,15 +480,46 @@ namespace Backend.BD.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("Backend.BD.Modelos.RefreshToken", b =>
+            modelBuilder.Entity("Backend.BD.Modelos.ObraUsuario", b =>
+                {
+                    b.HasOne("Backend.BD.Models.Usuario", "Usuario")
+                        .WithMany()
+                        .HasForeignKey("UsuarioId1");
+
+                    b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.StockMaquina", b =>
+                {
+                    b.HasOne("Backend.BD.Modelos.Maquina", "Maquina")
+                        .WithMany()
+                        .HasForeignKey("MaquinaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Maquina");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.Tokens", b =>
                 {
                     b.HasOne("Backend.BD.Models.Usuario", "Usuario")
                         .WithOne("RefreshToken")
-                        .HasForeignKey("Backend.BD.Modelos.RefreshToken", "UsuarioId")
+                        .HasForeignKey("Backend.BD.Modelos.Tokens", "UsuarioId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Usuario");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.Ubicacion", b =>
+                {
+                    b.HasOne("Backend.BD.Modelos.Provincia", "Provincia")
+                        .WithMany()
+                        .HasForeignKey("ProvinciaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Provincia");
                 });
 
             modelBuilder.Entity("Backend.BD.Models.Usuario", b =>

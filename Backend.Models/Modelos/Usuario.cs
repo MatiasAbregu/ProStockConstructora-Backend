@@ -19,7 +19,7 @@ namespace Backend.BD.Models
         public int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
 
-        public RefreshToken RefreshToken { get; set; }
+        public Tokens RefreshToken { get; set; }
 
         public Usuario() { }
 
