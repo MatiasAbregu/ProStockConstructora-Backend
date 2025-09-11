@@ -34,9 +34,17 @@ namespace Backend.BD.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("TipoDeposito")
+                        .IsRequired()
                         .HasColumnType("longtext");
 
+                    b.Property<int>("UbicacionId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("ObraId");
+
+                    b.HasIndex("UbicacionId");
 
                     b.ToTable("Depositos");
                 });
@@ -78,7 +86,11 @@ namespace Backend.BD.Migrations
                     b.ToTable("Empresa");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("Backend.BD.Modelos.Maquina", b =>
+=======
+            modelBuilder.Entity("Backend.BD.Modelos.MaterialesyMaquinas", b =>
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -86,21 +98,44 @@ namespace Backend.BD.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+<<<<<<< HEAD
                     b.Property<string>("Marca")
                         .IsRequired()
                         .HasColumnType("longtext");
 
                     b.Property<string>("Modelo")
                         .IsRequired()
+=======
+                    b.Property<string>("CodigoISO")
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
                         .HasColumnType("longtext");
 
                     b.Property<string>("Nombre")
                         .IsRequired()
                         .HasColumnType("longtext");
 
+<<<<<<< HEAD
                     b.HasKey("Id");
 
                     b.ToTable("Maquinas");
+=======
+                    b.Property<int>("Tipo")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TipoMaterialId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UnidadMedidaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TipoMaterialId");
+
+                    b.HasIndex("UnidadMedidaId");
+
+                    b.ToTable("MaterialesyMaquinas");
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
                 });
 
             modelBuilder.Entity("Backend.BD.Modelos.Obra", b =>
@@ -121,12 +156,52 @@ namespace Backend.BD.Migrations
                         .IsRequired()
                         .HasColumnType("longtext");
 
-                    b.Property<int>("UbicacionId")
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmpresaId");
+
+                    b.ToTable("Obras");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.ObraUsuario", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ObraId")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("UsuarioId")
+                        .HasColumnType("char(36)");
+
+                    b.Property<string>("UsuarioId1")
+                        .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Obras");
+                    b.HasIndex("UsuarioId1");
+
+                    b.ToTable("ObraUsuarios");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.Provincia", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("varchar(80)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Provincias");
                 });
 
             modelBuilder.Entity("Backend.BD.Modelos.ObraUsuario", b =>
@@ -224,6 +299,50 @@ namespace Backend.BD.Migrations
                     b.ToTable("RefreshTokens");
                 });
 
+<<<<<<< HEAD
+=======
+            modelBuilder.Entity("Backend.BD.Modelos.Stock", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Cantidad")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("FechaIngreso")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("MaterialesyMaquinasId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("MaterialesyMaquinasId");
+
+                    b.ToTable("Stocks");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.TipoMaterial", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TipoMateriales");
+                });
+
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
             modelBuilder.Entity("Backend.BD.Modelos.Ubicacion", b =>
                 {
                     b.Property<int>("Id")
@@ -250,6 +369,30 @@ namespace Backend.BD.Migrations
                     b.ToTable("Ubicaciones");
                 });
 
+<<<<<<< HEAD
+=======
+            modelBuilder.Entity("Backend.BD.Modelos.UnidadMedida", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Simbolo")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UnidadMedidas");
+                });
+
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
             modelBuilder.Entity("Backend.BD.Models.Usuario", b =>
                 {
                     b.Property<string>("Id")
@@ -350,25 +493,41 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
+<<<<<<< HEAD
                             Id = "d05912f1-c483-4006-aca0-0a6c76ea429c",
+=======
+                            Id = "e1ba79a5-1903-4657-ab9c-0d9d7a7e1740",
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
                             Name = "Superadministrador",
                             NormalizedName = "Superadministrador"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "81fc0257-bfd4-4c04-b64c-7cf1af58596e",
+=======
+                            Id = "7ca87bea-28d1-45c9-9045-f03fa57c2664",
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
                             Name = "Administrador",
                             NormalizedName = "Administrador"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "637dab76-e99c-4e43-a106-ceaad02fa42d",
+=======
+                            Id = "bb3e9f41-07a9-4e0d-abcd-8982bd496631",
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
                             Name = "JefeDeDeposito",
                             NormalizedName = "JefeDeDeposito"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "454abbbd-9dc2-4a78-a36f-dfb7ebe04cd6",
+=======
+                            Id = "4afe7f97-518b-4beb-98a1-25826a882388",
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
                             Name = "JefeDeObra",
                             NormalizedName = "JefeDeObra"
                         });
@@ -480,6 +639,54 @@ namespace Backend.BD.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+<<<<<<< HEAD
+=======
+            modelBuilder.Entity("Backend.BD.Modelos.Deposito", b =>
+                {
+                    b.HasOne("Backend.BD.Modelos.Obra", "Obra")
+                        .WithMany()
+                        .HasForeignKey("ObraId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Backend.BD.Modelos.Ubicacion", "Ubicacion")
+                        .WithMany()
+                        .HasForeignKey("UbicacionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Obra");
+
+                    b.Navigation("Ubicacion");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.MaterialesyMaquinas", b =>
+                {
+                    b.HasOne("Backend.BD.Modelos.TipoMaterial", "tipoMaterial")
+                        .WithMany()
+                        .HasForeignKey("TipoMaterialId");
+
+                    b.HasOne("Backend.BD.Modelos.UnidadMedida", "unidadMedida")
+                        .WithMany()
+                        .HasForeignKey("UnidadMedidaId");
+
+                    b.Navigation("tipoMaterial");
+
+                    b.Navigation("unidadMedida");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.Obra", b =>
+                {
+                    b.HasOne("Backend.BD.Modelos.Empresa", "Empresa")
+                        .WithMany()
+                        .HasForeignKey("EmpresaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Empresa");
+                });
+
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
             modelBuilder.Entity("Backend.BD.Modelos.ObraUsuario", b =>
                 {
                     b.HasOne("Backend.BD.Models.Usuario", "Usuario")
@@ -489,6 +696,7 @@ namespace Backend.BD.Migrations
                     b.Navigation("Usuario");
                 });
 
+<<<<<<< HEAD
             modelBuilder.Entity("Backend.BD.Modelos.StockMaquina", b =>
                 {
                     b.HasOne("Backend.BD.Modelos.Maquina", "Maquina")
@@ -501,6 +709,9 @@ namespace Backend.BD.Migrations
                 });
 
             modelBuilder.Entity("Backend.BD.Modelos.Tokens", b =>
+=======
+            modelBuilder.Entity("Backend.BD.Modelos.RefreshToken", b =>
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
                 {
                     b.HasOne("Backend.BD.Models.Usuario", "Usuario")
                         .WithOne("RefreshToken")
@@ -511,6 +722,20 @@ namespace Backend.BD.Migrations
                     b.Navigation("Usuario");
                 });
 
+<<<<<<< HEAD
+=======
+            modelBuilder.Entity("Backend.BD.Modelos.Stock", b =>
+                {
+                    b.HasOne("Backend.BD.Modelos.MaterialesyMaquinas", "MaterialesyMaquinas")
+                        .WithMany()
+                        .HasForeignKey("MaterialesyMaquinasId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("MaterialesyMaquinas");
+                });
+
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
             modelBuilder.Entity("Backend.BD.Modelos.Ubicacion", b =>
                 {
                     b.HasOne("Backend.BD.Modelos.Provincia", "Provincia")
