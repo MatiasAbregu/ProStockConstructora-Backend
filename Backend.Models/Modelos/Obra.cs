@@ -11,12 +11,16 @@ namespace Backend.BD.Modelos
     {
         public int Id { get; set; }
 
+        [MaxLength (100)]
         public required string NombreObra { get; set; }
 
-        public string? Estado { get; set; }
+        public string Estado { get; set; }
 
         public int EmpresaId { get; set; }
+        public Empresa Empresa { get; set; }
 
         public int UbicacionId { get; set; }
+        public Ubicacion Ubicacion { get; set; }
+        
     }
 }

@@ -10,8 +10,9 @@ namespace Backend.BD.Modelos
     {
         public int Id { get; set; }
 
-        public string? TipoDeposito { get; set; }
+        public string TipoDeposito { get; set; }
 
         public int ObraId { get; set; }
+        public Obra Obra { get; set; }
     }
 }
