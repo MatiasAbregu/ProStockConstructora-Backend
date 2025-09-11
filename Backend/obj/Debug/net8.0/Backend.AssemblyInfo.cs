@@ -15,7 +15,11 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 <<<<<<< HEAD
+<<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1298e3535b4dc8d11d1073b2e5f1b4d795346c9c")]
+=======
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fcb40fe317a0c384a79a79a9b43aca267519529")]
+>>>>>>> f7b7b2b6e5721a80fd65d1c8fb95c69408fc4baf
 =======
 <<<<<<< HEAD
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1482d015a135c05e1774d58ccd8537b660894e3c")]

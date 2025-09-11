@@ -9,7 +9,11 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Backend.Repositorios
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\matia\Documents\ProStockConstructora\Backend\Repositorios\
+=======
+build_property.ProjectDir = C:\stock construcciones\ProStockConstructora-Backend\Repositorios\
+>>>>>>> f7b7b2b6e5721a80fd65d1c8fb95c69408fc4baf
 =======
 <<<<<<< HEAD
 build_property.ProjectDir = C:\Users\lucas\Downloads\Backend nuevo\ProStockConstructora-Backend\Repositorios\

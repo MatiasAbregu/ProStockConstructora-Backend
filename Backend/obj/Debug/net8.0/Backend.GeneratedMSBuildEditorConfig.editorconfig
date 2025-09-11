@@ -10,7 +10,11 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Backend
 build_property.RootNamespace = Backend
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\matia\Documents\ProStockConstructora\Backend\Backend\
+=======
+build_property.ProjectDir = C:\stock construcciones\ProStockConstructora-Backend\Backend\
+>>>>>>> f7b7b2b6e5721a80fd65d1c8fb95c69408fc4baf
 =======
 <<<<<<< HEAD
 build_property.ProjectDir = C:\Users\lucas\Downloads\Backend nuevo\ProStockConstructora-Backend\Backend\
@@ -24,7 +28,11 @@ build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 <<<<<<< HEAD
+<<<<<<< HEAD
 build_property.MSBuildProjectDirectory = C:\Users\matia\Documents\ProStockConstructora\Backend\Backend
+=======
+build_property.MSBuildProjectDirectory = C:\stock construcciones\ProStockConstructora-Backend\Backend
+>>>>>>> f7b7b2b6e5721a80fd65d1c8fb95c69408fc4baf
 =======
 <<<<<<< HEAD
 build_property.MSBuildProjectDirectory = C:\Users\lucas\Downloads\Backend nuevo\ProStockConstructora-Backend\Backend

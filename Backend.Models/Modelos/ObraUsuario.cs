@@ -12,6 +12,7 @@ namespace Backend.BD.Modelos
         public int Id { get; set; }
 
         public int ObraId { get; set; }
+        public Obra Obra { get; set; }
 
         public required Guid UsuarioId { get; set; }
         public Usuario Usuario { get; set; }

@@ -2,7 +2,21 @@
   "format": 1,
   "restore": {
 <<<<<<< HEAD
+<<<<<<< HEAD
     "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj": {}
+=======
+    "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {}
+  },
+  "projects": {
+    "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+        "projectName": "Backend.DTO",
+        "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+        "packagesPath": "C:\\Users\\Estudiante\\.nuget\\packages\\",
+        "outputPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\obj\\",
+>>>>>>> f7b7b2b6e5721a80fd65d1c8fb95c69408fc4baf
 =======
 <<<<<<< HEAD
     "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {}
@@ -42,7 +56,11 @@
         ],
         "configFilePaths": [
 <<<<<<< HEAD
+<<<<<<< HEAD
           "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Estudiante\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> f7b7b2b6e5721a80fd65d1c8fb95c69408fc4baf
 =======
 <<<<<<< HEAD
           "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
