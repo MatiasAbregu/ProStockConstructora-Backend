@@ -3176,23 +3176,39 @@
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\lucas\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\maria\\.nuget\\packages\\": {},
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
       "projectName": "Backend",
       "projectPath": "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\Backend\\obj\\",
+=======
+      "projectUniqueName": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
+      "projectName": "Backend",
+      "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
+      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
+      "outputPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\obj\\",
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3208,6 +3224,7 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+<<<<<<< HEAD
             "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
               "projectPath": "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj"
             },
@@ -3216,6 +3233,16 @@
             },
             "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj": {
               "projectPath": "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj"
+=======
+            "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
+              "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj"
+            },
+            "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
+              "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj"
+            },
+            "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj": {
+              "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj"
+>>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
             }
           }
         }

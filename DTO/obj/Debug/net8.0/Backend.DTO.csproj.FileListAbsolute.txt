@@ -1,3 +1,15 @@
+C:\stock construcciones\ProStockConstructora-Backend\DTO\bin\Debug\net8.0\Backend.DTO.deps.json
+C:\stock construcciones\ProStockConstructora-Backend\DTO\bin\Debug\net8.0\Backend.DTO.dll
+C:\stock construcciones\ProStockConstructora-Backend\DTO\bin\Debug\net8.0\Backend.DTO.pdb
+C:\stock construcciones\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\stock construcciones\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.AssemblyInfoInputs.cache
+C:\stock construcciones\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.AssemblyInfo.cs
+C:\stock construcciones\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.csproj.CoreCompileInputs.cache
+C:\stock construcciones\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.sourcelink.json
+C:\stock construcciones\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.dll
+C:\stock construcciones\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\refint\Backend.DTO.dll
+C:\stock construcciones\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.pdb
+C:\stock construcciones\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\ref\Backend.DTO.dll
 C:\Users\matia\Documents\ProStockConstructora\Backend\DTO\bin\Debug\net8.0\Backend.DTO.deps.json
 C:\Users\matia\Documents\ProStockConstructora\Backend\DTO\bin\Debug\net8.0\Backend.DTO.dll
 C:\Users\matia\Documents\ProStockConstructora\Backend\DTO\bin\Debug\net8.0\Backend.DTO.pdb
@@ -10,3 +22,15 @@ C:\Users\matia\Documents\ProStockConstructora\Backend\DTO\obj\Debug\net8.0\Backe
 C:\Users\matia\Documents\ProStockConstructora\Backend\DTO\obj\Debug\net8.0\refint\Backend.DTO.dll
 C:\Users\matia\Documents\ProStockConstructora\Backend\DTO\obj\Debug\net8.0\Backend.DTO.pdb
 C:\Users\matia\Documents\ProStockConstructora\Backend\DTO\obj\Debug\net8.0\ref\Backend.DTO.dll
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\bin\Debug\net8.0\Backend.DTO.deps.json
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\bin\Debug\net8.0\Backend.DTO.dll
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\bin\Debug\net8.0\Backend.DTO.pdb
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.AssemblyInfoInputs.cache
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.AssemblyInfo.cs
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.csproj.CoreCompileInputs.cache
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.sourcelink.json
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.dll
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\refint\Backend.DTO.dll
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\Backend.DTO.pdb
+D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\DTO\obj\Debug\net8.0\ref\Backend.DTO.dll
