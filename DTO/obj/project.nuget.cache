@@ -1,26 +1,18 @@
 {
   "version": 2,
-<<<<<<< HEAD
-<<<<<<< HEAD
   "dgSpecHash": "AqET+8UXDps=",
   "success": true,
   "projectFilePath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
-=======
-  "dgSpecHash": "b+o4lRQlddc=",
-  "success": true,
-  "projectFilePath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
->>>>>>> f7b7b2b6e5721a80fd65d1c8fb95c69408fc4baf
-=======
-<<<<<<< HEAD
-  "dgSpecHash": "dC3wh+/TmfA=",
-  "success": true,
-  "projectFilePath": "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-=======
-  "dgSpecHash": "ETZwRjeU2so=",
-  "success": true,
-  "projectFilePath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
->>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
->>>>>>> aa50e1b3667f625b9c08ee2ef34f360071c86723
   "expectedPackageFiles": [],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problema al leer el archivo de caché C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
+      "targetGraphs": []
+    }
+  ]
 }

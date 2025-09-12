@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,21 +9,16 @@ namespace Backend.BD.Modelos
 {
     public class DetalleRemito
     {
-        public int Id { get; set; }
+        [Key]
+        public int Id { get; set; } 
 
-        public int IdRemito { get; set; }
+        public required int RemitoId { get; set; }
+        public Remito Remito { get; set; }
 
-        public int IdMaterial { get; set; }
+        public required int DetalleNotaDePedidoId { get; set; }
+        public DetalleNotaDePedido DetalleNotaDePedido { get; set; }
 
-        public int IdMaquina { get; set; }
-
-        public int Cantidad { get; set; }
-
-        public int CantidadEntregada { get; set; }
-
-        public string Unidad { get; set; }
-
-
+        public required int CantidadDespachada { get; set; }
+        public int CantidadRecibida { get; set; }
     }
 }
-

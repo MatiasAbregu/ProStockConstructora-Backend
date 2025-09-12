@@ -10,10 +10,12 @@ namespace Backend.BD.Modelos
     public class Stock
     {
         [Key]   
-        public int Id { get; set; }
-        public DateTime? FechaIngreso { get; set; }
-        public int Cantidad { get; set; }
-        public int MaterialesyMaquinasId { get; set; }
+        public int Id { get; set; } 
+
+        public required int MaterialesyMaquinasId { get; set; }
         public MaterialesyMaquinas MaterialesyMaquinas { get; set; }
+
+        public required int Cantidad { get; set; }
+        public required DateTime FechaIngreso { get; set; } 
     }
 }

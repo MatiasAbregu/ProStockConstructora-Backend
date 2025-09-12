@@ -1,38 +1,7 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-<<<<<<< HEAD
     "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj": {}
-=======
-    "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {}
-  },
-  "projects": {
-    "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-        "projectName": "Backend.DTO",
-        "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-        "packagesPath": "C:\\Users\\Estudiante\\.nuget\\packages\\",
-        "outputPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\obj\\",
->>>>>>> f7b7b2b6e5721a80fd65d1c8fb95c69408fc4baf
-=======
-<<<<<<< HEAD
-    "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {}
-  },
-  "projects": {
-    "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-        "projectName": "Backend.DTO",
-        "projectPath": "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-        "packagesPath": "C:\\Users\\lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lucas\\Downloads\\Backend nuevo\\ProStockConstructora-Backend\\DTO\\obj\\",
-=======
-    "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {}
->>>>>>> aa50e1b3667f625b9c08ee2ef34f360071c86723
   },
   "projects": {
     "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj": {
@@ -40,34 +9,15 @@
       "restore": {
         "projectUniqueName": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
         "projectName": "Backend.DTO",
-<<<<<<< HEAD
         "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
         "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\obj\\",
-=======
-        "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\obj\\",
->>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
->>>>>>> aa50e1b3667f625b9c08ee2ef34f360071c86723
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-<<<<<<< HEAD
           "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\Estudiante\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> f7b7b2b6e5721a80fd65d1c8fb95c69408fc4baf
-=======
-<<<<<<< HEAD
-          "C:\\Users\\lucas\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
->>>>>>> aa50e1b3667f625b9c08ee2ef34f360071c86723
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -115,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

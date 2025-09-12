@@ -16,7 +16,7 @@ namespace Backend.BD.Models
         public bool Estado { get; set; }
 
         [Required]
-        public int EmpresaId { get; set; }
+        public required int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
 
         public Tokens RefreshToken { get; set; }

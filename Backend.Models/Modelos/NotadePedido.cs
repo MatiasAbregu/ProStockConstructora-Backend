@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Backend.BD.Enums;
+using Backend.BD.Models;
+using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,25 +10,22 @@ using System.Threading.Tasks;
 
 namespace Backend.BD.Modelos
 {
-    public class NotadePedido
+    [Index(nameof(NumeroNotaPedido), IsUnique = true)]
+    public class NotaDePedido
     {
         [Key]
-
-        public int IdNotaPedido { get; set; }
-
+        public int Id { get; set; }
         public required string NumeroNotaPedido { get; set; }
 
-        public int IdObra { get; set; }
+        public required int DepositoDestinoId { get; set; }
+        public Deposito DepositoDestino { get; set; }
 
-        public int IdDeposito { get; set; }
+        public required DateTime FechaEmision { get; set; }
+        public EstadoNotaPedido Estado { get; set; } = EstadoNotaPedido.Pendiente;
 
-        public DateTime FechaEmision { get; set; }
-
-        public DateTime FechaEstimadaEntrega { get; set; }
-
-        public string Estado { get; set; }
-
+        public required Guid SolicitadoPor {  get; set; }
+        public Usuario Usuario { get; set; }
       
+        public List<DetalleNotaDePedido>? ListaDePedido { get; }
     }
-
 }

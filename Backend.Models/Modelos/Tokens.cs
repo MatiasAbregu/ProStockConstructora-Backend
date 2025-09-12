@@ -13,19 +13,17 @@ namespace Backend.BD.Modelos
         [Key]
         public int Id { get; set; }
 
-        [Required]
+        public required string Token { get; set; }
 
-        public string Token { get; set; }
-        [Required]
-        public string UsuarioId { get; set; }
+        public required string UsuarioId { get; set; }
 
         public Usuario Usuario { get; set; }
 
         [Required]
-        public DateTime CreadoEn { get; set; }
+        public required DateTime CreadoEn { get; set; }
 
         [Required]
-        public DateTime VenceEn { get; set; }
+        public required DateTime VenceEn { get; set; }
 
     }
 }
