@@ -8,5 +8,12 @@ namespace Backend.DTO.DTOs_Obras
 {
     public class VerObraDTO
     {
+        public int Id { get; set; }
+        public  string Nombre { get; set; }
+
+        public string Estado { get; set; }
+
+        public int EmpresaId { get; set; }
+
     }
 }
