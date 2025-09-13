@@ -20,30 +20,46 @@ namespace Backend.Controllers
             this.usuarioServicio = usuarioServicio;
         }
 
-        [HttpGet("obtener-administradores")]
-        public async Task<ActionResult<List<VerAdministradorDTO>>> ObtenerTodosLosAdministradores()
+        // EN DEUSO
+        /*[HttpGet("obtener-administradores")]
+        //public async Task<ActionResult<List<VerAdministradorDTO>>> ObtenerTodosLosAdministradores()
+        //{
+        //    ValueTuple<bool, List<VerAdministradorDTO>> res = await usuarioServicio.ObtenerTodosLosAdministradores();
+
+        //    if (res.Item1) return StatusCode(200, res.Item2);
+        //    else return StatusCode(500, "Error al cargar los datos desde el servidor.");
+        //}
+
+        //[HttpPost("crear-administrador")]
+        //public async Task<ActionResult<string>> CrearUsuario([FromBody] CrearUsuarioDTO usuario)
+        //{
+        //    IdentityResult resultado = await usuarioServicio.CrearUsuario(usuario);
+
+        //    if (resultado.Succeeded) return Ok("¡Usuario creado con éxito!");
+        //    else
+        //    {
+        //        string errores = "";
+        //        foreach (IdentityError error in resultado.Errors)
+        //        {
+        //            errores += error.Description + ", ";
+        //        }
+        //        return BadRequest("¡No se pudo crear el usuario!");
+        //    }
+           }
+        */
+
+        [HttpGet("{id:int}")]
+        public async Task<ActionResult> ObtenerUsuariosDeEmpresa(int id)
         {
-            ValueTuple<bool, List<VerAdministradorDTO>> res = await usuarioServicio.ObtenerTodosLosAdministradores();
+            ValueTuple<bool, List<VerUsuarioDTO>> res = await usuarioServicio.ObtenerUsuariosPorEmpresaId(id);
 
             if (res.Item1) return StatusCode(200, res.Item2);
-            else return StatusCode(500, "Error al cargar los datos desde el servidor.");
+            return StatusCode(200, "Todavía no hay usuarios añadidos a la empresa.");
         }
 
-        [HttpPost("crear-administrador")]
-        public async Task<ActionResult<string>> CrearUsuario([FromBody] CrearUsuarioDTO usuario)
+        [HttpPost("{id:int}")]
+        public async Task<ActionResult> CrearUsuarioEnEmpresa(int id)
         {
-            IdentityResult resultado = await usuarioServicio.CrearUsuario(usuario);
-
-            if (resultado.Succeeded) return Ok("¡Usuario creado con éxito!");
-            else
-            {
-                string errores = "";
-                foreach (IdentityError error in resultado.Errors)
-                {
-                    errores += error.Description + ", ";
-                }
-                return BadRequest("¡No se pudo crear el usuario!");
-            }
 
         }
     }
