@@ -18,7 +18,7 @@ namespace Backend.BD.Modelos
         public Obra Obra { get; set; }
 
         [Required]
-        public Guid UsuarioId { get; set; }
+        public string UsuarioId { get; set; }
         public Usuario Usuario { get; set; }
     } 
 }

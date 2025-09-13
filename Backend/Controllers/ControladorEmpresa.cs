@@ -3,10 +3,11 @@ using Backend.DTO.DTOs_Empresas;
 using Backend.Repositorios.Implementaciones;
 using Microsoft.AspNetCore.Mvc;
 
+// EN DEUSO
 namespace Backend.Controllers
 {
-    [Route("api/empresa")]
-    [ApiController]
+    //[Route("api/empresa")]
+    //[ApiController]
     public class ControladorEmpresa : ControllerBase
     {
         private readonly IEmpresaServicio empresaServicio;

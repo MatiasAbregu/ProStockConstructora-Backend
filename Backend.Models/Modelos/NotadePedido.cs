@@ -23,9 +23,10 @@ namespace Backend.BD.Modelos
         public required DateTime FechaEmision { get; set; }
         public EstadoNotaPedido Estado { get; set; } = EstadoNotaPedido.Pendiente;
 
-        public required Guid SolicitadoPor {  get; set; }
+        public required string SolicitadoPor {  get; set; }
         public Usuario Usuario { get; set; }
-      
-        public List<DetalleNotaDePedido>? ListaDePedido { get; }
+
+        // HACER EN DTO
+        //public List<DetalleNotaDePedido>? ListaDePedido { get; }
     }
 }
