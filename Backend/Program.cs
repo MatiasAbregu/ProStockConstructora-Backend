@@ -73,6 +73,8 @@ builder.Services.AddScoped<ITokenServicio, TokenServicio>();
 builder.Services.AddScoped<IAuthServicio, AuthServicio>();
 builder.Services.AddScoped<IEmpresaServicio, EmpresaServicio>();
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
+builder.Services.AddScoped<IObraServicio, ObraServicio>();
+
 
 var app = builder.Build();
 
