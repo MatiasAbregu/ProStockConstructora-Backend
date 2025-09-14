@@ -62,12 +62,11 @@
 <<<<<<< HEAD
           "SelectedChildIndex": 6,
 =======
+<<<<<<< HEAD
           "SelectedChildIndex": 9,
->>>>>>> 6b1b3393413c21ed4d423f3e658fa16e5fcaadc9
           "Children": [
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 1,
               "Title": "VerDepositoDTO.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
@@ -78,6 +77,11 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T18:20:32.582Z",
 =======
+          "SelectedChildIndex": 5,
+>>>>>>> 6b1b3393413c21ed4d423f3e658fa16e5fcaadc9
+          "Children": [
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ActualizarUsuarioDTO.cs",
               "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\DTOs-Usuarios\\ActualizarUsuarioDTO.cs",
@@ -135,24 +139,10 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T17:31:43.565Z",
-=======
-              "DocumentIndex": 0,
-<<<<<<< HEAD
-=======
-              "Title": "ControladorUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorUsuario.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorUsuario.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorUsuario.cs",
-              "RelativeToolTip": "Backend\\Controllers\\ControladorUsuario.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAgwD0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:55:41.545Z",
->>>>>>> 1443b85fdacb0c11524e6b8fd68b80454b328569
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
               "DocumentIndex": 4,
               "Title": "ObraUsuario.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\ObraUsuario.cs",
@@ -166,18 +156,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-=======
-              "DocumentIndex": 1,
->>>>>>> 1443b85fdacb0c11524e6b8fd68b80454b328569
->>>>>>> 6b1b3393413c21ed4d423f3e658fa16e5fcaadc9
               "Title": "UsuarioServicio.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
               "RelativeDocumentMoniker": "Repositorios\\Servicios\\UsuarioServicio.cs",
               "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
               "RelativeToolTip": "Repositorios\\Servicios\\UsuarioServicio.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAuwHgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAwwFQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
               "WhenOpened": "2025-09-13T17:04:12.05Z"
             },
             {
@@ -205,6 +190,14 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T17:00:19.82Z",
 =======
+              "DocumentIndex": 0,
+              "Title": "UsuarioServicio.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
+              "RelativeDocumentMoniker": "Repositorios\\Servicios\\UsuarioServicio.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
+              "RelativeToolTip": "Repositorios\\Servicios\\UsuarioServicio.cs",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAuwHgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T17:04:12.05Z",
 >>>>>>> 1443b85fdacb0c11524e6b8fd68b80454b328569
               "EditorCaption": ""

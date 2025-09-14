@@ -64,7 +64,7 @@ namespace Backend.Controllers
 
             ValueTuple<bool, string, Usuario> res = await usuarioServicio.ActualizarUsuario(id, usuario);
 
-
+            throw new NotImplementedException();
         }
 
         [HttpDelete]
