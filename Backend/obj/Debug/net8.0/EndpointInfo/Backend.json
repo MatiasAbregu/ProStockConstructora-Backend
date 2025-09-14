@@ -36,7 +36,11 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/ControladorObra/ObtenerObras/{EmpresaId}": {
+=======
+    "/api/usuario/{id}": {
+>>>>>>> 159e3d8ca252f65a0bf02ab738048271196e4eef
       "get": {
         "tags": [
           "ControladorObra"
@@ -52,6 +56,59 @@
             }
           }
         ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+<<<<<<< HEAD
+=======
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ControladorUsuario"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            }
+>>>>>>> 159e3d8ca252f65a0bf02ab738048271196e4eef
+          }
+        },
         "responses": {
           "200": {
             "description": "OK"
@@ -59,6 +116,7 @@
         }
       }
     },
+<<<<<<< HEAD
     "/api/ControladorObra/ObtenerObraPorId/{id}": {
       "get": {
         "tags": [
@@ -144,6 +202,8 @@
         }
       }
     },
+=======
+>>>>>>> 159e3d8ca252f65a0bf02ab738048271196e4eef
     "/api/usuario": {
       "post": {
         "tags": [

@@ -57,7 +57,7 @@ namespace Backend.Controllers
             }
         }
 
-        [HttpPut("{id:string}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> ActualizarUsuario(string id, ActualizarUsuarioDTO usuario)
         {
             if (id != usuario.Id) return StatusCode(409, "Hubo un error al querer actualizar el usuario.");
