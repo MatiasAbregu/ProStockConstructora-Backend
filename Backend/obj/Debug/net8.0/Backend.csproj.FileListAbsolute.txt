@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\matia\Documents\ProStockConstructora\Backend\Backend\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\matia\Documents\ProStockConstructora\Backend\Backend\bin\Debug\net8.0\appsettings.json
 C:\Users\matia\Documents\ProStockConstructora\Backend\Backend\bin\Debug\net8.0\Backend.staticwebassets.endpoints.json
@@ -144,3 +145,5 @@ D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\Backe
 D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\Backend\obj\Debug\net8.0\Backend.dll
 D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\Backend\obj\Debug\net8.0\refint\Backend.dll
 D:\Proyecto C# Backend Pro stock constructora\ProStockConstructora-Backend\Backend\obj\Debug\net8.0\Backend.pdb
+=======
+>>>>>>> 457d2b83644e8f672e15d298cc252972ae0631eb
