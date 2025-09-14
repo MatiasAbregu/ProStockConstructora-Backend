@@ -134,7 +134,7 @@ namespace Backend.Repositorios.Servicios
             if(!string.IsNullOrEmpty(usuario.Email))
                 usuarioBBDD.Email = usuario.Email;
 
-            
+            throw new NotImplementedException();
         }
 
         public Task<string> DesactivarUsuario()

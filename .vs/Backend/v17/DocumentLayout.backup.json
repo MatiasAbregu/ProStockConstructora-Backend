@@ -1,12 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\",
+  "WorkspaceRootPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\",
   "Documents": [
-    {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\repositorios\\servicios\\usuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\usuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
     {
       "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend\\controllers\\controladorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -14,42 +9,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\dto\\dtos-usuarios\\actualizarusuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-usuarios\\actualizarusuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\backend\\controllers\\controladorempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorempresa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\dto\\dtos-depositos\\verdepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-depositos\\verdepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\backend.models\\modelos\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\backend.models\\modelos\\obrausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\obrausuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend\\controllers\\controladorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 1443b85fdacb0c11524e6b8fd68b80454b328569
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\repositorios\\servicios\\usuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\repositorios\\servicios\\usuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\usuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-<<<<<<< HEAD
-=======
->>>>>>> 6b1b3393413c21ed4d423f3e658fa16e5fcaadc9
     },
     {
       "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\repositorios\\implementaciones\\iusuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\implementaciones\\iusuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 1443b85fdacb0c11524e6b8fd68b80454b328569
     }
   ],
   "DocumentGroupContainers": [
@@ -59,58 +26,8 @@
       "DocumentGroups": [
         {
           "DockedHeight": 275,
-<<<<<<< HEAD
-          "SelectedChildIndex": 6,
-=======
-<<<<<<< HEAD
-          "SelectedChildIndex": 9,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "VerDepositoDTO.cs",
-              "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
-              "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
-              "RelativeToolTip": "DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T18:20:32.582Z",
-=======
           "SelectedChildIndex": 5,
->>>>>>> 6b1b3393413c21ed4d423f3e658fa16e5fcaadc9
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ActualizarUsuarioDTO.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\DTOs-Usuarios\\ActualizarUsuarioDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\DTOs-Usuarios\\ActualizarUsuarioDTO.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\DTOs-Usuarios\\ActualizarUsuarioDTO.cs",
-              "RelativeToolTip": "DTO\\DTOs-Usuarios\\ActualizarUsuarioDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-<<<<<<< HEAD
-              "WhenOpened": "2025-09-13T20:05:45.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ControladorUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorUsuario.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorUsuario.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorUsuario.cs",
-              "RelativeToolTip": "Backend\\Controllers\\ControladorUsuario.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAgwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T20:58:50.735Z",
-=======
-              "WhenOpened": "2025-09-13T18:13:04.289Z",
->>>>>>> 1443b85fdacb0c11524e6b8fd68b80454b328569
->>>>>>> 6b1b3393413c21ed4d423f3e658fa16e5fcaadc9
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -129,77 +46,41 @@
             },
             {
               "$type": "Document",
-<<<<<<< HEAD
+              "DocumentIndex": 1,
+              "Title": "ActualizarUsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\DTOs-Usuarios\\ActualizarUsuarioDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Usuarios\\ActualizarUsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\DTOs-Usuarios\\ActualizarUsuarioDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Usuarios\\ActualizarUsuarioDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwA8AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T20:05:45.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ControladorUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorUsuario.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorUsuario.cs",
+              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorUsuario.cs*",
+              "RelativeToolTip": "Backend\\Controllers\\ControladorUsuario.cs*",
+              "ViewState": "AgIAACUAAAAAAAAAAAAqwDsAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-13T20:58:50.735Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Stock.cs",
-              "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\Stock.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\Stock.cs",
-              "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\Stock.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\Stock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:31:43.565Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ObraUsuario.cs",
-              "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\ObraUsuario.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\ObraUsuario.cs",
-              "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\ObraUsuario.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\ObraUsuario.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:23:55.514Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UsuarioServicio.cs",
-              "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Servicios\\UsuarioServicio.cs",
-              "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
-              "RelativeToolTip": "Repositorios\\Servicios\\UsuarioServicio.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAwwFQAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:04:12.05Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\AppDbContext.cs",
-              "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\AppDbContext.cs",
-              "RelativeToolTip": "Backend.Models\\AppDbContext.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAowBgAAAA/AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:00:50.829Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ControladorEmpresa.cs",
-              "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorEmpresa.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorEmpresa.cs",
-              "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorEmpresa.cs",
-              "RelativeToolTip": "Backend\\Controllers\\ControladorEmpresa.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:00:19.82Z",
-=======
-              "DocumentIndex": 0,
               "Title": "UsuarioServicio.cs",
               "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
               "RelativeDocumentMoniker": "Repositorios\\Servicios\\UsuarioServicio.cs",
               "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
               "RelativeToolTip": "Repositorios\\Servicios\\UsuarioServicio.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAuwHgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAowIgAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T17:04:12.05Z",
->>>>>>> 1443b85fdacb0c11524e6b8fd68b80454b328569
               "EditorCaption": ""
             },
             {
@@ -212,8 +93,7 @@
               "RelativeToolTip": "Repositorios\\Implementaciones\\IUsuarioServicio.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T19:50:22.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T19:50:22.727Z"
             }
           ]
         }

@@ -36,45 +36,69 @@
         }
       }
     },
-    "/api/usuario/obtener-administradores": {
+    "/api/usuario/{id}": {
       "get": {
         "tags": [
           "ControladorUsuario"
         ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VerAdministradorDTO"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VerAdministradorDTO"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/VerAdministradorDTO"
-                  }
-                }
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "ControladorUsuario"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/ActualizarUsuarioDTO"
               }
             }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
     },
-    "/api/usuario/crear-administrador": {
+    "/api/usuario": {
       "post": {
         "tags": [
           "ControladorUsuario"
@@ -100,24 +124,26 @@
         },
         "responses": {
           "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "string"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "string"
-                }
-              }
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "ControladorUsuario"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "string"
             }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
           }
         }
       }
@@ -125,6 +151,38 @@
   },
   "components": {
     "schemas": {
+      "ActualizarUsuarioDTO": {
+        "required": [
+          "id"
+        ],
+        "type": "object",
+        "properties": {
+          "id": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "nombreUsuario": {
+            "type": "string",
+            "nullable": true
+          },
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "celular": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "CrearUsuarioDTO": {
         "type": "object",
         "properties": {
@@ -136,8 +194,11 @@
             "type": "string",
             "nullable": true
           },
-          "rol": {
-            "type": "string",
+          "roles": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           },
           "empresaId": {
@@ -172,40 +233,6 @@
           },
           "mantenerSesion": {
             "type": "boolean"
-          }
-        },
-        "additionalProperties": false
-      },
-      "VerAdministradorDTO": {
-        "type": "object",
-        "properties": {
-          "id": {
-            "type": "string",
-            "nullable": true
-          },
-          "nombreUsuario": {
-            "type": "string",
-            "nullable": true
-          },
-          "email": {
-            "type": "string",
-            "nullable": true
-          },
-          "telefono": {
-            "type": "string",
-            "nullable": true
-          },
-          "estado": {
-            "type": "string",
-            "nullable": true
-          },
-          "empresaId": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "nombreEmpresa": {
-            "type": "string",
-            "nullable": true
           }
         },
         "additionalProperties": false
