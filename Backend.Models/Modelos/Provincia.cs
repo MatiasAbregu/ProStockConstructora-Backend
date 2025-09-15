@@ -15,6 +15,6 @@ namespace Backend.BD.Modelos
         
         [Required(ErrorMessage = "Nombre de provincia obligatorio.")]
         [Column(TypeName = "varchar(80)")]
-        public string Nombre { get; set; }
+        public required string Nombre { get; set; }
     }
 }

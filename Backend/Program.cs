@@ -70,7 +70,7 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddScoped<ITokenServicio, TokenServicio>();
-builder.Services.AddScoped<ISesionServicio, SesionServicio>();
+builder.Services.AddScoped<IAuthServicio, AuthServicio>();
 builder.Services.AddScoped<IEmpresaServicio, EmpresaServicio>();
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
 

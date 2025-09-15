@@ -19,9 +19,16 @@ namespace Backend.BD.Models
         public int EmpresaId { get; set; }
         public Empresa Empresa { get; set; }
 
-        public RefreshToken RefreshToken { get; set; }
+        public Tokens RefreshToken { get; set; }
 
-        public Usuario() { }
+        public Usuario()
+        {
+            EmailConfirmed = false;
+            PhoneNumberConfirmed = false;
+            TwoFactorEnabled = false;
+            LockoutEnabled = false;
+            AccessFailedCount = 0;
+        }
 
         public Usuario(string nombreUsuario, int empresaId, string email, string telefono, bool estado = true)
         {

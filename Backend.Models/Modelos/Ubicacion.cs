@@ -13,12 +13,12 @@ namespace Backend.BD.Modelos
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El codigo de ubicacion es obligatorio.")]
-        public string CodigoUbicacion { get; set; } = null!;
+        public required string CodigoUbicacion { get; set; }
 
         [Required(ErrorMessage = "El domicilio es obligatorio.")]
-        public string Domicilio { get; set; } = null!;
+        public required string Domicilio { get; set; }
 
-        public int ProvinciaId { get; set; }
-        public Provincia Provincia { get; set; } = null!;
+        public required int ProvinciaId { get; set; }
+        public Provincia Provincia { get; set; }
     }
 }

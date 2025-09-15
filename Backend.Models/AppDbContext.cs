@@ -18,13 +18,17 @@ namespace Backend.BD
         public DbSet<Obra> Obras { get; set; }
         public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
-        public DbSet<RefreshToken> RefreshTokens { get; set; }
+        public DbSet<Tokens> RefreshTokens { get; set; }
         public DbSet<Ubicacion> Ubicaciones { get; set; } 
         public DbSet<Provincia> Provincias { get; set; }
         public DbSet<UnidadMedida> UnidadMedidas { get; set; }
         public DbSet<TipoMaterial> TipoMateriales { get; set; }
         public DbSet<Stock> Stocks { get; set; }
         public DbSet<MaterialesyMaquinas> MaterialesyMaquinas { get; set; }
+        public DbSet<DetalleNotaDePedido> DetalleNotaDePedidos { get; set; }
+        public DbSet<NotaDePedido> NotaDePedidos { get; set; }
+        public DbSet<DetalleRemito> DetalleRemitos { get; set; }
+        public DbSet<Remito> Remitos { get; set; }
 
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }

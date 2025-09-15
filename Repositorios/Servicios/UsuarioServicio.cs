@@ -52,7 +52,8 @@ namespace Backend.Repositorios.Servicios
                 }
 
                 return (true, usuarios);
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Debug.WriteLine($"Error: {ex.Message}");
                 return (false, null);
@@ -65,9 +66,31 @@ namespace Backend.Repositorios.Servicios
                 .Where(u => u.Empresa.NombreEmpresa == nombreEmpresa).ToListAsync();
         }
 
-        public Task<List<Usuario>> ObtenerUsuariosPorEmpresa()
+        public async Task<(bool, List<VerUsuarioDTO>)> ObtenerUsuariosPorEmpresaId(int id)
         {
-            throw new NotImplementedException();
+            List<Usuario> usuariosBBDD = await baseDeDatos.Usuarios.Where(u => u.EmpresaId == id)
+                                            .ToListAsync();
+
+            if (usuariosBBDD.Count == 0) return (false, null);
+
+            List<VerUsuarioDTO> usuarios = new List<VerUsuarioDTO>();
+
+            foreach (var usuario in usuariosBBDD)
+            {
+                var roles = await gestorUsuarios.GetRolesAsync(usuario);
+
+                usuarios.Add(new VerUsuarioDTO()
+                {
+                    Id = usuario.Id,
+                    NombreUsuario = usuario.UserName,
+                    Estado = usuario.Estado ? "Activo" : "Desactivado",
+                    Email = usuario.Email,
+                    Telefono = usuario.PhoneNumber,
+                    Roles = roles.ToList()
+                });
+            }
+
+            return (true, usuarios);
         }
 
         public Task<Usuario> ObtenerUsuarioPorNombreUsuario()
