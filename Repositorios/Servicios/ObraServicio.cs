@@ -15,6 +15,8 @@ namespace Backend.Repositorios.Servicios
     public class ObraServicio : IObraServicio
     {
         private readonly AppDbContext baseDeDatos;
+        private readonly IDepositoServicio depositoServicio;
+
 
         public ObraServicio(AppDbContext baseDeDatos)
         {
@@ -32,7 +34,7 @@ namespace Backend.Repositorios.Servicios
                 {
                     obrasVer.Add(new VerObraDTO
                     {
-                        Id = o.Id,
+                        EmpresaId = o.EmpresaId,
                         Nombre = o.NombreObra,
                         Estado = o.Estado.ToString()
                     });
@@ -97,11 +99,22 @@ namespace Backend.Repositorios.Servicios
             }
         }
 
-        public async Task<(bool, string)> CrearObra(Obra o)
+        public async Task<(bool, string)> CrearObra(ObraAsociarDTO obraDTO)
         {
             try
             {
-                baseDeDatos.Obras.Add(o);
+                bool existeObra = await baseDeDatos.Obras.AnyAsync(ob => obraDTO.NombreObra.ToLower() == obraDTO.NombreObra.ToLower() && ob.EmpresaId == obraDTO.EmpresaId);
+                if (existeObra) 
+                    return (false, "Ya existe una obra con ese nombre en la empresa.");
+
+                var nuevaObra = new Obra
+                {
+                    NombreObra = obraDTO.NombreObra,
+                    EmpresaId = obraDTO.EmpresaId,
+                    Estado = EnumEstadoObra.EnProceso
+                };
+
+                await baseDeDatos.Obras.AddAsync(nuevaObra);
                 await baseDeDatos.SaveChangesAsync();
                 return (true, "Obra creada con éxito.");
             }

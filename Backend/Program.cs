@@ -76,6 +76,7 @@ builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
 builder.Services.AddScoped<IObraServicio, ObraServicio>();
 
 
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

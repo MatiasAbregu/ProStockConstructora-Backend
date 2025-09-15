@@ -7,11 +7,11 @@ using Backend.BD.Enums;
 
 namespace Backend.DTO.DTOs_Obras
 {
-    public class ObraAsociarDTO
+    public class ObraActualizarDTO 
     {
         public int Id { get; set; }
-        public int EmpresaId { get; set; }
-        public required string NombreObra { get; set; }
-        public EnumEstadoObra EstadoObra { get; set; } = EnumEstadoObra.EnProceso;
+        public string NombreObra { get; set; }
+        public string EstadoObra { get; set; }  
     }
 }
+
