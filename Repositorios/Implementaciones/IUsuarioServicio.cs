@@ -22,7 +22,7 @@ namespace Backend.Repositorios.Implementaciones
         public Task<IdentityResult> CrearUsuario(CrearUsuarioDTO usuario);
 
         // PUTs
-        public Task<string> ActualizarUsuario(int id, Usuario usuario);
+        public Task<(bool, string, Usuario)> ActualizarUsuario(string id, ActualizarUsuarioDTO usuario);
 
         // DELETEs
         public Task<string> DesactivarUsuario();

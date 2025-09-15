@@ -108,7 +108,7 @@ namespace Backend.Repositorios.Servicios
             Usuario UsuarioBD = new(usuario.NombreUsuario, usuario.EmpresaId, usuario.Email, usuario.Celular);
             IdentityResult resultado = await gestorUsuarios.CreateAsync(UsuarioBD, usuario.Contrasena);
 
-            if (resultado.Succeeded) resultado = await gestorUsuarios.AddToRoleAsync(UsuarioBD, usuario.Rol);
+            if (resultado.Succeeded) resultado = await gestorUsuarios.AddToRolesAsync(UsuarioBD, usuario.Roles);
             else
             {
                 foreach (IdentityError error in resultado.Errors)
@@ -119,8 +119,21 @@ namespace Backend.Repositorios.Servicios
             return resultado;
         }
 
-        public Task<string> ActualizarUsuario(int id, Usuario usuario)
+        public async Task<(bool, string, Usuario)> ActualizarUsuario(string id, ActualizarUsuarioDTO usuario)
         {
+            Usuario? usuarioBBDD = await gestorUsuarios.FindByIdAsync(id);
+
+            if (usuarioBBDD == null) return (false, "El usuario que se desea actualizar no existe", null);
+
+            if(!string.IsNullOrEmpty(usuario.NombreUsuario)) 
+                usuarioBBDD.UserName = usuario.NombreUsuario;
+
+            if(!string.IsNullOrEmpty(usuario.Celular)) 
+                usuarioBBDD.PhoneNumber = usuario.Celular;
+
+            if(!string.IsNullOrEmpty(usuario.Email))
+                usuarioBBDD.Email = usuario.Email;
+
             throw new NotImplementedException();
         }
 
