@@ -50,8 +50,24 @@
       "DocumentGroups": [
         {
           "DockedHeight": 275,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -75,8 +91,7 @@
               "RelativeToolTip": "DTO\\DTOs-Obras\\ObraAsociarDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:57:03.603Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T21:57:03.603Z"
             },
             {
               "$type": "Document",
@@ -88,8 +103,7 @@
               "RelativeToolTip": "Backend.Models\\Modelos\\Obra.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:30:11.636Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T21:30:11.636Z"
             },
             {
               "$type": "Document",
@@ -101,8 +115,7 @@
               "RelativeToolTip": "Repositorios\\Servicios\\ObraServicio.cs",
               "ViewState": "AgIAAFkAAAAAAAAAAAAIwHEAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T18:54:26.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T18:54:26.996Z"
             },
             {
               "$type": "Document",
@@ -114,8 +127,7 @@
               "RelativeToolTip": "DTO\\DTOs-Obras\\VerObraDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:57:23.248Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T21:57:23.248Z"
             },
             {
               "$type": "Document",
@@ -127,8 +139,7 @@
               "RelativeToolTip": "DTO\\DTOs-Obras\\ObraActualizarDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:15:35.57Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T21:15:35.57Z"
             },
             {
               "$type": "Document",
@@ -140,24 +151,7 @@
               "RelativeToolTip": "DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:22:30.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+              "WhenOpened": "2025-09-15T21:22:30.157Z"
             },
             {
               "$type": "Document",
@@ -169,8 +163,7 @@
               "RelativeToolTip": "Repositorios\\Implementaciones\\IObraServicio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T19:17:01.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-15T19:17:01.521Z"
             },
             {
               "$type": "Document",
@@ -182,8 +175,7 @@
               "RelativeToolTip": "Backend.Models\\AppDbContext.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAcwBgAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:00:50.829Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-13T17:00:50.829Z"
             },
             {
               "$type": "Document",
@@ -195,8 +187,7 @@
               "RelativeToolTip": "Backend\\Program.cs",
               "ViewState": "AgIAADYAAAAAAAAAAAAAAEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T05:15:07.324Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-09-14T05:15:07.324Z"
             }
           ]
         }
