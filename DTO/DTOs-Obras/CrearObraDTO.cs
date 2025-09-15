@@ -4,16 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Backend.DTOs
+namespace Backend.DTO.DTOs_Obras
 {
-    
-    public class VerObraDTO
+    public class CrearObraDTO
     {
-        public int Id { get; set; }
         public string NombreObra { get; set; }
-        public string Estado { get; set; }
         public int EmpresaId { get; set; }
+
     }
-
-
 }
