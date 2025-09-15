@@ -25,6 +25,6 @@ namespace Backend.Repositorios.Implementaciones
         public Task<(bool, string, Usuario)> ActualizarUsuario(string id, ActualizarUsuarioDTO usuario);
 
         // DELETEs
-        public Task<string> DesactivarUsuario();
+        public Task<(bool, string)> DesactivarUsuario(string id);
     }
 }

@@ -31,10 +31,10 @@ namespace Backend.Controllers
         //}
         */    
 
-        [HttpGet("{id:int}")]
-        public async Task<ActionResult> ObtenerUsuariosDeEmpresa(int id)
+        [HttpGet("{EmpresaId:int}")]
+        public async Task<ActionResult> ObtenerUsuariosDeEmpresa(int EmpresaId)
         {
-            ValueTuple<bool, List<VerUsuarioDTO>> res = await usuarioServicio.ObtenerUsuariosPorEmpresaId(id);
+            ValueTuple<bool, List<VerUsuarioDTO>> res = await usuarioServicio.ObtenerUsuariosPorEmpresaId(EmpresaId);
 
             if (res.Item1) return StatusCode(200, res.Item2);
             return StatusCode(204, "Todavía no hay usuarios añadidos a la empresa.");
@@ -64,13 +64,19 @@ namespace Backend.Controllers
 
             ValueTuple<bool, string, Usuario> res = await usuarioServicio.ActualizarUsuario(id, usuario);
 
-            throw new NotImplementedException();
+            if (res.Item2.Contains("Error")) return StatusCode(500, res.Item2);
+            else if(!res.Item1) return StatusCode(409, res.Item2);
+            return StatusCode(200, res.Item2);
         }
 
         [HttpDelete]
         public async Task<ActionResult> DesactivarUsuario(string id)
         {
-            return Ok("Vamooos");
+            ValueTuple<bool, string> res = await usuarioServicio.DesactivarUsuario(id);
+
+            if(res.Item2.Contains("Error")) return StatusCode(500, res.Item2);
+            else if(!res.Item1) return StatusCode(404, res.Item2);
+            return StatusCode(200, res.Item2);
         }
     }
 }
