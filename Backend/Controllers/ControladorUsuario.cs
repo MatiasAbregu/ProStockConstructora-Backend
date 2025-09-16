@@ -20,8 +20,8 @@ namespace Backend.Controllers
             this.usuarioServicio = usuarioServicio;
         }
 
-         EN DEUSO
-        *[HttpGet("obtener-administradores")]
+        // EN DEUSO
+        /*[HttpGet("obtener-administradores")]
         public async Task<ActionResult<List<VerAdministradorDTO>>> ObtenerTodosLosAdministradores()
         {
             ValueTuple<bool, List<VerAdministradorDTO>> res = await usuarioServicio.ObtenerTodosLosAdministradores();

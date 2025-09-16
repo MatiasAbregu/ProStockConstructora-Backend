@@ -1,18 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "b+o4lRQlddc=",
+  "dgSpecHash": "AqET+8UXDps=",
   "success": true,
-  "projectFilePath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+  "projectFilePath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
   "expectedPackageFiles": [],
-  "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "message": "Problema al leer el archivo de caché C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
-      "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-      "targetGraphs": []
-    }
-  ]
+  "logs": []
 }
