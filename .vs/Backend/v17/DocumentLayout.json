@@ -1,54 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\admin\\desktop\\backend\\prostockconstructora-backend\\repositorios\\implementaciones\\iobraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\implementaciones\\iobraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|c:\\users\\admin\\desktop\\backend\\prostockconstructora-backend\\backend\\controllers\\controladorobra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorobra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": [
-        {
-          "DockedHeight": 200,
-          "SelectedChildIndex": 1,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ControladorObra.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorObra.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorObra.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorObra.cs",
-              "RelativeToolTip": "Backend\\Controllers\\ControladorObra.cs",
-              "ViewState": "AgIAALgAAAAAAAAAAAAAAH0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T19:03:23.948Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "IObraServicio.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Repositorios\\Implementaciones\\IObraServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Implementaciones\\IObraServicio.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Repositorios\\Implementaciones\\IObraServicio.cs",
-              "RelativeToolTip": "Repositorios\\Implementaciones\\IObraServicio.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAA8AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T22:10:04.312Z",
-              "EditorCaption": ""
-            }
-          ]
-        }
-      ]
+      "DocumentGroups": []
     }
   ]
 }
