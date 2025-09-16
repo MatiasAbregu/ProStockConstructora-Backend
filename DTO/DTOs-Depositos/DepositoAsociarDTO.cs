@@ -10,5 +10,7 @@ namespace Backend.DTO.DTOs_Depositos
     {
         public int Id { get; set; }
         public string NombreDeposito { get; set; }
+        public int ObraId { get; set; }
+
     }
 }
