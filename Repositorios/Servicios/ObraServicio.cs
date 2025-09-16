@@ -1,35 +1,22 @@
-﻿using Backend.BD;
-<<<<<<< HEAD
-using Backend.BD.Modelos;
-using Backend.BD.Models;
-using Backend.DTO.DTOs_Obras;
-using Backend.Repositorios.Implementaciones;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-=======
+﻿
+using Backend.BD;
 using Backend.BD.Enums;
 using Backend.BD.Modelos;
 using Backend.DTO.DTOs_Obras;
+using Backend.DTOs;
 using Backend.Repositorios.Implementaciones;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
->>>>>>> 61a143f6eb6acf07acc6b77b23501739ec2f77d5
 using System.Threading.Tasks;
 
 namespace Backend.Repositorios.Servicios
 {
     public class ObraServicio : IObraServicio
     {
-<<<<<<< HEAD
+
         private readonly AppDbContext _context;
 
         public ObraServicio(AppDbContext context)
@@ -75,15 +62,12 @@ namespace Backend.Repositorios.Servicios
             }
         }
 
-=======
+
         private readonly AppDbContext baseDeDatos;
         private readonly IDepositoServicio depositoServicio;
 
 
-        public ObraServicio(AppDbContext baseDeDatos)
-        {
-            this.baseDeDatos = baseDeDatos;
-        }
+        public ObraServicio(AppDbContext baseDeDatos) 
 
         public async Task<(bool, List<VerObraDTO>)> ObtenerObras(int EmpresaId)
         {

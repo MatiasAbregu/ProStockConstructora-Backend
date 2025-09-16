@@ -14,7 +14,6 @@ namespace Backend.Controllers
 
     public class ControladorDeposito : ControllerBase
     {
-<<<<<<< HEAD
         private readonly IDepositoServicio depositoServicio;
 
         public ControladorDeposito(IDepositoServicio depositoServicio)
@@ -25,6 +24,8 @@ namespace Backend.Controllers
         public async Task<ActionResult<List<VerDepositoDTO>>> ObtenerDepositos()
         {
             var depositos= await depositoServicio.ObtenerDepositos();
+            if (depositos.Item1) return StatusCode(200, depositos.Item2);
+            else return StatusCode(500, "Error al cargar los datos desde el servidor.");
 
         }
         [HttpGet("obtener-depositos/{id}")]
@@ -61,8 +62,6 @@ namespace Backend.Controllers
             else if (res.Item2.Contains("No existe")) return StatusCode(404, res.Item2);
             else return StatusCode(500, res.Item2);
         }
-=======
-        
->>>>>>> 12444dd00f52567356b6927572ac50437fb6576f
+
     }
 }
