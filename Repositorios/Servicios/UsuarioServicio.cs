@@ -52,7 +52,8 @@ namespace Backend.Repositorios.Servicios
                 }
 
                 return (true, usuarios);
-            } catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 Debug.WriteLine($"Error: {ex.Message}");
                 return (false, null);
@@ -65,9 +66,31 @@ namespace Backend.Repositorios.Servicios
                 .Where(u => u.Empresa.NombreEmpresa == nombreEmpresa).ToListAsync();
         }
 
-        public Task<List<Usuario>> ObtenerUsuariosPorEmpresa()
+        public async Task<(bool, List<VerUsuarioDTO>)> ObtenerUsuariosPorEmpresaId(int id)
         {
-            throw new NotImplementedException();
+            List<Usuario> usuariosBBDD = await baseDeDatos.Usuarios.Where(u => u.EmpresaId == id)
+                                            .ToListAsync();
+
+            if (usuariosBBDD.Count == 0) return (false, null);
+
+            List<VerUsuarioDTO> usuarios = new List<VerUsuarioDTO>();
+
+            foreach (var usuario in usuariosBBDD)
+            {
+                var roles = await gestorUsuarios.GetRolesAsync(usuario);
+
+                usuarios.Add(new VerUsuarioDTO()
+                {
+                    Id = usuario.Id,
+                    NombreUsuario = usuario.UserName,
+                    Estado = usuario.Estado ? "Activo" : "Desactivado",
+                    Email = usuario.Email,
+                    Telefono = usuario.PhoneNumber,
+                    Roles = roles.ToList()
+                });
+            }
+
+            return (true, usuarios);
         }
 
         public Task<Usuario> ObtenerUsuarioPorNombreUsuario()
@@ -82,28 +105,96 @@ namespace Backend.Repositorios.Servicios
 
         public async Task<IdentityResult> CrearUsuario(CrearUsuarioDTO usuario)
         {
+            using var transaction = await baseDeDatos.Database.BeginTransactionAsync();
+
             Usuario UsuarioBD = new(usuario.NombreUsuario, usuario.EmpresaId, usuario.Email, usuario.Celular);
             IdentityResult resultado = await gestorUsuarios.CreateAsync(UsuarioBD, usuario.Contrasena);
 
-            if (resultado.Succeeded) resultado = await gestorUsuarios.AddToRoleAsync(UsuarioBD, usuario.Rol);
+            if (resultado.Succeeded)
+            {
+                resultado = await gestorUsuarios.AddToRolesAsync(UsuarioBD, usuario.Roles);
+                if (!resultado.Succeeded)
+                {
+                    await transaction.RollbackAsync();
+                }
+            }
             else
             {
                 foreach (IdentityError error in resultado.Errors)
                 {
                     Debug.WriteLine(error.Description);
                 }
+                await transaction.RollbackAsync();
             }
+            await transaction.CommitAsync();
             return resultado;
         }
 
-        public Task<string> ActualizarUsuario(int id, Usuario usuario)
+        public async Task<(bool, string, Usuario)> ActualizarUsuario(string id, ActualizarUsuarioDTO usuario)
         {
-            throw new NotImplementedException();
+            Usuario? usuarioBBDD = await gestorUsuarios.FindByIdAsync(id);
+
+            using var transaction = await baseDeDatos.Database.BeginTransactionAsync();
+
+            if (usuarioBBDD == null) return (false, "El usuario que se desea actualizar no existe", null);
+
+            if (!string.IsNullOrEmpty(usuario.NombreUsuario))
+                usuarioBBDD.UserName = usuario.NombreUsuario;
+
+            if (!string.IsNullOrEmpty(usuario.Celular))
+                usuarioBBDD.PhoneNumber = usuario.Celular;
+
+            if (!string.IsNullOrEmpty(usuario.Email))
+                usuarioBBDD.Email = usuario.Email;
+
+            IdentityResult res;
+
+            if (usuario.Roles.Count > 0)
+            {
+                var rolesActuales = await gestorUsuarios.GetRolesAsync(usuarioBBDD);
+                var rolesAEliminar = rolesActuales.Except(usuario.Roles).ToList();
+                var rolesAAnadir = usuario.Roles.Except(rolesActuales).ToList();
+
+                if (rolesAEliminar.Count > 0)
+                {
+                    res = await gestorUsuarios.RemoveFromRolesAsync(usuarioBBDD, rolesAEliminar);
+                    if (!res.Succeeded)
+                    {
+                        await transaction.RollbackAsync();
+                        return (false, "Error al eliminar roles", null);
+                    }
+                }
+
+                if (rolesAAnadir.Count > 0)
+                {
+                    res = await gestorUsuarios.AddToRolesAsync(usuarioBBDD, rolesAAnadir);
+                    if (!res.Succeeded)
+                    {
+                        await transaction.RollbackAsync();
+                        return (false, "Error al añadir roles", null);
+                    }
+                }
+            }
+
+            res = await gestorUsuarios.UpdateAsync(usuarioBBDD);
+            if (!res.Succeeded) await transaction.RollbackAsync();
+
+            await transaction.CommitAsync();
+            return (true, "Usuario actualizado con éxito", usuarioBBDD);
         }
 
-        public Task<string> DesactivarUsuario()
+        public async Task<(bool, string)> DesactivarUsuario(string id)
         {
-            throw new NotImplementedException();
+            Usuario? usuarioBBDD = await gestorUsuarios.FindByIdAsync(id);
+
+            if (usuarioBBDD == null) return (false, "El usuario que se desea desactivar no existe");
+
+            usuarioBBDD.Estado = false;
+
+            var res = await gestorUsuarios.UpdateAsync(usuarioBBDD);
+
+            if (!res.Succeeded) return (false, "Ocurrio un error al desactivar el usuario");
+            return (true, "Usuario desactivado con éxito");
         }
     }
 }

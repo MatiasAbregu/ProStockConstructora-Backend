@@ -14,7 +14,7 @@ namespace Backend.Repositorios.Implementaciones
         // GETs
         public Task<(bool, List<VerAdministradorDTO>)> ObtenerTodosLosAdministradores();
         public Task<List<Usuario>> ObtenerTodosLosAdministradoresDeEmpresa(string nombreEmpresa);
-        public Task<List<Usuario>> ObtenerUsuariosPorEmpresa();
+        public Task<(bool, List<VerUsuarioDTO>)> ObtenerUsuariosPorEmpresaId(int id);
         public Task<List<Usuario>> ObtenerUsuariosPorCategoria(); // Obra o Rol
         public Task<Usuario> ObtenerUsuarioPorNombreUsuario();
 
@@ -22,9 +22,9 @@ namespace Backend.Repositorios.Implementaciones
         public Task<IdentityResult> CrearUsuario(CrearUsuarioDTO usuario);
 
         // PUTs
-        public Task<string> ActualizarUsuario(int id, Usuario usuario);
+        public Task<(bool, string, Usuario)> ActualizarUsuario(string id, ActualizarUsuarioDTO usuario);
 
         // DELETEs
-        public Task<string> DesactivarUsuario();
+        public Task<(bool, string)> DesactivarUsuario(string id);
     }
 }
