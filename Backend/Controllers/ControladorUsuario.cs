@@ -22,13 +22,13 @@ namespace Backend.Controllers
 
         // EN DEUSO
         /*[HttpGet("obtener-administradores")]
-        //public async Task<ActionResult<List<VerAdministradorDTO>>> ObtenerTodosLosAdministradores()
-        //{
-        //    ValueTuple<bool, List<VerAdministradorDTO>> res = await usuarioServicio.ObtenerTodosLosAdministradores();
+        public async Task<ActionResult<List<VerAdministradorDTO>>> ObtenerTodosLosAdministradores()
+        {
+            ValueTuple<bool, List<VerAdministradorDTO>> res = await usuarioServicio.ObtenerTodosLosAdministradores();
 
-        //    if (res.Item1) return StatusCode(200, res.Item2);
-        //    else return StatusCode(500, "Error al cargar los datos desde el servidor.");
-        //}
+            if (res.Item1) return StatusCode(200, res.Item2);
+            else return StatusCode(500, "Error al cargar los datos desde el servidor.");
+        }
         */    
 
         [HttpGet("{EmpresaId:int}")]

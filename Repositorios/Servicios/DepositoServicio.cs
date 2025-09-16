@@ -1,14 +1,8 @@
-﻿using Backend.BD;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
-namespace Backend.Repositorios.Servicios
+public class DepositoServicio
 {
-    public class DepositoServicio
-    {
-        private readonly AppDbContext baseDeDatos;
-    }
+	public DepositoServicio()
+	{
+	}
 }

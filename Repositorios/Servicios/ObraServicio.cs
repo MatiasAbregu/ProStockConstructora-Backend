@@ -1,21 +1,28 @@
-﻿using Backend.BD;
+using Backend.BD;
 using Backend.BD.Enums;
 using Backend.BD.Modelos;
+using Backend.BD.Models;
 using Backend.DTO.DTOs_Obras;
+using Backend.DTOs;
 using Backend.Repositorios.Implementaciones;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Backend.Repositorios.Servicios
 {
     public class ObraServicio : IObraServicio
     {
+
         private readonly AppDbContext baseDeDatos;
         private readonly IDepositoServicio depositoServicio;
+        private readonly IObraServicio obraServicio;
 
 
         public ObraServicio(AppDbContext baseDeDatos)
@@ -86,7 +93,6 @@ namespace Backend.Repositorios.Servicios
                 if (o == null) return (true, null);
                 VerObraDTO obraVer = new VerObraDTO
                 {
-                    Id = o.Id,
                     Nombre = o.NombreObra,
                     Estado = o.Estado.ToString()
                 };
@@ -104,7 +110,7 @@ namespace Backend.Repositorios.Servicios
             try
             {
                 bool existeObra = await baseDeDatos.Obras.AnyAsync(ob => obraDTO.NombreObra.ToLower() == obraDTO.NombreObra.ToLower() && ob.EmpresaId == obraDTO.EmpresaId);
-                if (existeObra) 
+                if (existeObra)
                     return (false, "Ya existe una obra con ese nombre en la empresa.");
 
                 var nuevaObra = new Obra
@@ -113,7 +119,6 @@ namespace Backend.Repositorios.Servicios
                     EmpresaId = obraDTO.EmpresaId,
                     Estado = EnumEstadoObra.EnProceso
                 };
-
                 await baseDeDatos.Obras.AddAsync(nuevaObra);
                 await baseDeDatos.SaveChangesAsync();
                 return (true, "Obra creada con éxito.");

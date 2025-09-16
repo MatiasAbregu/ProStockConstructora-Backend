@@ -1,6 +1,12 @@
-﻿using Backend.BD.Enums;
+using Backend.BD.Enums;
 using Backend.BD.Modelos;
 using Backend.DTO.DTOs_Obras;
+using Backend.DTOs;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Backend.Repositorios.Implementaciones
 {
@@ -14,3 +20,5 @@ namespace Backend.Repositorios.Implementaciones
         Task<(bool, List<VerObraConDepositoDTO>)> ObtenerObrasConDeposito(int EmpresaId);
     }
 }
+
+
