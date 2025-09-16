@@ -7,7 +7,9 @@ namespace Backend.Controllers
 {
     [Route("api/deposito")]
     [ApiController]
+
+
     public class ControladorDeposito : ControllerBase
     {
-    }
+        public ControladorDeposito (AppDbContext)    }
 }

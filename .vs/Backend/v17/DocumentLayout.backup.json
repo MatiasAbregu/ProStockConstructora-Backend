@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend.models\\modelos\\notadepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\notadepedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend.models\\modelos\\remito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\remito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedHeight": 275,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -59,32 +51,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Remito.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\Remito.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\Remito.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\Remito.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\Remito.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAA0wCYAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:53:22.685Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "NotaDePedido.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\NotaDePedido.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\NotaDePedido.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\NotaDePedido.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\NotaDePedido.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T17:47:13.311Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Stock.cs",
               "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\Stock.cs",
               "RelativeDocumentMoniker": "Backend.Models\\Modelos\\Stock.cs",
@@ -97,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "ObraUsuario.cs",
               "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Modelos\\ObraUsuario.cs",
               "RelativeDocumentMoniker": "Backend.Models\\Modelos\\ObraUsuario.cs",
@@ -110,7 +76,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "UsuarioServicio.cs",
               "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
               "RelativeDocumentMoniker": "Repositorios\\Servicios\\UsuarioServicio.cs",
@@ -123,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Backend.Models\\AppDbContext.cs",
@@ -136,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 4,
               "Title": "ControladorEmpresa.cs",
               "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorEmpresa.cs",
               "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorEmpresa.cs",
