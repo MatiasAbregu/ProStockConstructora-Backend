@@ -7,32 +7,28 @@
       "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorobra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\dto\\dtos-obras\\obraasociardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-obras\\obraasociardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\dto\\dtos-depositos\\verdepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-depositos\\verdepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\backend.models\\modelos\\obra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\obra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\repositorios\\servicios\\obraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\obraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\backend.models\\modelos\\obra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\obra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\repositorios\\implementaciones\\iobraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\implementaciones\\iobraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\dto\\dtos-obras\\verobradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-obras\\verobradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\dto\\dtos-depositos\\verdepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-depositos\\verdepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\dto\\dtos-obras\\obraactualizardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-obras\\obraactualizardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\repositorios\\implementaciones\\iobraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\implementaciones\\iobraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\dto\\dtos-obras\\verobradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-obras\\verobradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto c# backend pro stock constructora\\prostockconstructora-backend\\backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -76,26 +72,27 @@
               "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorObra.cs",
               "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorObra.cs",
               "RelativeToolTip": "Backend\\Controllers\\ControladorObra.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAIwEwAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwEwAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-15T21:56:29.004Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ObraAsociarDTO.cs",
-              "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\ObraAsociarDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\DTOs-Obras\\ObraAsociarDTO.cs",
-              "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\ObraAsociarDTO.cs",
-              "RelativeToolTip": "DTO\\DTOs-Obras\\ObraAsociarDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "ObraServicio.cs",
+              "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\ObraServicio.cs",
+              "RelativeDocumentMoniker": "Repositorios\\Servicios\\ObraServicio.cs",
+              "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\ObraServicio.cs",
+              "RelativeToolTip": "Repositorios\\Servicios\\ObraServicio.cs",
+              "ViewState": "AgIAAIQAAAAAAAAAAAAmwHQAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:57:03.603Z"
+              "WhenOpened": "2025-09-13T18:54:26.996Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Obra.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\Obra.cs",
               "RelativeDocumentMoniker": "Backend.Models\\Modelos\\Obra.cs",
@@ -103,23 +100,12 @@
               "RelativeToolTip": "Backend.Models\\Modelos\\Obra.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:30:11.636Z"
+              "WhenOpened": "2025-09-15T21:30:11.636Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ObraServicio.cs",
-              "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\ObraServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Servicios\\ObraServicio.cs",
-              "ToolTip": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\ObraServicio.cs",
-              "RelativeToolTip": "Repositorios\\Servicios\\ObraServicio.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAIwHEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-13T18:54:26.996Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "VerObraDTO.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\VerObraDTO.cs",
               "RelativeDocumentMoniker": "DTO\\DTOs-Obras\\VerObraDTO.cs",
@@ -127,11 +113,12 @@
               "RelativeToolTip": "DTO\\DTOs-Obras\\VerObraDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:57:23.248Z"
+              "WhenOpened": "2025-09-15T21:57:23.248Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "ObraActualizarDTO.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\ObraActualizarDTO.cs",
               "RelativeDocumentMoniker": "DTO\\DTOs-Obras\\ObraActualizarDTO.cs",
@@ -139,11 +126,12 @@
               "RelativeToolTip": "DTO\\DTOs-Obras\\ObraActualizarDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:15:35.57Z"
+              "WhenOpened": "2025-09-15T21:15:35.57Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "VerDepositoDTO.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
               "RelativeDocumentMoniker": "DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
@@ -151,11 +139,12 @@
               "RelativeToolTip": "DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T21:22:30.157Z"
+              "WhenOpened": "2025-09-15T21:22:30.157Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 3,
               "Title": "IObraServicio.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Implementaciones\\IObraServicio.cs",
               "RelativeDocumentMoniker": "Repositorios\\Implementaciones\\IObraServicio.cs",
@@ -163,11 +152,12 @@
               "RelativeToolTip": "Repositorios\\Implementaciones\\IObraServicio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwA4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T19:17:01.521Z"
+              "WhenOpened": "2025-09-15T19:17:01.521Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Backend.Models\\AppDbContext.cs",
@@ -179,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Program.cs",
               "RelativeDocumentMoniker": "Backend\\Program.cs",
