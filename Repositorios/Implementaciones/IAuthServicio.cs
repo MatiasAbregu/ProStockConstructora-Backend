@@ -10,6 +10,7 @@ namespace Backend.Repositorios.Implementaciones
     public interface IAuthServicio
     {
         public Task<ValueTuple<bool, string, TokenDTO>> IniciarSesion(InicioSesionDTO usuarioDTO);
+        public Task<ValueTuple<bool, string, TokenDTO>> SolicitarNuevoToken();
         public Task<string> CerrarSesion(string UsuarioId, string RefreshToken);
     }
 }

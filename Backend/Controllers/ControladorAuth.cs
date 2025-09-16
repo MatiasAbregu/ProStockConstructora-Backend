@@ -17,7 +17,7 @@ namespace Backend.Controllers
             this.authServicio = authServicio;
         }
 
-        [HttpPost]
+        [HttpPost("iniciar-sesion")]
         public async Task<ActionResult> IniciarSesion(InicioSesionDTO inicioSesionDTO)
         {
             ValueTuple<bool, string, TokenDTO> res = await authServicio.IniciarSesion(inicioSesionDTO);
@@ -25,6 +25,18 @@ namespace Backend.Controllers
             if (res.Item1 == false) return StatusCode(409, res.Item2);
             else if (res.Item1 == true && res.Item3 == null) return StatusCode(409, res.Item2);
             else return StatusCode(200, res.Item3);
+        }
+
+        [HttpPost("nuevo-token")]
+        public async Task<ActionResult> SolicitarNuevoToken()
+        {
+            throw new NotImplementedException();
+        }
+
+        [HttpPost("cerrar-sesion")]
+        public async Task<ActionResult> CerrarSesion()
+        {
+            throw new NotImplementedException();
         }
     }
 }
