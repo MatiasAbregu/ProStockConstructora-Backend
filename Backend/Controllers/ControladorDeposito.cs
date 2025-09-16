@@ -14,6 +14,7 @@ namespace Backend.Controllers
 
     public class ControladorDeposito : ControllerBase
     {
+<<<<<<< HEAD
         private readonly IDepositoServicio depositoServicio;
 
         public ControladorDeposito(IDepositoServicio depositoServicio)
@@ -60,5 +61,8 @@ namespace Backend.Controllers
             else if (res.Item2.Contains("No existe")) return StatusCode(404, res.Item2);
             else return StatusCode(500, res.Item2);
         }
+=======
+        
+>>>>>>> 12444dd00f52567356b6927572ac50437fb6576f
     }
 }

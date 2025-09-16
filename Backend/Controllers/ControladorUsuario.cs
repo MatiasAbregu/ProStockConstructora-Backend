@@ -20,21 +20,32 @@ namespace Backend.Controllers
             this.usuarioServicio = usuarioServicio;
         }
 
-        [HttpGet("obtener-administradores")]
-        public async Task<ActionResult<List<VerAdministradorDTO>>> ObtenerTodosLosAdministradores()
+        // EN DEUSO
+        /*[HttpGet("obtener-administradores")]
+        //public async Task<ActionResult<List<VerAdministradorDTO>>> ObtenerTodosLosAdministradores()
+        //{
+        //    ValueTuple<bool, List<VerAdministradorDTO>> res = await usuarioServicio.ObtenerTodosLosAdministradores();
+
+        //    if (res.Item1) return StatusCode(200, res.Item2);
+        //    else return StatusCode(500, "Error al cargar los datos desde el servidor.");
+        //}
+        */    
+
+        [HttpGet("{EmpresaId:int}")]
+        public async Task<ActionResult> ObtenerUsuariosDeEmpresa(int EmpresaId)
         {
-            ValueTuple<bool, List<VerAdministradorDTO>> res = await usuarioServicio.ObtenerTodosLosAdministradores();
+            ValueTuple<bool, List<VerUsuarioDTO>> res = await usuarioServicio.ObtenerUsuariosPorEmpresaId(EmpresaId);
 
             if (res.Item1) return StatusCode(200, res.Item2);
-            else return StatusCode(500, "Error al cargar los datos desde el servidor.");
+            return StatusCode(204, "Todavía no hay usuarios añadidos a la empresa.");
         }
 
-        [HttpPost("crear-administrador")]
-        public async Task<ActionResult<string>> CrearUsuario([FromBody] CrearUsuarioDTO usuario)
+        [HttpPost]
+        public async Task<ActionResult> CrearUsuario(CrearUsuarioDTO usuario)
         {
             IdentityResult resultado = await usuarioServicio.CrearUsuario(usuario);
 
-            if (resultado.Succeeded) return Ok("¡Usuario creado con éxito!");
+            if (resultado.Succeeded) return StatusCode(200, "¡Usuario creado con éxito!");
             else
             {
                 string errores = "";
@@ -42,9 +53,30 @@ namespace Backend.Controllers
                 {
                     errores += error.Description + ", ";
                 }
-                return BadRequest("¡No se pudo crear el usuario!");
+                return StatusCode(400, $"¡No se pudo crear el usuario! Errores: ${errores}");
             }
+        }
 
+        [HttpPut("{id}")]
+        public async Task<ActionResult> ActualizarUsuario(string id, ActualizarUsuarioDTO usuario)
+        {
+            if (id != usuario.Id) return StatusCode(409, "Hubo un error al querer actualizar el usuario.");
+
+            ValueTuple<bool, string, Usuario> res = await usuarioServicio.ActualizarUsuario(id, usuario);
+
+            if (res.Item2.Contains("Error")) return StatusCode(500, res.Item2);
+            else if(!res.Item1) return StatusCode(409, res.Item2);
+            return StatusCode(200, res.Item2);
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult> DesactivarUsuario(string id)
+        {
+            ValueTuple<bool, string> res = await usuarioServicio.DesactivarUsuario(id);
+
+            if(res.Item2.Contains("Error")) return StatusCode(500, res.Item2);
+            else if(!res.Item1) return StatusCode(404, res.Item2);
+            return StatusCode(200, res.Item2);
         }
     }
 }

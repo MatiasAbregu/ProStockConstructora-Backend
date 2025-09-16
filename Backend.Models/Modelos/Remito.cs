@@ -33,10 +33,11 @@ namespace Backend.BD.Modelos
         public DateTime? FechaSalida { get; set; }
         public DateTime? FechaRecepcion { get; set; }
 
-        public Guid? RecibidoPor { get; set; }
+        public string? RecibidoPor { get; set; }
         public Usuario Usuario { get; set; }
 
-        public List<DetalleRemito>? ListaDelRemito { get; }
+        // HACER EN DTO
+        //public List<DetalleRemito>? ListaDelRemito { get; }
 
     }
 }
