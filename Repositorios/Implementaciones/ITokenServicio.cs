@@ -11,7 +11,7 @@ namespace Backend.Repositorios.Implementaciones
     public interface ITokenServicio
     {
         Task<TokenDTO> GenerarNuevosTokens(Usuario usuario, bool mantenerSesion);
-        Task<TokenDTO> ValidarRefreshToken();
+        Task<TokenDTO> ValidarRefreshToken(TokenDTO token, string usuarioId);
         Task<string> InvalidarTokens(string UsuarioId, string RefreshToken);
     }
 }

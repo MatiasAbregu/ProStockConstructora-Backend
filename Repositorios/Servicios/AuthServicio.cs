@@ -42,6 +42,11 @@ namespace Backend.Repositorios.Servicios
                 await tokenServicio.GenerarNuevosTokens(usuarioBBDD, usuarioDTO.MantenerSesion));
         }
 
+        public Task<(bool, string, TokenDTO)> SolicitarNuevoToken()
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<string> CerrarSesion(string UsuarioId, string RefreshToken)
         {
             throw new NotImplementedException();

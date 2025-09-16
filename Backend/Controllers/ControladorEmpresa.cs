@@ -4,7 +4,7 @@ using Backend.Repositorios.Implementaciones;
 using Microsoft.AspNetCore.Mvc;
 
 // EN DEUSO
-/namespace Backend.Controllers
+/*namespace Backend.Controllers
 {
     [Route("api/empresa")]
    [ApiController]
@@ -74,4 +74,4 @@ using Microsoft.AspNetCore.Mvc;
            else return StatusCode(500, res.Item2);
        }
    }
-}
+}*/
