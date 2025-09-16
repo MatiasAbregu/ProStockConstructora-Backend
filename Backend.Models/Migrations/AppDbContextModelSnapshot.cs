@@ -572,25 +572,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "572cc2cc-c28d-43c0-9a8c-6fab77f3341e",
+                            Id = "918f3357-cb83-4e6a-8f9c-bdf4eeda5060",
                             Name = "Superadministrador",
                             NormalizedName = "Superadministrador"
                         },
                         new
                         {
-                            Id = "7841dec0-322d-4001-a6de-a58672c05be6",
+                            Id = "78abbb91-2d1f-4297-a241-2af60252458e",
                             Name = "Administrador",
                             NormalizedName = "Administrador"
                         },
                         new
                         {
-                            Id = "a4264903-c8b8-4d08-b31e-5f5be61b4afa",
+                            Id = "ce9374ca-dd00-4e42-94da-41367aec7cdf",
                             Name = "JefeDeDeposito",
                             NormalizedName = "JefeDeDeposito"
                         },
                         new
                         {
-                            Id = "5c14e977-c36d-44f8-a408-83eb19f25361",
+                            Id = "7285a1be-c843-49e5-b063-7f1b1879a2da",
                             Name = "JefeDeObra",
                             NormalizedName = "JefeDeObra"
                         });
@@ -730,7 +730,7 @@ namespace Backend.BD.Migrations
                         .IsRequired();
 
                     b.HasOne("Backend.BD.Modelos.NotaDePedido", "NotaDePedido")
-                        .WithMany("ListaDePedido")
+                        .WithMany()
                         .HasForeignKey("NotaDePedidoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -749,7 +749,7 @@ namespace Backend.BD.Migrations
                         .IsRequired();
 
                     b.HasOne("Backend.BD.Modelos.Remito", "Remito")
-                        .WithMany("ListaDelRemito")
+                        .WithMany()
                         .HasForeignKey("RemitoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -947,16 +947,6 @@ namespace Backend.BD.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Backend.BD.Modelos.NotaDePedido", b =>
-                {
-                    b.Navigation("ListaDePedido");
-                });
-
-            modelBuilder.Entity("Backend.BD.Modelos.Remito", b =>
-                {
-                    b.Navigation("ListaDelRemito");
                 });
 
             modelBuilder.Entity("Backend.BD.Models.Usuario", b =>

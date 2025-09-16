@@ -9,6 +9,6 @@ namespace Backend.DTO.DTOs_Depositos
     public class VerDepositoDTO
     {
         public int Id { get; set; }
-        public string NombreDeposito { get; set; }
+        public string TipoDeposito { get; set; }
     }
 }
