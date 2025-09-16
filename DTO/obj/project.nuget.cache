@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "+gM28qgbbTc=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+=======
+  "dgSpecHash": "AqET+8UXDps=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
+>>>>>>> 97aab3db8785ce22506297d0e0d0faa7c1e9438c
   "expectedPackageFiles": [],
   "logs": [
     {

@@ -7,6 +7,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Backend.BD;
+using Backend.BD.Modelos;
 using Backend.BD.Models;
 using Backend.DTO.DTOs_Usuarios;
 using Backend.Repositorios.Implementaciones;
@@ -78,7 +79,7 @@ namespace Backend.Repositorios.Servicios
             };
         }
 
-        public Task<TokenDTO> ValidarRefreshToken()
+        public async Task<TokenDTO> ValidarRefreshToken(TokenDTO token, string usuarioId)
         {
             throw new NotImplementedException();
         }
