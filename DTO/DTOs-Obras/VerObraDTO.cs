@@ -20,6 +20,4 @@ namespace Backend.DTOs
         public required string Estado { get; set; }
 >>>>>>> 61a143f6eb6acf07acc6b77b23501739ec2f77d5
     }
-
-
 }
