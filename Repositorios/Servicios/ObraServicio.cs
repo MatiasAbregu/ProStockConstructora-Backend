@@ -35,7 +35,8 @@ namespace Backend.Repositorios.Servicios
             try
             {
                 List<VerObraDTO> obrasVer = [];
-                List<Obra> obras = await baseDeDatos.Obras.Where(o => o.EmpresaId == EmpresaId).ToListAsync();
+                List<Obra> obras = await baseDeDatos.Obras.
+                    Where(o => o.EmpresaId == EmpresaId).ToListAsync();
 
                 foreach (Obra o in obras)
                 {
@@ -93,6 +94,7 @@ namespace Backend.Repositorios.Servicios
                 if (o == null) return (true, null);
                 VerObraDTO obraVer = new VerObraDTO
                 {
+                    EmpresaId = o.EmpresaId,
                     Nombre = o.NombreObra,
                     Estado = o.Estado.ToString()
                 };
@@ -109,7 +111,9 @@ namespace Backend.Repositorios.Servicios
         {
             try
             {
-                bool existeObra = await baseDeDatos.Obras.AnyAsync(ob => obraDTO.NombreObra.ToLower() == obraDTO.NombreObra.ToLower() && ob.EmpresaId == obraDTO.EmpresaId);
+                bool existeObra = await baseDeDatos.Obras
+                    .AnyAsync(ob => obraDTO.NombreObra.ToLower() == ob.NombreObra.ToLower() 
+                    && ob.EmpresaId == obraDTO.EmpresaId);
                 if (existeObra)
                     return (false, "Ya existe una obra con ese nombre en la empresa.");
 

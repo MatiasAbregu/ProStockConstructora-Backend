@@ -1,41 +1,23 @@
 {
   "format": 1,
   "restore": {
-<<<<<<< HEAD
-    "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend\\Backend.csproj": {}
+    "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Backend.csproj": {}
   },
   "projects": {
-    "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
+    "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Backend.BD.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Backend.BD.csproj",
         "projectName": "Backend.BD",
-        "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj",
-        "packagesPath": "C:\\Users\\Estudiante\\.nuget\\packages\\",
-        "outputPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend.Models\\obj\\",
-=======
-    "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj": {}
-  },
-  "projects": {
-    "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj",
-        "projectName": "Backend.BD",
-        "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\obj\\",
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+        "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Backend.BD.csproj",
+        "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\Estudiante\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+          "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -104,39 +85,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend\\Backend.csproj": {
+    "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Backend.csproj",
         "projectName": "Backend",
-        "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\Estudiante\\.nuget\\packages\\",
-        "outputPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend\\obj\\",
-=======
-    "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
-        "projectName": "Backend",
-        "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\obj\\",
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+        "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Backend.csproj",
+        "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\Estudiante\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+          "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -145,32 +111,20 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
-                "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj"
+              "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Backend.BD.csproj": {
+                "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Backend.BD.csproj"
               },
-              "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
-                "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj"
+              "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj": {
+                "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj"
               },
-              "C:\\stock construcciones\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj": {
-                "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj"
-=======
-              "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
-                "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj"
-              },
-              "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
-                "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj"
-              },
-              "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj": {
-                "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj"
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+              "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Backend.Repositorios.csproj": {
+                "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Backend.Repositorios.csproj"
               }
             }
           }
@@ -241,39 +195,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
+    "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
         "projectName": "Backend.DTO",
-        "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-        "packagesPath": "C:\\Users\\Estudiante\\.nuget\\packages\\",
-        "outputPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\obj\\",
-=======
-    "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-        "projectName": "Backend.DTO",
-        "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\obj\\",
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+        "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
+        "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\Estudiante\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+          "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -282,7 +221,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -322,39 +260,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-<<<<<<< HEAD
-    "C:\\stock construcciones\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj": {
+    "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Backend.Repositorios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\stock construcciones\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj",
+        "projectUniqueName": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Backend.Repositorios.csproj",
         "projectName": "Backend.Repositorios",
-        "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj",
-        "packagesPath": "C:\\Users\\Estudiante\\.nuget\\packages\\",
-        "outputPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\Repositorios\\obj\\",
-=======
-    "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj",
-        "projectName": "Backend.Repositorios",
-        "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj",
-        "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-        "outputPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Repositorios\\obj\\",
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+        "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Backend.Repositorios.csproj",
+        "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-<<<<<<< HEAD
-          "C:\\Users\\Estudiante\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-          "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+          "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -363,26 +286,17 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-<<<<<<< HEAD
-              "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
-                "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj"
+              "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Backend.BD.csproj": {
+                "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend.Models\\Backend.BD.csproj"
               },
-              "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
-                "projectPath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj"
-=======
-              "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
-                "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj"
-              },
-              "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
-                "projectPath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj"
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
+              "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj": {
+                "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj"
               }
             }
           }
@@ -442,7 +356,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

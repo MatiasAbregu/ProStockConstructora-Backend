@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿using Backend.BD;
+using Backend.BD;
 using Backend.DTO.DTOs_Depositos;
 using Backend.Repositorios.Implementaciones;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +18,7 @@ namespace Backend.Repositorios.Servicios
         public DepositoServicio(AppDbContext BaseDeDatos)
         {
             this.baseDeDatos = BaseDeDatos;
-           
+
         }
         public async Task<(bool, List<VerDepositoDTO>)> ObtenerDepositos()
         {
@@ -116,13 +115,4 @@ namespace Backend.Repositorios.Servicios
             }
         }
     }
-=======
-﻿using System;
-
-public class DepositoServicio
-{
-	public DepositoServicio()
-	{
-	}
->>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
 }
