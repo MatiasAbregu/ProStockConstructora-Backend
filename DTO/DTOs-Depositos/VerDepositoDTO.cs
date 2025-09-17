@@ -13,7 +13,7 @@ namespace Backend.DTO.DTOs_Depositos
         public int ObraId { get; set; }
         public string NombreObra { get; set; }
         public int UbicacionId { get; set; }
-        public string NombreUbicacion { get; set; }
+        public string Ubicacion { get; set; }
 
     }
 }
