@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "b+o4lRQlddc=",
   "success": true,
   "projectFilePath": "C:\\stock construcciones\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+=======
+  "dgSpecHash": "gkZj0Yi06Hw=",
+  "success": true,
+  "projectFilePath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+>>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
   "expectedPackageFiles": [],
   "logs": []
 }

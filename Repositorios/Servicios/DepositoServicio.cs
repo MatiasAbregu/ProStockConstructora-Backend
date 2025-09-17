@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿using Backend.BD;
 using Backend.DTO.DTOs_Depositos;
 using Backend.Repositorios.Implementaciones;
@@ -115,4 +116,13 @@ namespace Backend.Repositorios.Servicios
             }
         }
     }
+=======
+﻿using System;
+
+public class DepositoServicio
+{
+	public DepositoServicio()
+	{
+	}
+>>>>>>> 32b618a0e3c5866bcc78fa1f1c224cc266fbf03b
 }

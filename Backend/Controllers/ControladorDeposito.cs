@@ -9,9 +9,10 @@ using System.Collections.Generic;
 
 namespace Backend.Controllers
 {
-    [ApiController]
     [Route("api/deposito")]
+    [ApiController]
 
+  
     public class ControladorDeposito : ControllerBase
     {
         private readonly IDepositoServicio depositoServicio;
