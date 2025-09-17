@@ -130,14 +130,14 @@ namespace Backend.Repositorios.Servicios
             }
         }
 
-        public async Task<(bool, string)> ActualizarObra(int id, Obra o)
+        public async Task<(bool, string)> ActualizarObra(int id, ObraActualizarDTO o)
         {
             try
             {
                 Obra obraUpdate = await baseDeDatos.Obras.FirstOrDefaultAsync(ob => ob.Id == id);
                 if (obraUpdate == null) return (false, "No existe una obra con ese ID.");
                 obraUpdate.NombreObra = o.NombreObra;
-                obraUpdate.Estado = o.Estado;
+
 
                 await baseDeDatos.SaveChangesAsync();
                 return (true, "Obra actualizada con éxito.");

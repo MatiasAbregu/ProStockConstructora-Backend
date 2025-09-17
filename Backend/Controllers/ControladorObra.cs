@@ -76,6 +76,33 @@ namespace Backend.Controllers
                 return StatusCode(500, resultado.Item2);
             return Ok("Obra creada exitosamente.");
         }
+
+        [HttpPut("ActualizarObra/{id}")]
+        public async Task<IActionResult> ActualizarObra(int id, [FromBody] DTO.DTOs_Obras.ObraActualizarDTO obraDTO)
+        {
+            if (id != obraDTO.Id)
+                return BadRequest("El ID de la obra no coincide.");
+            ValueTuple<bool, string> resultado = await obraServicio.ActualizarObra(id, new ObraActualizarDTO
+            {
+                Id = obraDTO.Id,
+                NombreObra = obraDTO.NombreObra,
+                EstadoObra = obraDTO.EstadoObra,
+            });
+            if (!resultado.Item1)
+                return StatusCode(500, resultado.Item2);
+            return Ok("Obra actualizada exitosamente.");
+        }
+
+        [HttpDelete("EliminarObra/{id}")]
+        public async Task<IActionResult> EliminarObra(int id)
+        {
+            var obra = await baseDeDatos.Obras.FindAsync(id);
+            if (obra == null)
+                return NotFound("No se encontró la obra con el ID proporcionado.");
+            baseDeDatos.Obras.Remove(obra);
+            await baseDeDatos.SaveChangesAsync();
+            return Ok("Obra eliminada exitosamente.");
+        }
     }
 }
    
