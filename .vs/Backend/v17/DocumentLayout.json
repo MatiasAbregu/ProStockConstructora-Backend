@@ -1,127 +1,71 @@
 {
   "Version": 1,
-<<<<<<< HEAD
   "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\",
-  "Documents": [],
-=======
-  "WorkspaceRootPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\dto\\enum\\enumestadoobra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\enum\\enumestadoobra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\admin\\desktop\\backend\\prostockconstructora-backend\\repositorios\\servicios\\obraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\obraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\repositorios\\implementaciones\\iobraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\implementaciones\\iobraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|c:\\users\\admin\\desktop\\backend\\prostockconstructora-backend\\dto\\dtos-obras\\verobradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-obras\\verobradto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\backend\\controllers\\controladorauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorauth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\repositorios\\implementaciones\\iauthservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\implementaciones\\iauthservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\documents\\prostockconstructora\\backend\\repositorios\\servicios\\authservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\authservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|c:\\users\\admin\\desktop\\backend\\prostockconstructora-backend\\backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
->>>>>>> 97aab3db8785ce22506297d0e0d0faa7c1e9438c
   "DocumentGroupContainers": [
     {
       "Orientation": 1,
       "VerticalTabListWidth": 256,
-<<<<<<< HEAD
-      "DocumentGroups": []
-=======
       "DocumentGroups": [
         {
-          "DockedHeight": 275,
-          "SelectedChildIndex": 4,
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EnumEstadoObra.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Enum\\EnumEstadoObra.cs",
-              "RelativeDocumentMoniker": "DTO\\Enum\\EnumEstadoObra.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Enum\\EnumEstadoObra.cs",
-              "RelativeToolTip": "DTO\\Enum\\EnumEstadoObra.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T18:08:07.934Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "IObraServicio.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Implementaciones\\IObraServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Implementaciones\\IObraServicio.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Implementaciones\\IObraServicio.cs",
-              "RelativeToolTip": "Repositorios\\Implementaciones\\IObraServicio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABHAAAAAAAAAA==",
+              "Title": "VerObraDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\VerObraDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Obras\\VerObraDTO.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\VerObraDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Obras\\VerObraDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-16T18:01:58.191Z",
+              "WhenOpened": "2025-09-16T21:22:57.756Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ControladorAuth.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorAuth.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorAuth.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorAuth.cs",
-              "RelativeToolTip": "Backend\\Controllers\\ControladorAuth.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAqwB4AAAAoAAAAAAAAAA==",
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend.Models\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Backend.Models\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend.Models\\AppDbContext.cs",
+              "RelativeToolTip": "Backend.Models\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T19:43:01.626Z"
+              "WhenOpened": "2025-09-16T21:21:26.418Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AuthServicio.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\AuthServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Servicios\\AuthServicio.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\AuthServicio.cs",
-              "RelativeToolTip": "Repositorios\\Servicios\\AuthServicio.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwC4AAAAtAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ObraServicio.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Repositorios\\Servicios\\ObraServicio.cs",
+              "RelativeDocumentMoniker": "Repositorios\\Servicios\\ObraServicio.cs",
+              "ToolTip": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Repositorios\\Servicios\\ObraServicio.cs",
+              "RelativeToolTip": "Repositorios\\Servicios\\ObraServicio.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAADwBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T19:45:23.576Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IAuthServicio.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Implementaciones\\IAuthServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Implementaciones\\IAuthServicio.cs",
-              "ToolTip": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Implementaciones\\IAuthServicio.cs",
-              "RelativeToolTip": "Repositorios\\Implementaciones\\IAuthServicio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T19:45:24.352Z"
+              "WhenOpened": "2025-09-16T18:47:41.533Z",
+              "EditorCaption": ""
             }
           ]
         }
       ]
->>>>>>> 97aab3db8785ce22506297d0e0d0faa7c1e9438c
     }
   ]
 }
