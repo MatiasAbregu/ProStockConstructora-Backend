@@ -1,12 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "0Pkyn4sAtqA=",
-=======
-  "dgSpecHash": "Q/vG3gGImUs=",
->>>>>>> e4e9fdb5e05dca4abfd060fa30f781b7e97111b9
+  "dgSpecHash": "9LEUlTc865Q=",
   "success": true,
-  "projectFilePath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
+  "projectFilePath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\maria\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
@@ -68,5 +64,15 @@
     "C:\\Users\\maria\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\maria\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problema al leer el archivo de caché D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
