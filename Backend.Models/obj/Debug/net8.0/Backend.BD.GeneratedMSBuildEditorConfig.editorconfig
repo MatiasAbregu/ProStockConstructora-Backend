@@ -8,7 +8,11 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Backend.BD
+<<<<<<< HEAD
 build_property.ProjectDir = C:\Users\Admin\Desktop\BackEnd\ProStockConstructora-Backend\Backend.Models\
+=======
+build_property.ProjectDir = D:\Proyecto Backend ProStock Constructora\ProStockConstructora-Backend\Backend.Models\
+>>>>>>> 972bb2237a9dcc178676ea3242aaff2067903695
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0

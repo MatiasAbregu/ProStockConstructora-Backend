@@ -1,17 +1,30 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ISRTMqkVK5Y=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+=======
+  "dgSpecHash": "3gU/nkMyRbY=",
+  "success": true,
+  "projectFilePath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+>>>>>>> 972bb2237a9dcc178676ea3242aaff2067903695
   "expectedPackageFiles": [],
   "logs": [
     {
       "code": "Undefined",
       "level": "Warning",
+<<<<<<< HEAD
       "message": "Problema al leer el archivo de caché C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\DTO\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
       "projectPath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
       "warningLevel": 1,
       "filePath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+=======
+      "message": "Problema al leer el archivo de caché D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+      "warningLevel": 1,
+      "filePath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj",
+>>>>>>> 972bb2237a9dcc178676ea3242aaff2067903695
       "targetGraphs": []
     }
   ]
