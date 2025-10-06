@@ -1,14 +1,10 @@
 {
   "ExpandedNodes": [
-<<<<<<< HEAD
-    ""
-  ],
-=======
     "",
     "\\Backend.Models",
-    "\\Backend.Models\\Modelos"
+    "\\DTO",
+    "\\DTO\\DTOs-Depositos",
+    "\\Repositorios"
   ],
-  "SelectedNode": "\\Backend.Models\\Modelos\\Provincia.cs",
->>>>>>> 30e0be2189ad7e6728202b4e259f174c30f60df0
   "PreviewInSolutionExplorer": false
 }

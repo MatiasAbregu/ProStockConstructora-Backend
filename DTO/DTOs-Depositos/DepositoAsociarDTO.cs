@@ -9,8 +9,9 @@ namespace Backend.DTO.DTOs_Depositos
     public class DepositoAsociarDTO
     {
         public int Id { get; set; }
-        public string NombreDeposito { get; set; }
+        public string TipoDeposito { get; set; } = "Disponible";
         public int ObraId { get; set; }
+        public int UbicacionId { get; set; }
 
     }
 }
