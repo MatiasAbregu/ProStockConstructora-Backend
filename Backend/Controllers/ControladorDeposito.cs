@@ -10,13 +10,7 @@ using System.Collections.Generic;
 namespace Backend.Controllers
 {
     [ApiController]
-<<<<<<< HEAD
 
-
-    public class ControladorDeposito : ControllerBase
-    {
-        public ControladorDeposito (AppDbContext)    }
-=======
     [Route("api/deposito")]
 
     public class ControladorDeposito : ControllerBase
@@ -71,5 +65,5 @@ namespace Backend.Controllers
         }
 
     }
->>>>>>> 97aab3db8785ce22506297d0e0d0faa7c1e9438c
+
 }

@@ -74,6 +74,7 @@ builder.Services.AddScoped<IAuthServicio, AuthServicio>();
 builder.Services.AddScoped<IEmpresaServicio, EmpresaServicio>();
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
 builder.Services.AddScoped<IObraServicio, ObraServicio>();
+builder.Services.AddScoped<IDepositoServicio, DepositoServicio>();
 
 
 
