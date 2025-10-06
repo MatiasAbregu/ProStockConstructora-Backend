@@ -1,10 +1,6 @@
 {
   "version": 2,
-<<<<<<< HEAD
-  "dgSpecHash": "/0oKsIyxrwE=",
-=======
-  "dgSpecHash": "Q/vG3gGImUs=",
->>>>>>> e4e9fdb5e05dca4abfd060fa30f781b7e97111b9
+  "dgSpecHash": "i/9XI2TsR2o=",
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
@@ -68,5 +64,15 @@
     "C:\\Users\\Admin\\.nuget\\packages\\system.text.encoding.codepages\\6.0.0\\system.text.encoding.codepages.6.0.0.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\system.threading.channels\\6.0.0\\system.threading.channels.6.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "message": "Problema al leer el archivo de caché C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0.",
+      "projectPath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
+      "targetGraphs": []
+    }
+  ]
 }
