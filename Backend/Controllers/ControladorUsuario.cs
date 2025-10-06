@@ -69,7 +69,7 @@ namespace Backend.Controllers
             return StatusCode(200, res.Item2);
         }
 
-        [HttpDelete]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> DesactivarUsuario(string id)
         {
             ValueTuple<bool, string> res = await usuarioServicio.DesactivarUsuario(id);

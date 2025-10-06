@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "/0oKsIyxrwE=",
+=======
+  "dgSpecHash": "Q/vG3gGImUs=",
+>>>>>>> e4e9fdb5e05dca4abfd060fa30f781b7e97111b9
   "success": true,
   "projectFilePath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
   "expectedPackageFiles": [
