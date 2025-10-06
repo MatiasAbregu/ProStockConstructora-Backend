@@ -35,7 +35,7 @@ namespace Backend.Controllers
             if (!resultado.Item1)
                 return StatusCode(500, "Error al obtener las obras.");
             else if (resultado.Item2 == null || resultado.Item2.Count == 0)
-                return StatusCode(204, "No hay obras registradas.");
+                return StatusCode(200, "No hay obras registradas.");
             return Ok(resultado.Item2);
         }
 
@@ -47,7 +47,7 @@ namespace Backend.Controllers
             if (!resultado.Item1)
                 return StatusCode(500, "Error al obtener la obra.");
             else if (resultado.Item2 == null)
-                return StatusCode(204, "No existe la obra con el ID proporcionado.");
+                return StatusCode(200, "No existe la obra con el ID proporcionado.");
             return Ok(resultado.Item2);
         }
 
@@ -59,7 +59,7 @@ namespace Backend.Controllers
             if (!resultado.Item1)
                 return StatusCode(500, "Error al obtener las obras con depósitos.");
             else if (resultado.Item2 == null || resultado.Item2.Count == 0)
-                return StatusCode(204, "No hay obras con depósitos registrados.");
+                return StatusCode(200, "No hay obras con depósitos registrados.");
             return Ok(resultado.Item2);
         }
 

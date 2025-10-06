@@ -75,7 +75,7 @@ builder.Services.AddScoped<IEmpresaServicio, EmpresaServicio>();
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
 builder.Services.AddScoped<IObraServicio, ObraServicio>();
 builder.Services.AddScoped<IDepositoServicio, DepositoServicio>();
-
+builder.Services.AddScoped<IRolesServicio, RolesServicio>();
 
 var app = builder.Build();
 
