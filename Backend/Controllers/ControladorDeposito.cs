@@ -9,10 +9,15 @@ using System.Collections.Generic;
 
 namespace Backend.Controllers
 {
+<<<<<<< HEAD
     [ApiController]
 
+=======
+>>>>>>> e4e9fdb5e05dca4abfd060fa30f781b7e97111b9
     [Route("api/deposito")]
+    [ApiController]
 
+  
     public class ControladorDeposito : ControllerBase
     {
         private readonly IDepositoServicio depositoServicio;
@@ -29,6 +34,7 @@ namespace Backend.Controllers
             else return StatusCode(500, "Error al cargar los datos desde el servidor.");
 
         }
+        
         [HttpGet("obtener-depositos/{id}")]
         public async Task<ActionResult<VerDepositoDTO>> ObtenerDepositoPorId([FromRoute] int id)
         {
@@ -38,6 +44,7 @@ namespace Backend.Controllers
             else return StatusCode(500, res.Item2);
         }
         [HttpPost("crear")]
+
         public async Task<ActionResult<string>> CrearDeposito([FromBody] DepositoAsociarDTO e)
         {
             ValueTuple<bool, string> res = await depositoServicio.CrearDeposito(e);
@@ -65,5 +72,8 @@ namespace Backend.Controllers
         }
 
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> e4e9fdb5e05dca4abfd060fa30f781b7e97111b9
 }

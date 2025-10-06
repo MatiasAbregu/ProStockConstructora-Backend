@@ -19,7 +19,7 @@ namespace Backend.BD
         public DbSet<Empresa> Empresa { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
         public DbSet<Tokens> RefreshTokens { get; set; }
-        public DbSet<Ubicacion> Ubicaciones { get; set; } 
+        public DbSet<Ubicacion> Ubicaciones { get; set; }
         public DbSet<Provincia> Provincias { get; set; }
         public DbSet<UnidadMedida> UnidadMedidas { get; set; }
         public DbSet<TipoMaterial> TipoMateriales { get; set; }
@@ -30,17 +30,17 @@ namespace Backend.BD
         public DbSet<DetalleRemito> DetalleRemitos { get; set; }
         public DbSet<Remito> Remitos { get; set; }
 
-
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
 
-            List<IdentityRole> roles = [new IdentityRole() { Name = "Superadministrador", NormalizedName = "Superadministrador" }, 
-                                        new IdentityRole() { Name = "Administrador", NormalizedName = "Administrador"},
-                                        new IdentityRole() { Name = "JefeDeDeposito", NormalizedName = "JefeDeDeposito" }, 
-                                        new IdentityRole() { Name = "JefeDeObra", NormalizedName = "JefeDeObra" }];
+            List<IdentityRole> roles = [
+                new IdentityRole() { Name = "Superadministrador",NormalizedName = "SUPERADMINISTRADOR" },
+                new IdentityRole() { Name = "Administrador", NormalizedName = "ADMINISTRADOR"},
+                new IdentityRole() { Name = "Jefe de depósito", NormalizedName = "JEFEDEDEPOSITO" },
+                new IdentityRole() { Name = "Jefe de obra", NormalizedName = "JEFEDEOBRA" }];
             builder.Entity<IdentityRole>().HasData(roles);
 
         }

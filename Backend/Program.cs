@@ -75,8 +75,12 @@ builder.Services.AddScoped<IEmpresaServicio, EmpresaServicio>();
 builder.Services.AddScoped<IUsuarioServicio, UsuarioServicio>();
 builder.Services.AddScoped<IObraServicio, ObraServicio>();
 builder.Services.AddScoped<IDepositoServicio, DepositoServicio>();
+<<<<<<< HEAD
 
 
+=======
+builder.Services.AddScoped<IRolesServicio, RolesServicio>();
+>>>>>>> e4e9fdb5e05dca4abfd060fa30f781b7e97111b9
 
 var app = builder.Build();
 

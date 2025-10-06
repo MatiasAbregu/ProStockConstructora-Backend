@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.BD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250913175121_Database")]
-    partial class Database
+    [Migration("20251006073234_nuevos-roles")]
+    partial class nuevosroles
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -575,27 +575,27 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "572cc2cc-c28d-43c0-9a8c-6fab77f3341e",
+                            Id = "4c5674ac-2d68-4036-bd35-8a48a25bf299",
                             Name = "Superadministrador",
-                            NormalizedName = "Superadministrador"
+                            NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "7841dec0-322d-4001-a6de-a58672c05be6",
+                            Id = "9bd62dc3-a042-436c-892b-7ae6ae8ea52c",
                             Name = "Administrador",
-                            NormalizedName = "Administrador"
+                            NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "a4264903-c8b8-4d08-b31e-5f5be61b4afa",
-                            Name = "JefeDeDeposito",
-                            NormalizedName = "JefeDeDeposito"
+                            Id = "c98b1007-19c2-4abd-a5c0-2284af9939a5",
+                            Name = "Jefe de depósito",
+                            NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
-                            Id = "5c14e977-c36d-44f8-a408-83eb19f25361",
-                            Name = "JefeDeObra",
-                            NormalizedName = "JefeDeObra"
+                            Id = "4498e7d2-f37c-4891-82e8-92779cc5de86",
+                            Name = "Jefe de obra",
+                            NormalizedName = "JEFEDEOBRA"
                         });
                 });
 
@@ -733,7 +733,7 @@ namespace Backend.BD.Migrations
                         .IsRequired();
 
                     b.HasOne("Backend.BD.Modelos.NotaDePedido", "NotaDePedido")
-                        .WithMany("ListaDePedido")
+                        .WithMany()
                         .HasForeignKey("NotaDePedidoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -752,7 +752,7 @@ namespace Backend.BD.Migrations
                         .IsRequired();
 
                     b.HasOne("Backend.BD.Modelos.Remito", "Remito")
-                        .WithMany("ListaDelRemito")
+                        .WithMany()
                         .HasForeignKey("RemitoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -950,16 +950,6 @@ namespace Backend.BD.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("Backend.BD.Modelos.NotaDePedido", b =>
-                {
-                    b.Navigation("ListaDePedido");
-                });
-
-            modelBuilder.Entity("Backend.BD.Modelos.Remito", b =>
-                {
-                    b.Navigation("ListaDelRemito");
                 });
 
             modelBuilder.Entity("Backend.BD.Models.Usuario", b =>

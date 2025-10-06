@@ -1,5 +1,4 @@
-﻿using Backend.DTO.Enum;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Backend.DTO.DTOs_Obras
 {
-    public class CrearObraDTO
+    public class ObraAsociarUsuarioDTO
     {
+        public int ObraId { get; set; }
         public int EmpresaId { get; set; }
         public string NombreObra { get; set; }
-        public EnumEstadoObra Estado { get; set; } = EnumEstadoObra.EnProceso;
+        public required string UsuarioId { get; set; }
     }
 }
