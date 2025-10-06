@@ -3176,39 +3176,23 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
     "C:\\Users\\Admin\\.nuget\\packages\\": {},
-=======
-    "C:\\Users\\maria\\.nuget\\packages\\": {},
->>>>>>> 972bb2237a9dcc178676ea3242aaff2067903695
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
       "projectName": "Backend",
       "projectPath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\obj\\",
-=======
-      "projectUniqueName": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
-      "projectName": "Backend",
-      "projectPath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Backend.csproj",
-      "packagesPath": "C:\\Users\\maria\\.nuget\\packages\\",
-      "outputPath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\obj\\",
->>>>>>> 972bb2237a9dcc178676ea3242aaff2067903695
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
         "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
-=======
-        "C:\\Users\\maria\\AppData\\Roaming\\NuGet\\NuGet.Config",
->>>>>>> 972bb2237a9dcc178676ea3242aaff2067903695
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3224,7 +3208,6 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-<<<<<<< HEAD
             "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
               "projectPath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj"
             },
@@ -3233,16 +3216,6 @@
             },
             "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj": {
               "projectPath": "C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj"
-=======
-            "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj": {
-              "projectPath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj"
-            },
-            "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj": {
-              "projectPath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\Backend.DTO.csproj"
-            },
-            "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj": {
-              "projectPath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Backend.Repositorios.csproj"
->>>>>>> 972bb2237a9dcc178676ea3242aaff2067903695
             }
           }
         }
@@ -3322,11 +3295,7 @@
       "code": "Undefined",
       "level": "Warning",
       "warningLevel": 1,
-<<<<<<< HEAD
       "message": "Problema al leer el archivo de caché C:\\Users\\Admin\\Desktop\\BackEnd\\ProStockConstructora-Backend\\Backend\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
-=======
-      "message": "Problema al leer el archivo de caché D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\obj\\project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
->>>>>>> 972bb2237a9dcc178676ea3242aaff2067903695
     }
   ]
 }
