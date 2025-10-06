@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Backend.BD.Migrations
 {
     /// <inheritdoc />
-    public partial class Database : Migration
+    public partial class nuevosroles : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -608,10 +608,10 @@ namespace Backend.BD.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "572cc2cc-c28d-43c0-9a8c-6fab77f3341e", null, "Superadministrador", "Superadministrador" },
-                    { "5c14e977-c36d-44f8-a408-83eb19f25361", null, "JefeDeObra", "JefeDeObra" },
-                    { "7841dec0-322d-4001-a6de-a58672c05be6", null, "Administrador", "Administrador" },
-                    { "a4264903-c8b8-4d08-b31e-5f5be61b4afa", null, "JefeDeDeposito", "JefeDeDeposito" }
+                    { "4498e7d2-f37c-4891-82e8-92779cc5de86", null, "Jefe de obra", "JEFEDEOBRA" },
+                    { "4c5674ac-2d68-4036-bd35-8a48a25bf299", null, "Superadministrador", "SUPERADMINISTRADOR" },
+                    { "9bd62dc3-a042-436c-892b-7ae6ae8ea52c", null, "Administrador", "ADMINISTRADOR" },
+                    { "c98b1007-19c2-4abd-a5c0-2284af9939a5", null, "Jefe de depósito", "JEFEDEDEPOSITO" }
                 });
 
             migrationBuilder.CreateIndex(

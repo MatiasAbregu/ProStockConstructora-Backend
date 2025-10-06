@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.BD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250916231851_prueba")]
-    partial class prueba
+    [Migration("20251006073234_nuevos-roles")]
+    partial class nuevosroles
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -575,27 +575,27 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "23fe31fa-efbc-4c12-99d2-f37cdffc60a8",
+                            Id = "4c5674ac-2d68-4036-bd35-8a48a25bf299",
                             Name = "Superadministrador",
-                            NormalizedName = "Superadministrador"
+                            NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "70995920-2942-40c8-b4a0-c3ba23513af8",
+                            Id = "9bd62dc3-a042-436c-892b-7ae6ae8ea52c",
                             Name = "Administrador",
-                            NormalizedName = "Administrador"
+                            NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "e8d77b09-d8c0-4dae-bdae-68579e748105",
-                            Name = "JefeDeDeposito",
-                            NormalizedName = "JefeDeDeposito"
+                            Id = "c98b1007-19c2-4abd-a5c0-2284af9939a5",
+                            Name = "Jefe de depósito",
+                            NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
-                            Id = "e3b908d7-99d8-4dbd-aceb-6f801be94de4",
-                            Name = "JefeDeObra",
-                            NormalizedName = "JefeDeObra"
+                            Id = "4498e7d2-f37c-4891-82e8-92779cc5de86",
+                            Name = "Jefe de obra",
+                            NormalizedName = "JEFEDEOBRA"
                         });
                 });
 

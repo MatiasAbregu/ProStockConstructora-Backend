@@ -1,6 +1,10 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "9YxYxHqL0X8=",
+=======
+  "dgSpecHash": "rm0BZN4+CpE=",
+>>>>>>> e4e9fdb5e05dca4abfd060fa30f781b7e97111b9
   "success": true,
   "projectFilePath": "D:\\Proyecto C# Backend Pro stock constructora\\ProStockConstructora-Backend\\Backend.Models\\Backend.BD.csproj",
   "expectedPackageFiles": [
