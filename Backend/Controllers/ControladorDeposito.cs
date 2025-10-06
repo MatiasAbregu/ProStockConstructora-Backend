@@ -29,6 +29,7 @@ namespace Backend.Controllers
             else return StatusCode(500, "Error al cargar los datos desde el servidor.");
 
         }
+        
         [HttpGet("obtener-depositos/{id}")]
         public async Task<ActionResult<VerDepositoDTO>> ObtenerDepositoPorId([FromRoute] int id)
         {
@@ -38,6 +39,7 @@ namespace Backend.Controllers
             else return StatusCode(500, res.Item2);
         }
         [HttpPost("crear")]
+
         public async Task<ActionResult<string>> CrearDeposito([FromBody] DepositoAsociarDTO e)
         {
             ValueTuple<bool, string> res = await depositoServicio.CrearDeposito(e);
