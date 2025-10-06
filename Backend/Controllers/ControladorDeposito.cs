@@ -9,6 +9,11 @@ using System.Collections.Generic;
 
 namespace Backend.Controllers
 {
+<<<<<<< HEAD
+    [ApiController]
+
+=======
+>>>>>>> e4e9fdb5e05dca4abfd060fa30f781b7e97111b9
     [Route("api/deposito")]
     [ApiController]
 
@@ -67,4 +72,8 @@ namespace Backend.Controllers
         }
 
     }
+<<<<<<< HEAD
+
+=======
+>>>>>>> e4e9fdb5e05dca4abfd060fa30f781b7e97111b9
 }
