@@ -16,5 +16,7 @@ namespace Backend.DTO.DTOs_MaterialesYmaquinarias
         public required string Nombre { get; set; }
 
         public int? UnidadMedidaId { get; set; }
+
+        public int Cantidad { get; set; }
     }
 }

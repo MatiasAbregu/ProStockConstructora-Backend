@@ -111,8 +111,7 @@ namespace Backend.Repositorios.Servicios
         {
             try
             {
-                bool existeObra = await baseDeDatos.Obras
-                    .AnyAsync(ob => obraDTO.NombreObra.ToLower() == ob.NombreObra.ToLower()
+                bool existeObra = await baseDeDatos.Obras.AnyAsync(ob => obraDTO.NombreObra.ToLower() == ob.NombreObra.ToLower()
                     && ob.EmpresaId == obraDTO.EmpresaId);
                 if (existeObra)
                     return (false, "Ya existe una obra con ese nombre en la empresa.");
