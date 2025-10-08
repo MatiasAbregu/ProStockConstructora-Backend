@@ -10,8 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
 using Backend.DTOs;
 using Backend.BD.Enums;
-
-
+using Backend.DTO.DTOs_MaterialesYmaquinarias;
 
 
 
@@ -19,5 +18,6 @@ namespace Backend.Controllers
 {
     public class ControladorMaterialesYmaquinarias
     {
+
     }
 }
