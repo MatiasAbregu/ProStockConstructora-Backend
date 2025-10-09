@@ -111,8 +111,12 @@ namespace Backend.Repositorios.Servicios
         {
             try
             {
+<<<<<<< HEAD
                 bool existeObra = await baseDeDatos.Obras
                     .AnyAsync(ob => obraDTO.NombreObra.ToLower() == ob.NombreObra.ToLower()
+=======
+                bool existeObra = await baseDeDatos.Obras.AnyAsync(ob => obraDTO.NombreObra.ToLower() == ob.NombreObra.ToLower()
+>>>>>>> b187d6171fe445dae8f756f2a7946a9d464ac777
                     && ob.EmpresaId == obraDTO.EmpresaId);
                 if (existeObra)
                     return (false, "Ya existe una obra con ese nombre en la empresa.");
@@ -141,8 +145,6 @@ namespace Backend.Repositorios.Servicios
                 Obra obraUpdate = await baseDeDatos.Obras.FirstOrDefaultAsync(ob => ob.Id == id);
                 if (obraUpdate == null) return (false, "No existe una obra con ese ID.");
                 obraUpdate.NombreObra = o.NombreObra;
-
-
                 await baseDeDatos.SaveChangesAsync();
                 return (true, "Obra actualizada con éxito.");
             }

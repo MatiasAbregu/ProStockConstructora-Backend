@@ -11,6 +11,7 @@ namespace Backend.DTOs
         public int EmpresaId { get; set; }
         public required string Nombre { get; set; }
         public required string Estado { get; set; }
+
     }
 }
 
