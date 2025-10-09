@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kVeDpkZjqQU=",
+  "dgSpecHash": "1X8s17yWVRQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\Repositorios\\Backend.Repositorios.csproj",
+  "projectFilePath": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Backend.Repositorios.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\matia\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\matia\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

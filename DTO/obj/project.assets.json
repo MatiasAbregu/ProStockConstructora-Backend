@@ -9,19 +9,19 @@
   },
   "packageFolders": {
     "C:\\Users\\matia\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "D:\\Herramientas Visual Studio Mierda\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
+      "projectUniqueName": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
       "projectName": "Backend.DTO",
-      "projectPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
+      "projectPath": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\DTO\\Backend.DTO.csproj",
       "packagesPath": "C:\\Users\\matia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\matia\\Documents\\ProStockConstructora\\Backend\\DTO\\obj\\",
+      "outputPath": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\DTO\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\Herramientas Visual Studio Mierda\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\matia\\AppData\\Roaming\\NuGet\\NuGet.Config",

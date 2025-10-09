@@ -15,6 +15,7 @@ namespace Backend.Repositorios.Implementaciones
         public Task<(bool, List<VerAdministradorDTO>)> ObtenerTodosLosAdministradores();
         public Task<List<Usuario>> ObtenerTodosLosAdministradoresDeEmpresa(string nombreEmpresa);
         public Task<(bool, List<VerUsuarioDTO>)> ObtenerUsuariosPorEmpresaId(int id);
+        public Task<(bool, VerUsuarioDTO)> ObtenerUsuarioPorId(string id);
         public Task<List<Usuario>> ObtenerUsuariosPorCategoria(); // Obra o Rol
         public Task<Usuario> ObtenerUsuarioPorNombreUsuario();
 
