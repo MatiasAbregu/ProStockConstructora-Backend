@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Backend.DTO.DTOs_Roles;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace Backend.Repositorios.Implementaciones
 {
     public interface IRolesServicio
     {
-        public (bool, List<IdentityRole>) ObtenerRoles();
+        public (bool, List<VerRol>) ObtenerRoles();
     }
 }

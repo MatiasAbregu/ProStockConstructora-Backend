@@ -12,8 +12,6 @@ using Backend.DTOs;
 using Backend.BD.Enums;
 using Backend.DTO.DTOs_MaterialesYmaquinarias;
 
-
-
 namespace Backend.Controllers
 {
     [Route("api/materialesYmaquinarias")]

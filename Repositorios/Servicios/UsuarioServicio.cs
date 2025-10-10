@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Backend.BD;
 using Backend.BD.Models;
@@ -93,6 +94,22 @@ namespace Backend.Repositorios.Servicios
             return (true, usuarios);
         }
 
+        public async Task<(bool, VerUsuarioDTO)> ObtenerUsuarioPorId(string id)
+        {
+            Usuario? usuarioBBDD = await gestorUsuarios.FindByIdAsync(id);
+            if (usuarioBBDD == null) return (false, null);
+            var roles = await gestorUsuarios.GetRolesAsync(usuarioBBDD);
+            return (true, new VerUsuarioDTO()
+            {
+                Id = usuarioBBDD.Id,
+                NombreUsuario = usuarioBBDD.UserName,
+                Estado = usuarioBBDD.Estado ? "Activo" : "Desactivado",
+                Email = usuarioBBDD.Email,
+                Telefono = usuarioBBDD.PhoneNumber,
+                Roles = roles.ToList()
+            });
+        }
+
         public Task<Usuario> ObtenerUsuarioPorNombreUsuario()
         {
             throw new NotImplementedException();
@@ -108,7 +125,7 @@ namespace Backend.Repositorios.Servicios
             using var transaction = await baseDeDatos.Database.BeginTransactionAsync();
 
             Usuario UsuarioBD = new(usuario.NombreUsuario, usuario.EmpresaId, usuario.Email, usuario.Celular);
-            IdentityResult resultado = await gestorUsuarios.CreateAsync(UsuarioBD, usuario.Contrasena);
+            IdentityResult resultado = await gestorUsuarios.CreateAsync(UsuarioBD, usuario.NombreUsuario);
 
             if (resultado.Succeeded)
             {
@@ -116,6 +133,7 @@ namespace Backend.Repositorios.Servicios
                 if (!resultado.Succeeded)
                 {
                     await transaction.RollbackAsync();
+                    return resultado;
                 }
             }
             else
@@ -125,6 +143,7 @@ namespace Backend.Repositorios.Servicios
                     Debug.WriteLine(error.Description);
                 }
                 await transaction.RollbackAsync();
+                return resultado;
             }
             await transaction.CommitAsync();
             return resultado;
@@ -139,7 +158,14 @@ namespace Backend.Repositorios.Servicios
             if (usuarioBBDD == null) return (false, "El usuario que se desea actualizar no existe", null);
 
             if (!string.IsNullOrEmpty(usuario.NombreUsuario))
-                usuarioBBDD.UserName = usuario.NombreUsuario;
+            {
+                if (usuarioBBDD.UserName != usuario.NombreUsuario)
+                {
+                    var resName = await gestorUsuarios.FindByNameAsync(usuario.NombreUsuario);
+                    if (resName != null) return (false, "El usuario con ese nombre ya existe", null);
+                    usuarioBBDD.UserName = usuario.NombreUsuario;
+                }
+            }
 
             if (!string.IsNullOrEmpty(usuario.Celular))
                 usuarioBBDD.PhoneNumber = usuario.Celular;
@@ -152,14 +178,21 @@ namespace Backend.Repositorios.Servicios
             if (usuario.Roles.Count > 0)
             {
                 var rolesActuales = await gestorUsuarios.GetRolesAsync(usuarioBBDD);
-                var rolesAEliminar = rolesActuales.Except(usuario.Roles).ToList();
-                var rolesAAnadir = usuario.Roles.Except(rolesActuales).ToList();
+
+                var rolesNormalizados =
+                    rolesActuales.Select(r => Regex.Replace(r.Replace(" ", "").ToUpperInvariant()
+                    .Normalize(NormalizationForm.FormD), "[\u0300-\u036f]", string.Empty
+                    )).ToList();
+
+                var rolesAEliminar = rolesNormalizados.Except(usuario.Roles).ToList();
+                var rolesAAnadir = usuario.Roles.Except(rolesNormalizados).ToList();
 
                 if (rolesAEliminar.Count > 0)
                 {
                     res = await gestorUsuarios.RemoveFromRolesAsync(usuarioBBDD, rolesAEliminar);
                     if (!res.Succeeded)
                     {
+                        foreach (var error in res.Errors) Debug.WriteLine($"Error: {error.Description}");
                         await transaction.RollbackAsync();
                         return (false, "Error al eliminar roles", null);
                     }
@@ -183,18 +216,19 @@ namespace Backend.Repositorios.Servicios
             return (true, "Usuario actualizado con éxito", usuarioBBDD);
         }
 
-        public async Task<(bool, string)> DesactivarUsuario(string id)
+        public async Task<(bool, string)> CambiarEstadoUsuario(string id)
         {
             Usuario? usuarioBBDD = await gestorUsuarios.FindByIdAsync(id);
 
-            if (usuarioBBDD == null) return (false, "El usuario que se desea desactivar no existe");
+            if (usuarioBBDD == null) return (false, "El usuario que se desea cambiar de estado no existe");
 
-            usuarioBBDD.Estado = false;
+            usuarioBBDD.Estado = !usuarioBBDD.Estado;
+            string estado = usuarioBBDD.Estado ? "reactivado" : "desactivado";
 
             var res = await gestorUsuarios.UpdateAsync(usuarioBBDD);
 
-            if (!res.Succeeded) return (false, "Ocurrio un error al desactivar el usuario");
-            return (true, "Usuario desactivado con éxito");
+            if (!res.Succeeded) return (false, "Ocurrio un error al cambiar estado del usuario");
+            return (true, $"Usuario {estado} con éxito");
         }
     }
 }
