@@ -19,11 +19,9 @@ namespace Backend.Repositorios.Servicios
 {
     public class ObraServicio : IObraServicio
     {
-
         private readonly AppDbContext baseDeDatos;
         private readonly IDepositoServicio depositoServicio;
         private readonly IObraServicio obraServicio;
-
 
         public ObraServicio(AppDbContext baseDeDatos)
         {
@@ -111,12 +109,8 @@ namespace Backend.Repositorios.Servicios
         {
             try
             {
-<<<<<<< HEAD
                 bool existeObra = await baseDeDatos.Obras
                     .AnyAsync(ob => obraDTO.NombreObra.ToLower() == ob.NombreObra.ToLower()
-=======
-                bool existeObra = await baseDeDatos.Obras.AnyAsync(ob => obraDTO.NombreObra.ToLower() == ob.NombreObra.ToLower()
->>>>>>> b187d6171fe445dae8f756f2a7946a9d464ac777
                     && ob.EmpresaId == obraDTO.EmpresaId);
                 if (existeObra)
                     return (false, "Ya existe una obra con ese nombre en la empresa.");

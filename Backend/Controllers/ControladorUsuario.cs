@@ -83,9 +83,9 @@ namespace Backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DesactivarUsuario(string id)
+        public async Task<ActionResult> CambiarEstadoUsuario(string id)
         {
-            ValueTuple<bool, string> res = await usuarioServicio.DesactivarUsuario(id);
+            ValueTuple<bool, string> res = await usuarioServicio.CambiarEstadoUsuario(id);
 
             if(res.Item2.Contains("Error")) return StatusCode(500, res.Item2);
             else if(!res.Item1) return StatusCode(404, res.Item2);

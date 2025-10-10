@@ -24,8 +24,6 @@ namespace Backend.Repositorios.Implementaciones
 
         // PUTs
         public Task<(bool, string, Usuario)> ActualizarUsuario(string id, ActualizarUsuarioDTO usuario);
-
-        // DELETEs
-        public Task<(bool, string)> DesactivarUsuario(string id);
+        public Task<(bool, string)> CambiarEstadoUsuario(string id);
     }
 }

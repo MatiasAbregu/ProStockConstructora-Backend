@@ -216,18 +216,19 @@ namespace Backend.Repositorios.Servicios
             return (true, "Usuario actualizado con éxito", usuarioBBDD);
         }
 
-        public async Task<(bool, string)> DesactivarUsuario(string id)
+        public async Task<(bool, string)> CambiarEstadoUsuario(string id)
         {
             Usuario? usuarioBBDD = await gestorUsuarios.FindByIdAsync(id);
 
-            if (usuarioBBDD == null) return (false, "El usuario que se desea desactivar no existe");
+            if (usuarioBBDD == null) return (false, "El usuario que se desea cambiar de estado no existe");
 
-            usuarioBBDD.Estado = false;
+            usuarioBBDD.Estado = !usuarioBBDD.Estado;
+            string estado = usuarioBBDD.Estado ? "reactivado" : "desactivado";
 
             var res = await gestorUsuarios.UpdateAsync(usuarioBBDD);
 
-            if (!res.Succeeded) return (false, "Ocurrio un error al desactivar el usuario");
-            return (true, "Usuario desactivado con éxito");
+            if (!res.Succeeded) return (false, "Ocurrio un error al cambiar estado del usuario");
+            return (true, $"Usuario {estado} con éxito");
         }
     }
 }
