@@ -7,5 +7,6 @@ namespace Backend.Repositorios.Implementaciones
         Task<(bool, string)> MaterialYmaquinaCargar(MaterialYmaquinaCargarDTO materialYmaquinaDTO);
         Task<(bool, string)> MaterialYmaquinaCargarAdeposito(MaterialYmaquinaCargarAdepositoDTO materialYmaquinaCargarAdepositoDTO);
         Task<(bool, string)> MaterialYmaquinaTransladarDeposito(MaterialYmaquinaTransladarDepositoDTO materialYmaquinaTransladarDepositoDTO);
+        Task<(bool, List<MaterialYmaquinaVerDTO>)> MaterialYmaquinaVerDTO(int empresaId);
     }
 }

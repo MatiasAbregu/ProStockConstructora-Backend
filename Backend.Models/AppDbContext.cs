@@ -29,6 +29,7 @@ namespace Backend.BD
         public DbSet<NotaDePedido> NotaDePedidos { get; set; }
         public DbSet<DetalleRemito> DetalleRemitos { get; set; }
         public DbSet<Remito> Remitos { get; set; }
+        public DbSet<MovimientoDeposito> MovimientoDepositos { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
