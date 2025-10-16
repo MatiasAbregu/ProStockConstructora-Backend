@@ -16,7 +16,7 @@ namespace Backend.BD.Modelos
         public NotaDePedido NotaDePedido { get; set; }
 
         public required int MaterialesyMaquinasId { get; set; }
-        public MaterialesyMaquinas MaterialesyMaquinas { get; set; }
+        public Recursos MaterialesyMaquinas { get; set; }
 
         public required int Cantidad { get; set; } 
     }

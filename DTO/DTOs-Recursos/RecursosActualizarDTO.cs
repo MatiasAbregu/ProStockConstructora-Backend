@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Backend.DTO.DTOs_MaterialesYmaquinarias
 {
-    public class MaterialYmaquinaActualizarDTO
+    public class RecursosActualizarDTO
     {
         public int DepositoId { get; set; }
         public EnumTipoMaterialoMaquina Tipo { get; set; }

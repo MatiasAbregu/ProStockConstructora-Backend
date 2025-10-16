@@ -1,63 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\",
+  "WorkspaceRootPath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\",
   "Documents": [
     {
-<<<<<<< HEAD
-      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\backend\\controllers\\controladormaterialesymaquinarias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladormaterialesymaquinarias.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\repositorios\\servicios\\recursosservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\recursosservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\backend.models\\modelos\\materialesymaquinas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\materialesymaquinas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\repositorios\\implementaciones\\irecursosservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\implementaciones\\irecursosservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\backend.models\\modelos\\recursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\recursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-recursos\\recursosverdepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-recursos\\recursosverdepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\enum\\enumtipodeposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\enum\\enumtipodeposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\backend\\controllers\\controladorrecursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorrecursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-recursos\\recursosverdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-recursos\\recursosverdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\repositorios\\implementaciones\\imaterialesymaquinariasservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\implementaciones\\imaterialesymaquinariasservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-obras\\verobracondepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-obras\\verobracondepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\repositorios\\servicios\\materialesymaquinariasservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\materialesymaquinariasservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-obras\\obraasociardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-obras\\obraasociardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\backend.models\\modelos\\movimientodeposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\movimientodeposito.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-materialesymaquinarias\\materialymaquinatransladardepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-materialesymaquinarias\\materialymaquinatransladardepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-materialesymaquinarias\\materialymaquinacargaradepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-materialesymaquinarias\\materialymaquinacargaradepositodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-materialesymaquinarias\\materialymaquinaverdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-materialesymaquinarias\\materialymaquinaverdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\backend.models\\modelos\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D3C0E8BA-E778-44FC-8ED7-0E5B4BEC30F6}|Backend.Models\\Backend.BD.csproj|solutionrelative:backend.models\\modelos\\stock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-materialesymaquinarias\\materialymaquinacargardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-materialesymaquinarias\\materialymaquinacargardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-=======
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\onedrive\\documentos\\prostockconstructora\\backend\\repositorios\\servicios\\usuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\usuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|c:\\users\\matia\\onedrive\\documentos\\prostockconstructora\\backend\\backend\\controllers\\controladorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\onedrive\\documentos\\prostockconstructora\\backend\\repositorios\\implementaciones\\iusuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\implementaciones\\iusuarioservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
->>>>>>> 85e8d8feda2bf7e49acb825a68349a5ff7c91854
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-obras\\obraactualizardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-obras\\obraactualizardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -66,13 +57,8 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-<<<<<<< HEAD
           "DockedHeight": 200,
-          "SelectedChildIndex": 5,
-=======
-          "DockedHeight": 275,
-          "SelectedChildIndex": 10,
->>>>>>> 85e8d8feda2bf7e49acb825a68349a5ff7c91854
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -88,195 +74,152 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-<<<<<<< HEAD
-              "Title": "MaterialesyMaquinas.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\MaterialesyMaquinas.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\MaterialesyMaquinas.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\MaterialesyMaquinas.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\MaterialesyMaquinas.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "EnumTipoDeposito.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\Enum\\EnumTipoDeposito.cs",
+              "RelativeDocumentMoniker": "DTO\\Enum\\EnumTipoDeposito.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\Enum\\EnumTipoDeposito.cs",
+              "RelativeToolTip": "DTO\\Enum\\EnumTipoDeposito.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T20:31:04.454Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-16T20:51:04.28Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Backend\\Program.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Program.cs",
+              "RelativeToolTip": "Backend\\Program.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAE4AAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T20:47:41.21Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RecursosVerDepositoDTO.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Recursos\\RecursosVerDepositoDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Recursos\\RecursosVerDepositoDTO.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Recursos\\RecursosVerDepositoDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Recursos\\RecursosVerDepositoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T20:29:38.562Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ControladorMaterialesYmaquinarias.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorMaterialesYmaquinarias.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorMaterialesYmaquinarias.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorMaterialesYmaquinarias.cs",
-              "RelativeToolTip": "Backend\\Controllers\\ControladorMaterialesYmaquinarias.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAAowD8AAAAuAAAAAAAAAA==",
+              "Title": "RecursosServicio.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\RecursosServicio.cs",
+              "RelativeDocumentMoniker": "Repositorios\\Servicios\\RecursosServicio.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\RecursosServicio.cs",
+              "RelativeToolTip": "Repositorios\\Servicios\\RecursosServicio.cs",
+              "ViewState": "AgIAAHYAAAAAAAAAAAAqwKYAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T20:14:08.111Z",
+              "WhenOpened": "2025-10-07T19:11:26.164Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Recursos.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\Recursos.cs",
+              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\Recursos.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\Recursos.cs",
+              "RelativeToolTip": "Backend.Models\\Modelos\\Recursos.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T20:15:26.97Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "RecursosVerDTO.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Recursos\\RecursosVerDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Recursos\\RecursosVerDTO.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Recursos\\RecursosVerDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Recursos\\RecursosVerDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T20:15:47.235Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ControladorRecursos.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorRecursos.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorRecursos.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorRecursos.cs",
+              "RelativeToolTip": "Backend\\Controllers\\ControladorRecursos.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAADwv0IAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T20:14:08.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IRecursosServicio.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Implementaciones\\IRecursosServicio.cs",
+              "RelativeDocumentMoniker": "Repositorios\\Implementaciones\\IRecursosServicio.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Implementaciones\\IRecursosServicio.cs",
+              "RelativeToolTip": "Repositorios\\Implementaciones\\IRecursosServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T19:51:37.125Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "VerObraConDepositoDTO.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\VerObraConDepositoDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Obras\\VerObraConDepositoDTO.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\VerObraConDepositoDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Obras\\VerObraConDepositoDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T20:12:04.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ObraAsociarDTO.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\ObraAsociarDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Obras\\ObraAsociarDTO.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\ObraAsociarDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Obras\\ObraAsociarDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T20:11:53.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ObraActualizarDTO.cs",
+              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\ObraActualizarDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Obras\\ObraActualizarDTO.cs",
+              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Obras\\ObraActualizarDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Obras\\ObraActualizarDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-16T20:11:24.425Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\AppDbContext.cs",
               "RelativeDocumentMoniker": "Backend.Models\\AppDbContext.cs",
               "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\AppDbContext.cs",
               "RelativeToolTip": "Backend.Models\\AppDbContext.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwB4AAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T20:28:05.946Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IMaterialesYmaquinariasServicio.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Implementaciones\\IMaterialesYmaquinariasServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Implementaciones\\IMaterialesYmaquinariasServicio.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Implementaciones\\IMaterialesYmaquinariasServicio.cs",
-              "RelativeToolTip": "Repositorios\\Implementaciones\\IMaterialesYmaquinariasServicio.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T19:51:37.125Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "MovimientoDeposito.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\MovimientoDeposito.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\MovimientoDeposito.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\MovimientoDeposito.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\MovimientoDeposito.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T20:12:54.942Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "MaterialesYmaquinariasServicio.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\MaterialesYmaquinariasServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Servicios\\MaterialesYmaquinariasServicio.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\MaterialesYmaquinariasServicio.cs",
-              "RelativeToolTip": "Repositorios\\Servicios\\MaterialesYmaquinariasServicio.cs",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAIgAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T19:11:26.164Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "MaterialYmaquinaTransladarDepositoDTO.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaTransladarDepositoDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaTransladarDepositoDTO.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaTransladarDepositoDTO.cs",
-              "RelativeToolTip": "DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaTransladarDepositoDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T19:50:27.109Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "MaterialYmaquinaCargarAdepositoDTO.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaCargarAdepositoDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaCargarAdepositoDTO.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaCargarAdepositoDTO.cs",
-              "RelativeToolTip": "DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaCargarAdepositoDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T19:04:39.047Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Stock.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\Stock.cs",
-              "RelativeDocumentMoniker": "Backend.Models\\Modelos\\Stock.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend.Models\\Modelos\\Stock.cs",
-              "RelativeToolTip": "Backend.Models\\Modelos\\Stock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T19:28:32.642Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MaterialYmaquinaVerDTO.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaVerDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaVerDTO.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaVerDTO.cs",
-              "RelativeToolTip": "DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaVerDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T19:18:33.872Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "MaterialYmaquinaCargarDTO.cs",
-              "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaCargarDTO.cs",
-              "RelativeDocumentMoniker": "DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaCargarDTO.cs",
-              "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaCargarDTO.cs",
-              "RelativeToolTip": "DTO\\DTOs-MaterialesYmaquinarias\\MaterialYmaquinaCargarDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-07T19:14:31.472Z"
-=======
-              "Title": "ControladorUsuario.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorUsuario.cs",
-              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorUsuario.cs",
-              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorUsuario.cs",
-              "RelativeToolTip": "Backend\\Controllers\\ControladorUsuario.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAAEwFcAAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T22:18:30.57Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUsuarioServicio.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Implementaciones\\IUsuarioServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Implementaciones\\IUsuarioServicio.cs",
-              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Implementaciones\\IUsuarioServicio.cs",
-              "RelativeToolTip": "Repositorios\\Implementaciones\\IUsuarioServicio.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwBkAAABoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-09T22:16:37.359Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UsuarioServicio.cs",
-              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
-              "RelativeDocumentMoniker": "Repositorios\\Servicios\\UsuarioServicio.cs",
-              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\UsuarioServicio.cs",
-              "RelativeToolTip": "Repositorios\\Servicios\\UsuarioServicio.cs",
-              "ViewState": "AgIAALcAAAAAAAAAAAAkwOgAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T06:22:07.238Z",
-              "EditorCaption": ""
->>>>>>> 85e8d8feda2bf7e49acb825a68349a5ff7c91854
+              "WhenOpened": "2025-10-08T20:28:05.946Z"
             }
           ]
         }

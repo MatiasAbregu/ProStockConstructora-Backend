@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Backend.DTO.DTOs_MaterialesYmaquinarias
 {
-    public class MaterialYmaquinaTransladarDepositoDTO
+    public class RecursosTransladarDepositoDTO
     {
         public int DepositoOrigenId { get; set; }
         public int DepositoDestinoId { get; set; }

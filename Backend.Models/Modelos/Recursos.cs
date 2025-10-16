@@ -11,7 +11,7 @@ namespace Backend.BD.Modelos
 {
 
     [Index(nameof(CodigoISO), IsUnique = true)]
-    public class MaterialesyMaquinas
+    public class Recursos
     {
         [Key]
         public int Id { get; set; }
