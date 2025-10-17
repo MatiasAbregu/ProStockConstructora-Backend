@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Backend.BD.Enums
+namespace Backend.DTO.Enums
 {
     public enum EnumTipoDeposito
     {

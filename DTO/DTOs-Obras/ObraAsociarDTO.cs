@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Backend.BD.Enums;
 using Backend.DTO.Enum;
 
 namespace Backend.DTO.DTOs_Obras

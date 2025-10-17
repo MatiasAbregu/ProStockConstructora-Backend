@@ -21,7 +21,7 @@ namespace Backend.BD.Modelos
 
         [Required]
         public int MaterialOMaquinaId { get; set; }
-        public MaterialesyMaquinas MaterialOMaquina { get; set; }
+        public Recursos MaterialOMaquina { get; set; }
 
         [Required]
         public int Cantidad { get; set; }
