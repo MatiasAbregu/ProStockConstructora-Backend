@@ -63,7 +63,7 @@ namespace Backend.Controllers
             var exito = await recursosServicio.RecursosCargarAdeposito(recursosCargarAdepositoDTO);
 
             if (!exito.Item1)
-                return StatusCode(500, "Error al cargar el recurso al deposito.");
+                return StatusCode(500, exito.Item2);
             return Ok("Recurso cargado al deposito con exito.");
         }
 
