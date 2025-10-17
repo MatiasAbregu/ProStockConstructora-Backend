@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Backend.DTO.DTOs_Ubicacion
 {
-    public class VerProvinciaDTO
+    public class ProvinciaDTO
     {
-        public int Id { get; set; }
-        public string NombreProvincia { get; set; }
+        public int? Id { get; set; }
+        public string? NombreProvincia { get; set; }
     }
 }
