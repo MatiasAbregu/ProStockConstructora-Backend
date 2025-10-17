@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Backend.DTO.DTOs_Ubicacion
+namespace Backend.DTO.DTOs_Recursos
 {
-    public class ProvinciaDTO
+    public class UnidadDeMedidaDTO
     {
         public int Id { get; set; }
-        public string? NombreProvincia { get; set; }
+        public string Nombre { get; set; }
+        public string Abreviacion { get; set; }
     }
 }

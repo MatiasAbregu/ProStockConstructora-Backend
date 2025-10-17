@@ -51,17 +51,17 @@ namespace Backend.Controllers
             return Ok(resultado.Item2);
         }
 
-        [HttpGet("ObtenerObrasConDeposito/{EmpresaId}")]
-        public async Task<IActionResult> ObtenerObrasConDeposito(int EmpresaId)
-        {
-            ValueTuple<bool, List<DTO.DTOs_Obras.VerObraConDepositoDTO>>
-            resultado = await obraServicio.ObtenerObrasConDeposito(EmpresaId);
-            if (!resultado.Item1)
-                return StatusCode(500, "Error al obtener las obras con depósitos.");
-            else if (resultado.Item2 == null || resultado.Item2.Count == 0)
-                return StatusCode(200, "No hay obras con depósitos registrados.");
-            return Ok(resultado.Item2);
-        }
+        //[HttpGet("ObtenerObrasConDeposito/{EmpresaId}")]
+        //public async Task<IActionResult> ObtenerObrasConDeposito(int EmpresaId)
+        //{
+        //    ValueTuple<bool, List<DTO.DTOs_Obras.VerObraConDepositoDTO>>
+        //    resultado = await obraServicio.ObtenerObrasConDeposito(EmpresaId);
+        //    if (!resultado.Item1)
+        //        return StatusCode(500, "Error al obtener las obras con depósitos.");
+        //    else if (resultado.Item2 == null || resultado.Item2.Count == 0)
+        //        return StatusCode(200, "No hay obras con depósitos registrados.");
+        //    return Ok(resultado.Item2);
+        //}
 
         [HttpPost("CrearObra")]
         public async Task<IActionResult> CrearObra([FromBody] DTO.DTOs_Obras.CrearObraDTO obraDTO)

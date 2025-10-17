@@ -29,17 +29,47 @@ namespace Backend.Repositorios.Servicios
         {
             try
             {
-                bool ExisteMaterialoMaquina = await baseDeDatos.MaterialesyMaquinas.AnyAsync(x => x.CodigoISO.Equals(materialYmaquinaDTO.CodigoISO, StringComparison.OrdinalIgnoreCase));
-                if (ExisteMaterialoMaquina)
-                    return (false, "El codigo ISO ya existe");
+                bool ExisteMaterialoMaquina = await baseDeDatos.MaterialesyMaquinas.AnyAsync(x => x.CodigoISO == x.CodigoISO.ToUpper());
+                if (ExisteMaterialoMaquina) return (false, "El codigo ISO ya existe");
+
+                TipoMaterial? tipoMaterial = null;
+                UnidadMedida? unidadMedida = null;
+                if (materialYmaquinaDTO.TipoMaterial.Id == 0 && materialYmaquinaDTO.Tipo == EnumTipoMaterialoMaquina.Material)
+                {
+                    tipoMaterial = await baseDeDatos.TipoMateriales.FirstOrDefaultAsync(tm => tm.Nombre == materialYmaquinaDTO.TipoMaterial.Nombre.ToUpper());
+                    if (tipoMaterial == null)
+                    {
+                        tipoMaterial = new TipoMaterial
+                        {
+                            Nombre = materialYmaquinaDTO.TipoMaterial.Nombre
+                        };
+                        baseDeDatos.TipoMateriales.Add(tipoMaterial);
+                        await baseDeDatos.SaveChangesAsync();
+                    }
+                }
+
+                if (materialYmaquinaDTO.UnidadDeMedida.Id == 0 && materialYmaquinaDTO.Tipo == EnumTipoMaterialoMaquina.Material)
+                {
+                    unidadMedida = await baseDeDatos.UnidadMedidas.FirstOrDefaultAsync(um => um.Nombre == materialYmaquinaDTO.UnidadDeMedida.Nombre.ToUpper());
+                    if (unidadMedida == null)
+                    {
+                        unidadMedida = new UnidadMedida
+                        {
+                            Nombre = materialYmaquinaDTO.UnidadDeMedida.Nombre,
+                            Simbolo = materialYmaquinaDTO.UnidadDeMedida.Abreviacion
+                        };
+                        baseDeDatos.UnidadMedidas.Add(unidadMedida);
+                        await baseDeDatos.SaveChangesAsync();
+                    }
+                }
 
                 var materialoMaquina = new Recursos
                 {
-                    CodigoISO = materialYmaquinaDTO.CodigoISO,
+                    CodigoISO = materialYmaquinaDTO.CodigoISO.ToUpper(),
                     Nombre = materialYmaquinaDTO.Nombre,
                     Tipo = (EnumTipoMaterialOMaquina)materialYmaquinaDTO.Tipo,
-                    TipoMaterialId = materialYmaquinaDTO.TipoMaterial,
-                    UnidadMedidaId = materialYmaquinaDTO.UnidadMedidaId,
+                    TipoMaterialId = materialYmaquinaDTO.TipoMaterial.Id != 0 ? materialYmaquinaDTO.TipoMaterial.Id : tipoMaterial!.Id,
+                    UnidadMedidaId = materialYmaquinaDTO.UnidadDeMedida.Id != 0 ? materialYmaquinaDTO.UnidadDeMedida.Id : unidadMedida!.Id,
                     Descripcion = materialYmaquinaDTO.Descripcion
                 };
                 await baseDeDatos.MaterialesyMaquinas.AddAsync(materialoMaquina);
@@ -48,7 +78,7 @@ namespace Backend.Repositorios.Servicios
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error: {ex.InnerException.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
                 return (false, "Error al cargar el material o maquina");
             }
         }
@@ -140,25 +170,26 @@ namespace Backend.Repositorios.Servicios
 
         public async Task<(bool, List<RecursosVerDepositoDTO>)> RecursosVerDepositoDTO(int depositoId)
         {
-            try { 
-            var resultado = await baseDeDatos.Stocks.Where(s => s.DepositoId == depositoId)
-                 .Include(s => s.Deposito)
-                 .Include(s => s.MaterialesyMaquinas)
-                       .ThenInclude(m => m.TipoMaterial)
-                 .Include(s => s.MaterialesyMaquinas)
-                        .ThenInclude(t => t.UnidadMedida)
-                 .Select(s => new RecursosVerDepositoDTO
-                 {
-                     Id = s.Id,
-                     CodigoISO = s.MaterialesyMaquinas.CodigoISO,
-                     Nombre = s.MaterialesyMaquinas.Nombre,
-                     TipoMaquinariaOmaquina = s.MaterialesyMaquinas.Tipo.ToString(),
-                     TipoMaterial = s.MaterialesyMaquinas.TipoMaterial != null ? s.MaterialesyMaquinas.TipoMaterial.Nombre : null,
-                     UnidadMedida = s.MaterialesyMaquinas.UnidadMedida.Nombre,
-                     Cantidad = s.Cantidad
-                 })
-                 .ToListAsync();
-            return (true, resultado);
+            try
+            {
+                var resultado = await baseDeDatos.Stocks.Where(s => s.DepositoId == depositoId)
+                   .Include(s => s.Deposito)
+                   .Include(s => s.MaterialesyMaquinas)
+                         .ThenInclude(m => m.TipoMaterial)
+                   .Include(s => s.MaterialesyMaquinas)
+                          .ThenInclude(t => t.UnidadMedida)
+                   .Select(s => new RecursosVerDepositoDTO
+                   {
+                       Id = s.Id,
+                       CodigoISO = s.MaterialesyMaquinas.CodigoISO,
+                       Nombre = s.MaterialesyMaquinas.Nombre,
+                       TipoMaquinariaOmaquina = s.MaterialesyMaquinas.Tipo.ToString(),
+                       TipoMaterial = s.MaterialesyMaquinas.TipoMaterial != null ? s.MaterialesyMaquinas.TipoMaterial.Nombre : null,
+                       UnidadMedida = s.MaterialesyMaquinas.UnidadMedida.Nombre,
+                       Cantidad = s.Cantidad
+                   })
+                   .ToListAsync();
+                return (true, resultado);
             }
             catch (Exception ex)
             {
@@ -167,30 +198,33 @@ namespace Backend.Repositorios.Servicios
             }
         }
 
-        public async Task<(bool, List<RecursosVerDTO>)> RecursosVerDTO(RecursosVerDTO recursosver)
+        public async Task<(bool, List<RecursosPagPrincipalDTO>)> RecursosVerDTO(int EmpresaId)
         {
             try
             {
-                var recursos = await baseDeDatos.MaterialesyMaquinas
-                    .Select(r => new RecursosVerDTO
-                    {
-                        CodigoISO = r.CodigoISO,
-                        Tipo = (EnumTipoMaterialoMaquina)r.Tipo,
-                        TipoMaterial = r.TipoMaterialId != null ? r.TipoMaterial.Nombre : null,
-                        Nombre = r.Nombre,
-                        Descripcion = r.Descripcion,
-                        UnidadMedidaId = r.UnidadMedidaId
-                    })
-                    .ToListAsync();
-                return (true, recursos);
+                var existe = await baseDeDatos.Obras.Where(s => s.EmpresaId == EmpresaId).ToListAsync();
+                if (existe == null || existe.Count == 0)
+                    return (false, null);
+                var resultado = await baseDeDatos.Stocks.Where(s => s.Deposito.Obra.EmpresaId == EmpresaId)
+                 .Include(s => s.Deposito)
+                        .ThenInclude(s => s.Obra)
+                 .Include(s => s.MaterialesyMaquinas)
+                       .ThenInclude(m => m.TipoMaterial)
+                 .Include(s => s.MaterialesyMaquinas)
+                        .ThenInclude(t => t.UnidadMedida).Select(s => new RecursosPagPrincipalDTO()
+                        {
+                            CodigoISO = s.MaterialesyMaquinas.CodigoISO,
+                            Nombre = s.MaterialesyMaquinas.Nombre,
+                            UnidadMedida = s.MaterialesyMaquinas.UnidadMedida.Simbolo
+                        }
+                ).ToListAsync();
+                return (true, resultado);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error: {ex.InnerException.Message}");
-                return (false, new List<RecursosVerDTO>());
+                return (false, null);
             }
         }
-
-
     }
 }

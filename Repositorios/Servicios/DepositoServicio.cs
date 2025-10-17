@@ -66,29 +66,35 @@ namespace Backend.Repositorios.Servicios
                 && d.UbicacionId == e.Ubicacion.Id);
                 if (existeDeposito) return (false, "Ya existe un depósito asociado a esa obra y ubicación.");
 
-                Ubicacion resUbicacion = null;
+                Ubicacion? resUbicacion = null;
+                Provincia? resProvincia = null;
                 if (e.Ubicacion.Id == 0)
                 {
                     resUbicacion = baseDeDatos.Ubicaciones
-                        .Where(u => u.CodigoUbicacion == e.Ubicacion.CodigoUbicacion.ToUpper()).ToList()?[0];
+                        .FirstOrDefault(u => u.CodigoUbicacion == e.Ubicacion.CodigoUbicacion.ToUpper());
                     if (resUbicacion == null)
-                    {
-                        var resProvincia = baseDeDatos.Provincias
-                            .Where(p => p.Nombre == e.Ubicacion.Provincia.NombreProvincia.ToUpper()).ToList()?[0];
-
-                        if (resProvincia == null)
+                    {                  
+                        if(e.Ubicacion.Provincia.Id == 0)
                         {
-                            resProvincia = new Provincia() { Nombre = e.Ubicacion.Provincia.NombreProvincia.ToUpper() };
-                            await baseDeDatos.Provincias.AddAsync(resProvincia);
+                            resProvincia = baseDeDatos.Provincias
+                            .FirstOrDefault(p => p.Nombre == e.Ubicacion.Provincia.NombreProvincia.ToUpper());
+
+                            if (resProvincia == null)
+                            {
+                                resProvincia = new Provincia() { Nombre = e.Ubicacion.Provincia.NombreProvincia.ToUpper() };
+                                baseDeDatos.Provincias.Add(resProvincia);
+                                await baseDeDatos.SaveChangesAsync();
+                            }
                         }
 
                         resUbicacion = new Ubicacion()
                         {
                             CodigoUbicacion = e.Ubicacion.CodigoUbicacion.ToUpper(),
                             Domicilio = e.Ubicacion.UbicacionDomicilio.ToUpper(),
-                            ProvinciaId = resProvincia.Id
+                            ProvinciaId = e.Ubicacion.Provincia.Id != 0 ? e.Ubicacion.Provincia.Id : resProvincia!.Id
                         };
-                        await baseDeDatos.Ubicaciones.AddAsync(resUbicacion);
+                        baseDeDatos.Ubicaciones.Add(resUbicacion);
+                        await baseDeDatos.SaveChangesAsync();
                     }     
                 }
 

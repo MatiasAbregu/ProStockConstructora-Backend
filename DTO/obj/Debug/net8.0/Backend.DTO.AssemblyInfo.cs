@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Backend.DTO")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+03e20dfda43cb5f12d98ea793d764ff80495d3dd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e7c991ce43f1b382ed119a88b88d3380d71e7f50")]
 [assembly: System.Reflection.AssemblyProductAttribute("Backend.DTO")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Backend.DTO")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

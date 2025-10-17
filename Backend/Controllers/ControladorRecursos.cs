@@ -41,21 +41,43 @@ namespace Backend.Controllers
         //    return Ok(resultado.Item2);
         //}
 
- 
+        [HttpGet("materialesYmaquinarias/{EmpresaId}")]
+        public async Task<IActionResult> ObtenerTotalRecursos(int EmpresaId)
+        {
+            ValueTuple<bool, List<RecursosPagPrincipalDTO>>
+            resultado = await recursosServicio.RecursosVerDTO(EmpresaId);
+            if (!resultado.Item1)
+                return StatusCode(500, "No hay recursos disponibles");
+            else if (resultado.Item2 == null || resultado.Item2.Count == 0)
+                return StatusCode(200, "No hay materiales y maquinarias registradas.");
+            return Ok(resultado.Item2);
+        }
 
+ 
         [HttpGet("deposito/{DepositoId}")]
-        public async Task<IActionResult> ObtenerRecursos(int DepositoId)
+        public async Task<IActionResult> ObtenerRecursosPorDepósito(int DepositoId)
         {
             ValueTuple<bool, List<RecursosVerDepositoDTO>>
             resultado = await recursosServicio.RecursosVerDepositoDTO(DepositoId);
             if (!resultado.Item1)
                 return StatusCode(500, "Error al obtener los materiales y maquinarias.");
             else if (resultado.Item2 == null || resultado.Item2.Count == 0)
-                return StatusCode(200, "No hay materiales y maquinarias registradas en la empresa.");
+                return StatusCode(200, "No hay materiales y maquinarias registradas en el depósito.");
             return Ok(resultado.Item2);
         }
 
         [HttpPost]
+        public async Task<IActionResult> RecursoCargar([FromBody] RecursosCargarDTO recursoCargarDTO)
+        {
+            if (recursoCargarDTO == null)
+                return BadRequest("El recurso no puede ser nulo.");
+            var exito = await recursosServicio.RecursoCargar(recursoCargarDTO);
+            if (!exito.Item1)
+                return StatusCode(500, exito.Item2);
+            return Ok("Recurso cargado con exito.");
+        }
+
+        [HttpPost("deposito")]
         public async Task<IActionResult> RecursosCargarAdeposito([FromBody] RecursosCargarAdepositoDTO recursosCargarAdepositoDTO)
         {
             if (recursosCargarAdepositoDTO == null)

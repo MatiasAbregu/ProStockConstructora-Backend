@@ -11,7 +11,6 @@ namespace Backend.DTO.DTOs_MaterialesYmaquinarias
         public int DepositoOrigenId { get; set; }
         public int DepositoDestinoId { get; set; }
         public int MaterialYmaquinaId { get; set; }
-        public string CodigoISO { get; set; }
         public int Cantidad { get; set; }
     }
 }
