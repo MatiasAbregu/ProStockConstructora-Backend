@@ -183,8 +183,7 @@ namespace Backend.Repositorios.Servicios
                        Id = s.Id,
                        CodigoISO = s.MaterialesyMaquinas.CodigoISO,
                        Nombre = s.MaterialesyMaquinas.Nombre,
-                       TipoMaquinariaOmaquina = s.MaterialesyMaquinas.Tipo.ToString(),
-                       TipoMaterial = s.MaterialesyMaquinas.TipoMaterial != null ? s.MaterialesyMaquinas.TipoMaterial.Nombre : null,
+                       TipoRecursoTipoMaterial = $"{s.MaterialesyMaquinas.Tipo.ToString() } - { (s.MaterialesyMaquinas.TipoMaterial != null ? s.MaterialesyMaquinas.TipoMaterial.Nombre : "N/A") }",
                        UnidadMedida = s.MaterialesyMaquinas.UnidadMedida.Nombre,
                        Cantidad = s.Cantidad
                    })

@@ -12,9 +12,8 @@ namespace Backend.DTO.DTOs_MaterialesYmaquinarias
         public int Id { get; set; }
         public string CodigoISO { get; set; }   
         public string Nombre { get; set; }
+        public string TipoRecursoTipoMaterial { get; set; }
         public string UnidadMedida { get; set; }
-        public string TipoMaquinariaOmaquina { get; set; }
-        public string TipoMaterial { get; set; }
         public int Cantidad { get; set; }
     }
 }
