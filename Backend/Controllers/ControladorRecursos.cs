@@ -67,28 +67,17 @@ namespace Backend.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> RecursoCargar([FromBody] RecursosCargarDTO recursoCargarDTO)
+        public async Task<IActionResult> RecursoCargar([FromBody] RecursosCargarDTO recursoCargarDTO, int DepositoId)
         {
             if (recursoCargarDTO == null)
                 return BadRequest("El recurso no puede ser nulo.");
-            var exito = await recursosServicio.RecursoCargar(recursoCargarDTO);
+            var exito = await recursosServicio.RecursoCargar(recursoCargarDTO, DepositoId);
             if (!exito.Item1)
                 return StatusCode(500, exito.Item2);
             return Ok("Recurso cargado con exito.");
         }
 
-        [HttpPost("deposito")]
-        public async Task<IActionResult> RecursosCargarAdeposito([FromBody] RecursosCargarAdepositoDTO recursosCargarAdepositoDTO)
-        {
-            if (recursosCargarAdepositoDTO == null)
-                return BadRequest("El recurso no puede ser nulo.");
-            var exito = await recursosServicio.RecursosCargarAdeposito(recursosCargarAdepositoDTO);
-
-            if (!exito.Item1)
-                return StatusCode(500, exito.Item2);
-            return Ok("Recurso cargado al deposito con exito.");
-        }
-
+     
         [HttpPut("deposito/movimiento")]
         public async Task<IActionResult> RecursosTransladarAdeposito([FromBody] RecursosTransladarDepositoDTO recursosTransladarAdepositoDTO)
         {
