@@ -25,16 +25,24 @@ namespace Backend.Repositorios.Servicios
             this.baseDeDatos = baseDeDatos;
         }
 
-        public async Task<(bool, string)> RecursoCargar(RecursosCargarDTO materialYmaquinaDTO)
+        public async Task<(bool, string)> RecursoCargar(RecursosCargarDTO materialYmaquinaDTO, int DepositoId)
         {
             try
-            {
-                bool ExisteMaterialoMaquina = await baseDeDatos.MaterialesyMaquinas.AnyAsync(x => x.CodigoISO == x.CodigoISO.ToUpper());
+            { 
+                bool ExisteMaterialoMaquina = 
+                    await baseDeDatos.MaterialesyMaquinas.AnyAsync(x => x.CodigoISO == materialYmaquinaDTO.CodigoISO.ToUpper());
                 if (ExisteMaterialoMaquina) return (false, "El codigo ISO ya existe");
+
+                bool depositoExiste = await baseDeDatos.Depositos.AnyAsync(d => d.Id == DepositoId);
+                if (!depositoExiste) return (false, "El deposito no existe");
+
+                bool cantidadMaterialoMaquina = materialYmaquinaDTO.Cantidad >= 0;
+                if (!cantidadMaterialoMaquina)
+                    return (false, "La cantidad debe ser mayor o igual a 0");
 
                 TipoMaterial? tipoMaterial = null;
                 UnidadMedida? unidadMedida = null;
-                if (materialYmaquinaDTO.TipoMaterial.Id == 0 && materialYmaquinaDTO.Tipo == EnumTipoMaterialoMaquina.Material)
+                if (materialYmaquinaDTO.Tipo == EnumTipoMaterialoMaquina.Material && materialYmaquinaDTO.TipoMaterial.Id == 0)
                 {
                     tipoMaterial = await baseDeDatos.TipoMateriales.FirstOrDefaultAsync(tm => tm.Nombre == materialYmaquinaDTO.TipoMaterial.Nombre.ToUpper());
                     if (tipoMaterial == null)
@@ -48,7 +56,7 @@ namespace Backend.Repositorios.Servicios
                     }
                 }
 
-                if (materialYmaquinaDTO.UnidadDeMedida.Id == 0 && materialYmaquinaDTO.Tipo == EnumTipoMaterialoMaquina.Material)
+                if (materialYmaquinaDTO.Tipo == EnumTipoMaterialoMaquina.Material && materialYmaquinaDTO.UnidadDeMedida.Id == 0)
                 {
                     unidadMedida = await baseDeDatos.UnidadMedidas.FirstOrDefaultAsync(um => um.Nombre == materialYmaquinaDTO.UnidadDeMedida.Nombre.ToUpper());
                     if (unidadMedida == null)
@@ -67,12 +75,33 @@ namespace Backend.Repositorios.Servicios
                 {
                     CodigoISO = materialYmaquinaDTO.CodigoISO.ToUpper(),
                     Nombre = materialYmaquinaDTO.Nombre,
-                    Tipo = (EnumTipoMaterialOMaquina)materialYmaquinaDTO.Tipo,
-                    TipoMaterialId = materialYmaquinaDTO.TipoMaterial.Id != 0 ? materialYmaquinaDTO.TipoMaterial.Id : tipoMaterial!.Id,
-                    UnidadMedidaId = materialYmaquinaDTO.UnidadDeMedida.Id != 0 ? materialYmaquinaDTO.UnidadDeMedida.Id : unidadMedida!.Id,
+                    Tipo = (EnumTipoMaterialOMaquina)materialYmaquinaDTO.Tipo,  
                     Descripcion = materialYmaquinaDTO.Descripcion
                 };
-                await baseDeDatos.MaterialesyMaquinas.AddAsync(materialoMaquina);
+
+                if (materialYmaquinaDTO.Tipo == EnumTipoMaterialoMaquina.Material)
+                {
+                    materialoMaquina.TipoMaterialId =
+                        materialYmaquinaDTO.TipoMaterial.Id != 0 ? materialYmaquinaDTO.TipoMaterial.Id : tipoMaterial!.Id;
+                    materialoMaquina.UnidadMedidaId =
+                        materialYmaquinaDTO.UnidadDeMedida.Id != 0 ? materialYmaquinaDTO.UnidadDeMedida.Id : unidadMedida!.Id;
+                } else
+                {
+                    materialoMaquina.TipoMaterial = null;
+                    materialoMaquina.UnidadMedida = null;           
+                }
+
+                    await baseDeDatos.MaterialesyMaquinas.AddAsync(materialoMaquina);
+                await baseDeDatos.SaveChangesAsync();
+                
+                var depositoMaterialoMaquina = new Stock
+                {
+                    DepositoId = DepositoId,
+                    MaterialesyMaquinasId = materialoMaquina.Id,
+                    Cantidad = materialYmaquinaDTO.Cantidad,
+                    FechaIngreso = DateTime.Now
+                };
+                await baseDeDatos.Stocks.AddAsync(depositoMaterialoMaquina);
                 await baseDeDatos.SaveChangesAsync();
                 return (true, "Material o Maquina cargado con exito");
             }
@@ -83,37 +112,7 @@ namespace Backend.Repositorios.Servicios
             }
         }
 
-        public async Task<(bool, string)> RecursosCargarAdeposito(RecursosCargarAdepositoDTO materialYmaquinaCargarAdepositoDTO)
-        {
-            try
-            {
-                bool depositoExiste = await baseDeDatos.Depositos.AnyAsync(d => d.Id == materialYmaquinaCargarAdepositoDTO.DepositoId);
-                if (!depositoExiste)
-                    return (false, "El deposito no existe");
-                bool materialoMaquinaExiste = await baseDeDatos.MaterialesyMaquinas.AnyAsync(m => m.Id == materialYmaquinaCargarAdepositoDTO.MaterialYmaquinaId);
-                if (!materialoMaquinaExiste)
-                    return (false, "El material o maquina no existe");
-                bool cantidadMaterialoMaquina = materialYmaquinaCargarAdepositoDTO.Cantidad > 0;
-                if (!cantidadMaterialoMaquina)
-                    return (false, "La cantidad debe ser mayor a 0");
-                var depositoMaterialoMaquina = new Stock
-                {
-                    DepositoId = materialYmaquinaCargarAdepositoDTO.DepositoId,
-                    MaterialesyMaquinasId = materialYmaquinaCargarAdepositoDTO.MaterialYmaquinaId,
-                    Cantidad = materialYmaquinaCargarAdepositoDTO.Cantidad,
-                    FechaIngreso = DateTime.Now
-                };
-                await baseDeDatos.Stocks.AddAsync(depositoMaterialoMaquina);
-                await baseDeDatos.SaveChangesAsync();
-                return (true, "Material o Maquina cargado al deposito con exito");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.InnerException.Message}");
-                return (false, "Error al cargar el material o maquina al deposito");
-            }
-        }
-
+ 
         public async Task<(bool, string)> RecursosTransladarAdeposito(RecursosTransladarDepositoDTO materialYmaquinaTransladarDeposito)
         {
             try
