@@ -151,22 +151,5 @@ namespace Backend.Repositorios.Servicios
                 return (false, "Error al actualizar la obra.");
             }
         }
-
-        public async Task<(bool, string)> ActualizarEstadoObra(int id, EnumEstadoObra nuevoEstado)
-        {
-            try
-            {
-                Obra obra = await baseDeDatos.Obras.FirstOrDefaultAsync(o => o.Id == id);
-                if (obra == null) return (false, "No existe una obra con ese ID.");
-                obra.Estado = nuevoEstado;
-                await baseDeDatos.SaveChangesAsync();
-                return (true, "Estado de la obra actualizado con éxito.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.InnerException.Message}");
-                return (false, "Error al actualizar el estado de la obra.");
-            }
-        }
     }
 }
