@@ -230,13 +230,35 @@ namespace Backend.Repositorios.Servicios
             try
             {
                 var stock = await baseDeDatos.Stocks
-                    .FirstOrDefaultAsync(s => s.DepositoId == depositoId && s.MaterialesyMaquinasId == recursoActualizarDTO.MaterialesyMaquinasId);
+                     .FirstOrDefaultAsync(s => s.DepositoId == depositoId && s.MaterialesyMaquinas.Nombre.ToUpper() == recursoActualizarDTO.MaterialoMaquinaNombre.ToUpper());
+
+                var materialoMaquina = await baseDeDatos.MaterialesyMaquinas
+                    .FirstOrDefaultAsync(m => m.Nombre.ToUpper() == recursoActualizarDTO.MaterialoMaquinaNombre.ToUpper());
+
                 if (stock == null)
                     return (false, "El recurso no existe en el deposito especificado");
                 if (recursoActualizarDTO.Cantidad < 0)
                     return (false, "La cantidad no puede ser negativa");
+                if (recursoActualizarDTO.MaterialoMaquinaNombre == null || recursoActualizarDTO.MaterialoMaquinaNombre.Trim() == "")
+                    return (false, "El nombre del recurso no puede estar vacio o no existe");
                 stock.Cantidad = recursoActualizarDTO.Cantidad;
-   
+
+                if (materialoMaquina == null)
+                    return (false, "El recurso no existe");
+                materialoMaquina.Nombre = recursoActualizarDTO.MaterialoMaquinaNombre;
+
+                if (recursoActualizarDTO.UnidadMedida != null)
+                {
+                    var unidadMedida = await baseDeDatos.UnidadMedidas
+                        .FirstOrDefaultAsync(um => um.Nombre.ToUpper() == recursoActualizarDTO.UnidadMedida.ToUpper() ||
+                                                   um.Simbolo.ToUpper() == recursoActualizarDTO.UnidadMedida.ToUpper());
+                    if (unidadMedida == null)
+                        return (false, "La unidad de medida especificada no existe");
+                    if (materialoMaquina == null)
+                        return (false, "El recurso no existe");
+                    materialoMaquina.UnidadMedidaId = unidadMedida.Id;
+                }
+
                 await baseDeDatos.SaveChangesAsync();
                 return (true, "Stock actualizado con exito");
             }
