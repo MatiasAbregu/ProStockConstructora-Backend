@@ -8,5 +8,6 @@ namespace Backend.Repositorios.Implementaciones
         Task<(bool, string)> RecursosTransladarAdeposito(RecursosTransladarDepositoDTO RecursosTransladarDepositoDTO);
         Task<(bool, List<RecursosPagPrincipalDTO>)> RecursosVerDTO(int empresaId);
         Task<(bool, List<RecursosVerDepositoDTO>)> RecursosVerDepositoDTO(int depositoId);
+        Task<(bool, string)> RecursosActualizarStock(RecursosActualizarDTO recursoActualizarDTO, int depositoId);
     }
 }
