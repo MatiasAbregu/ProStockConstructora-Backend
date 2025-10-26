@@ -66,7 +66,7 @@ namespace Backend.Controllers
             return Ok(resultado.Item2);
         }
 
-        [HttpPost]
+        [HttpPost("{DepositoId:int}")]
         public async Task<IActionResult> RecursoCargar([FromBody] RecursosCargarDTO recursoCargarDTO, int DepositoId)
         {
             if (recursoCargarDTO == null)

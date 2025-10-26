@@ -40,7 +40,7 @@ namespace Backend.Repositorios.Servicios
                 {
                     obrasVer.Add(new VerObraDTO
                     {
-                        EmpresaId = o.EmpresaId,
+                        Id = o.Id,
                         Nombre = o.NombreObra,
                         Estado = o.Estado.ToString()
                     });
@@ -92,7 +92,7 @@ namespace Backend.Repositorios.Servicios
                 if (o == null) return (true, null);
                 VerObraDTO obraVer = new VerObraDTO
                 {
-                    EmpresaId = o.EmpresaId,
+                    Id = o.Id,
                     Nombre = o.NombreObra,
                     Estado = o.Estado.ToString()
                 };
@@ -105,7 +105,7 @@ namespace Backend.Repositorios.Servicios
             }
         }
 
-        public async Task<(bool, string)> CrearObra(ObraAsociarDTO obraDTO)
+        public async Task<(bool, string)> CrearObra(CrearObraDTO obraDTO)
         {
             try
             {
@@ -119,7 +119,7 @@ namespace Backend.Repositorios.Servicios
                 {
                     NombreObra = obraDTO.NombreObra,
                     EmpresaId = obraDTO.EmpresaId,
-                    Estado = EnumEstadoObra.EnProceso
+                    Estado = (EnumEstadoObra)obraDTO.Estado
                 };
                 await baseDeDatos.Obras.AddAsync(nuevaObra);
                 await baseDeDatos.SaveChangesAsync();

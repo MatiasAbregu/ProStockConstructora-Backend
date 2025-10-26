@@ -12,7 +12,7 @@ namespace Backend.Repositorios.Implementaciones
 {
     public interface IObraServicio
     {
-        Task<(bool, string)> CrearObra(ObraAsociarDTO obraDTO);
+        Task<(bool, string)> CrearObra(CrearObraDTO obraDTO);
         Task<(bool, string)> ActualizarEstadoObra(int id, EnumEstadoObra nuevoEstado);
         Task<(bool, string)> ActualizarObra(int id, ObraActualizarDTO o);
         Task<(bool, VerObraDTO)> ObtenerObraPorId(int id);
