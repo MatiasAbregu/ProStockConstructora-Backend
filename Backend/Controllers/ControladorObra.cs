@@ -81,7 +81,7 @@ namespace Backend.Controllers
             {
                 Id = obraDTO.Id,
                 NombreObra = obraDTO.NombreObra,
-                EstadoObra = obraDTO.EstadoObra,
+                Estado = obraDTO.Estado,
             });
             if (!resultado.Item1)
                 return StatusCode(500, resultado.Item2);

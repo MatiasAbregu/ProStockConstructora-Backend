@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.DTO.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace Backend.DTO.DTOs_Obras
     {
         public int Id { get; set; }
         public string NombreObra { get; set; }
-        public string EstadoObra { get; set; }  
+        public EnumEstadoObra Estado { get; set; }
     }
 }
 
