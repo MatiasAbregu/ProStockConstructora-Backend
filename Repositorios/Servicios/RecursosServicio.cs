@@ -224,5 +224,27 @@ namespace Backend.Repositorios.Servicios
                 return (false, null);
             }
         }
+
+        public async Task<(bool, string)> RecursosActualizarStock(RecursosActualizarDTO recursoActualizarDTO, int depositoId)
+        {
+            try
+            {
+                var stock = await baseDeDatos.Stocks
+                    .FirstOrDefaultAsync(s => s.DepositoId == depositoId && s.MaterialesyMaquinasId == recursoActualizarDTO.MaterialesyMaquinasId);
+                if (stock == null)
+                    return (false, "El recurso no existe en el deposito especificado");
+                if (recursoActualizarDTO.Cantidad < 0)
+                    return (false, "La cantidad no puede ser negativa");
+                stock.Cantidad = recursoActualizarDTO.Cantidad;
+   
+                await baseDeDatos.SaveChangesAsync();
+                return (true, "Stock actualizado con exito");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.InnerException.Message}");
+                return (false, "Error al actualizar el stock del recurso");
+            }
+        }
     }
 }

@@ -88,5 +88,16 @@ namespace Backend.Controllers
                 return StatusCode(500, "Error al trasladar el recurso al deposito.");
             return Ok( $"Recurso trasladado al deposito {recursosTransladarAdepositoDTO.DepositoDestinoId} con exito.");
         }
+
+        [HttpPut("deposito/actualizarstock/{DepositoId:int}")]
+        public async Task<IActionResult> RecursosActualizarStock([FromBody] RecursosActualizarDTO recursoActualizarDTO, int DepositoId)
+        {
+            if (recursoActualizarDTO == null)
+                return BadRequest("El recurso no puede ser nulo.");
+            var exito = await recursosServicio.RecursosActualizarStock(recursoActualizarDTO, DepositoId);
+            if (!exito.Item1)
+                return StatusCode(500, exito.Item2);
+            return Ok("Recurso actualizado con exito.");
+        }
     }
 }
