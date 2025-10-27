@@ -333,17 +333,22 @@ namespace Backend.Repositorios.Servicios
             return (true, "Stock actualizado con éxito.");
         }
 
-        public async Task<(bool, string)> RecursoEliminarStock(RecursoEliminarStockDTO recursoEliminarDTO, int StockId)
+        public async Task<(bool, string)> RecursoEliminarStock(int StockId)
         {
-           if(recursoEliminarDTO == null)
-                return (false, "El recurso no puede ser nulo.");
-            var stock = await baseDeDatos.Stocks.FirstOrDefaultAsync(s => s.Id == StockId);
+            if (StockId > 0)
+            {
+                var stock = await baseDeDatos.Stocks.FindAsync(StockId);
+                if (stock == null)
+                    return (false, "El stock no existe.");
+                baseDeDatos.Stocks.Remove(stock);
+                await baseDeDatos.SaveChangesAsync();
+                return (true, "Stock eliminado con éxito.");
+            }
+            else
+            {
+                return (false, "ID de stock inválido.");
+            }
 
-            if (stock == null)
-                return (false, "El stock no existe.");
-            baseDeDatos.Stocks.Remove(stock);
-            await baseDeDatos.SaveChangesAsync();
-            return (true, "Stock eliminado con éxito.");
         }
     }
 }
