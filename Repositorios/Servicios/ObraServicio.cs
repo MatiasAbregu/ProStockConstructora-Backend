@@ -20,8 +20,6 @@ namespace Backend.Repositorios.Servicios
     public class ObraServicio : IObraServicio
     {
         private readonly AppDbContext baseDeDatos;
-        private readonly IDepositoServicio depositoServicio;
-        private readonly IObraServicio obraServicio;
 
         public ObraServicio(AppDbContext baseDeDatos)
         {

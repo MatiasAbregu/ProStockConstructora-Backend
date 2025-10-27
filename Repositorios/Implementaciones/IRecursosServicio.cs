@@ -1,4 +1,5 @@
 ﻿using Backend.DTO.DTOs_MaterialesYmaquinarias;
+using Backend.DTO.DTOs_Recursos;
 
 namespace Backend.Repositorios.Implementaciones
 {
@@ -9,5 +10,6 @@ namespace Backend.Repositorios.Implementaciones
         Task<(bool, List<RecursosPagPrincipalDTO>)> RecursosVerDTO(int empresaId);
         Task<(bool, List<RecursosVerDepositoDTO>)> RecursosVerDepositoDTO(int depositoId);
         Task<(bool, string)> RecursosActualizarStock(RecursosActualizarDTO recursoActualizarDTO, int depositoId);
+        Task<(bool, RecursoStockVerDTO)> ObtenerRecursoPorStockId(int stockId);
     }
 }

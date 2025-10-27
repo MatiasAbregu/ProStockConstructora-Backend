@@ -55,7 +55,7 @@ namespace Backend.Controllers
 
  
         [HttpGet("deposito/{DepositoId}")]
-        public async Task<IActionResult> ObtenerRecursosPorDepósito(int DepositoId)
+        public async Task<IActionResult> ObtenerRecursosPorDeposito(int DepositoId)
         {
             ValueTuple<bool, List<RecursosVerDepositoDTO>>
             resultado = await recursosServicio.RecursosVerDepositoDTO(DepositoId);
@@ -64,6 +64,15 @@ namespace Backend.Controllers
             else if (resultado.Item2 == null || resultado.Item2.Count == 0)
                 return StatusCode(200, "No hay materiales y maquinarias registradas en el depósito.");
             return Ok(resultado.Item2);
+        }
+
+        [HttpGet("{stockId:int}")]
+        public async Task<IActionResult> ObtenerRecursoPorStockId(int stockId)
+        {
+            var res = await recursosServicio.ObtenerRecursoPorStockId(stockId);
+
+            if (res.Item1) return StatusCode(200, res.Item2);
+            else return StatusCode(404, res.Item2);
         }
 
         [HttpPost("{DepositoId:int}")]
