@@ -283,17 +283,19 @@ namespace Backend.Repositorios.Servicios
 
             recurso.Nombre = dto.Nombre;
             recurso.CodigoISO = dto.CodigoISO.ToUpper();
+            recurso.Descripcion = dto.Descripcion;
 
-            recurso.Tipo = dto.TipoRecursoTipoMaterial == "Material"
-                ? EnumTipoMaterialOMaquina.Material
-                : EnumTipoMaterialOMaquina.Maquina;
+            recurso.Tipo = dto.Tipo == "Material" ? EnumTipoMaterialOMaquina.Material : EnumTipoMaterialOMaquina.Maquina;
 
-            if (recurso.Tipo == EnumTipoMaterialOMaquina.Material)
+            TipoMaterial? tipoMaterial = null;
+            UnidadMedida? unidadMedida = null;
+            if (recurso.Tipo == EnumTipoMaterialOMaquina.Material && recurso.TipoMaterial.Id == 0)
             {
+                tipoMaterial = await baseDeDatos.TipoMateriales.FirstOrDefaultAsync(t => t.Nombre == dto.TipoMaterial);
+
                 if (!string.IsNullOrWhiteSpace(dto.UnidadMedida))
                 {
-                    var unidad = await baseDeDatos.UnidadMedidas
-                        .FirstOrDefaultAsync(u => u.Nombre == dto.UnidadMedida);
+                    var unidad = await baseDeDatos.UnidadMedidas.FirstOrDefaultAsync(u => u.Nombre == dto.UnidadMedida);
 
                     if (unidad == null)
                     {
@@ -302,21 +304,17 @@ namespace Backend.Repositorios.Servicios
                             Nombre = dto.UnidadMedida,
                             Simbolo = dto.UnidadMedida
                         };
-
                         baseDeDatos.UnidadMedidas.Add(unidad);
                         await baseDeDatos.SaveChangesAsync();
                     }
-
                     recurso.UnidadMedida = unidad;
                 }
             }
             else
             {
-                recurso.UnidadMedidaId = null;
+                recurso.TipoMaterial = null;
                 recurso.UnidadMedida = null;
             }
-
-            // Actualizar stock
             stock.Cantidad = dto.Cantidad;
 
             await baseDeDatos.SaveChangesAsync();
@@ -324,3 +322,4 @@ namespace Backend.Repositorios.Servicios
         }
     }
 }
+
