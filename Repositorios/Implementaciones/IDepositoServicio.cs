@@ -9,7 +9,7 @@ namespace Backend.Repositorios.Implementaciones
 {
     public interface IDepositoServicio
     {
-        public Task<(bool, List<VerDepositoDTO>)> ObtenerDepositos();
+        public Task<(bool, List<VerDepositoDTO>)> ObtenerDepositosPorObraId(int obraId);
         public Task<(bool, VerDepositoDTO)> ObtenerDepositoPorId(int id);
         public Task<(bool, string)> CrearDeposito(DepositoAsociarDTO e);
         public Task<(bool, string)> ActualizarDeposito(DepositoAsociarDTO e);

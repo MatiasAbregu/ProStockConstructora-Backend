@@ -108,12 +108,14 @@ namespace Backend.Controllers
             return Ok("Stock actualizado con exito.");
         }
 
-        [HttpDelete("deposito/eliminartock/{StockId:int}")]
-        public async Task<IActionResult> RecursoEliminarStock([FromBody]RecursoEliminarStockDTO recursoEliminarDTO, int StockId)
+        [HttpDelete("deposito/eliminartock/{stockId:int}")]
+        public async Task<IActionResult> RecursoEliminarStock(int stockId)
         {
-            if (recursoEliminarDTO == null)
-                return BadRequest("El recurso no puede ser nulo.");
-            var exito = await recursosServicio.RecursoEliminarStock(recursoEliminarDTO, StockId);
+            if (stockId <= 0)
+                return StatusCode(404, "El ID del stock no puede ser menor o igual a cero.");
+            if (stockId == 0)
+                return StatusCode(404, "El ID del stock no existe");
+            var exito = await recursosServicio.RecursoEliminarStock(stockId);
             if (!exito.Item1)
                 return StatusCode(500, exito.Item2);
             return Ok("Stock eliminado con exito.");

@@ -21,19 +21,6 @@ namespace Backend.Repositorios.Servicios
             this.baseDeDatos = BaseDeDatos;
 
         }
-        public async Task<(bool, List<VerDepositoDTO>)> ObtenerDepositos()
-        {
-            var depositos = await baseDeDatos.Depositos.ToListAsync();
-            return (true, depositos.Select(deposito => new VerDepositoDTO
-            {
-                Id = deposito.Id,
-                TipoDeposito = deposito.TipoDeposito.ToString(),
-                ObraId = deposito.ObraId,
-                NombreObra = (baseDeDatos.Obras.FirstOrDefault(o => o.Id == deposito.ObraId))?.NombreObra ?? "Obra no encontrada",
-                UbicacionId = deposito.UbicacionId,
-                Ubicacion = (baseDeDatos.Ubicaciones.FirstOrDefault(u => u.Id == deposito.UbicacionId))?.Domicilio ?? "Ubicación no encontrada"
-            }).ToList());
-        }
 
         public async Task<(bool, VerDepositoDTO)> ObtenerDepositoPorId(int id)
         {
@@ -45,9 +32,7 @@ namespace Backend.Repositorios.Servicios
                 {
                     Id = deposito.Id,
                     TipoDeposito = deposito.TipoDeposito.ToString(),
-                    ObraId = deposito.ObraId,
                     NombreObra = (await baseDeDatos.Obras.FirstOrDefaultAsync(o => o.Id == deposito.ObraId))?.NombreObra ?? "Obra no encontrada",
-                    UbicacionId = deposito.UbicacionId,
                     Ubicacion = (await baseDeDatos.Ubicaciones.FirstOrDefaultAsync(u => u.Id == deposito.UbicacionId))?.Domicilio ?? "Ubicación no encontrada"
                 };
                 return (true, depositoVer);
@@ -58,6 +43,30 @@ namespace Backend.Repositorios.Servicios
                 return (false, null);
             }
         }
+
+        public async Task<(bool, List<VerDepositoDTO>)> ObtenerDepositosPorObraId(int obraId)
+        {
+            try
+            {
+                var depositos = await baseDeDatos.Depositos.Where(o => o.ObraId == obraId).ToListAsync();
+                if (depositos != null && depositos.Count > 0)
+                {
+                    return (true, depositos.Select(deposito => new VerDepositoDTO
+                    {
+                        Id = deposito.Id,
+                        TipoDeposito = deposito.TipoDeposito.ToString(),
+                        NombreObra = (baseDeDatos.Obras.FirstOrDefault(o => o.Id == deposito.ObraId))?.NombreObra ?? "Obra no encontrada",
+                        Ubicacion = (baseDeDatos.Ubicaciones.FirstOrDefault(u => u.Id == deposito.UbicacionId))?.Domicilio ?? "Ubicación no encontrada"
+                    }).ToList());
+                }
+                else
+                {
+                    return (true, null);
+                }
+            }
+            catch (Exception ex) { return (false, null); };
+        }
+
         public async Task<(bool, string)> CrearDeposito(DepositoAsociarDTO e)
         {
             try
