@@ -76,6 +76,17 @@ namespace Backend.Controllers
             else return StatusCode(404, res.Item2);
         }
 
+        [HttpGet("verificar/{CodigoISO}")]
+        public async Task<IActionResult> VerificarRecursoPorCodigoISO(string CodigoISO)
+        {
+            var res = await recursosServicio.VerificarRecursoPorCodigoISO(CodigoISO);
+            if (res.Item1)
+                return StatusCode(200, "No existe");
+            else 
+                return StatusCode(404, "Tampoco existe");
+        }
+
+
         [HttpPost("{DepositoId:int}")]
         public async Task<IActionResult> RecursoCargar([FromBody] RecursosCargarDTO recursoCargarDTO, int DepositoId)
         {

@@ -12,5 +12,6 @@ namespace Backend.Repositorios.Implementaciones
         Task<(bool, string)> RecursosActualizarStock(RecursosActualizarDTO recursoActualizarDTO, int depositoId);
         Task<(bool, RecursoStockVerDTO)> ObtenerRecursoPorStockId(int stockId);
         Task<(bool, string)> RecursoEliminarStock(int stockId);
+        Task<(bool, string)> VerificarRecursoPorCodigoISO(string codigoISO);
     }
 }
