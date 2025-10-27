@@ -12,6 +12,7 @@ using Backend.DTOs;
 using Backend.BD.Enums;
 //using Backend.DTO.DTOs_Recursos;
 using Backend.DTO.DTOs_MaterialesYmaquinarias;
+using Backend.DTO.DTOs_Recursos;
 
 namespace Backend.Controllers
 {
@@ -53,7 +54,7 @@ namespace Backend.Controllers
             return Ok(resultado.Item2);
         }
 
- 
+
         [HttpGet("deposito/{DepositoId}")]
         public async Task<IActionResult> ObtenerRecursosPorDeposito(int DepositoId)
         {
@@ -86,7 +87,7 @@ namespace Backend.Controllers
             return Ok("Recurso cargado con exito.");
         }
 
-     
+
         [HttpPut("deposito/movimiento")]
         public async Task<IActionResult> RecursosTransladarAdeposito([FromBody] RecursosTransladarDepositoDTO recursosTransladarAdepositoDTO)
         {
@@ -95,7 +96,7 @@ namespace Backend.Controllers
             var exito = await recursosServicio.RecursosTransladarAdeposito(recursosTransladarAdepositoDTO);
             if (!exito.Item1)
                 return StatusCode(500, "Error al trasladar el recurso al deposito.");
-            return Ok( $"Recurso trasladado al deposito {recursosTransladarAdepositoDTO.DepositoDestinoId} con exito.");
+            return Ok($"Recurso trasladado al deposito {recursosTransladarAdepositoDTO.DepositoDestinoId} con exito.");
         }
 
 
@@ -109,6 +110,17 @@ namespace Backend.Controllers
             if (!exito.Item1)
                 return StatusCode(500, exito.Item2);
             return Ok("Stock actualizado con exito.");
+        }
+
+        [HttpDelete("deposito/eliminartock/{StockId:int}")]
+        public async Task<IActionResult> RecursoEliminarStock([FromBody]RecursoEliminarStockDTO recursoEliminarDTO, int StockId)
+        {
+            if (recursoEliminarDTO == null)
+                return BadRequest("El recurso no puede ser nulo.");
+            var exito = await recursosServicio.RecursoEliminarStock(recursoEliminarDTO, StockId);
+            if (!exito.Item1)
+                return StatusCode(500, exito.Item2);
+            return Ok("Stock eliminado con exito.");
         }
     }
 }

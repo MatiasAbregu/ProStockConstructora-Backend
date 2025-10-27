@@ -289,9 +289,21 @@ namespace Backend.Repositorios.Servicios
 
             TipoMaterial? tipoMaterial = null;
             UnidadMedida? unidadMedida = null;
-            if (recurso.Tipo == EnumTipoMaterialOMaquina.Material && recurso.TipoMaterial.Id == 0)
+            if (recurso.Tipo == EnumTipoMaterialOMaquina.Material)
             {
-                tipoMaterial = await baseDeDatos.TipoMateriales.FirstOrDefaultAsync(t => t.Nombre == dto.TipoMaterial);
+                tipoMaterial = await baseDeDatos.TipoMateriales.FirstOrDefaultAsync(t => t.Nombre.ToLower() == dto.TipoMaterial.ToLower());
+
+                if (tipoMaterial == null)
+                {
+                    tipoMaterial = new TipoMaterial
+                    {
+                        Nombre = dto.TipoMaterial
+                    };
+                    baseDeDatos.TipoMateriales.Add(tipoMaterial);
+                    await baseDeDatos.SaveChangesAsync();
+                }
+
+                unidadMedida = await baseDeDatos.UnidadMedidas.FirstOrDefaultAsync(u => u.Nombre.ToLower() == dto.UnidadMedida.ToLower());
 
                 if (!string.IsNullOrWhiteSpace(dto.UnidadMedida))
                 {
@@ -319,6 +331,19 @@ namespace Backend.Repositorios.Servicios
 
             await baseDeDatos.SaveChangesAsync();
             return (true, "Stock actualizado con éxito.");
+        }
+
+        public async Task<(bool, string)> RecursoEliminarStock(RecursoEliminarStockDTO recursoEliminarDTO, int StockId)
+        {
+           if(recursoEliminarDTO == null)
+                return (false, "El recurso no puede ser nulo.");
+            var stock = await baseDeDatos.Stocks.FirstOrDefaultAsync(s => s.Id == StockId);
+
+            if (stock == null)
+                return (false, "El stock no existe.");
+            baseDeDatos.Stocks.Remove(stock);
+            await baseDeDatos.SaveChangesAsync();
+            return (true, "Stock eliminado con éxito.");
         }
     }
 }
