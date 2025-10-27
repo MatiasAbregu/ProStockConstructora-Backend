@@ -291,12 +291,16 @@ namespace Backend.Repositorios.Servicios
             UnidadMedida? unidadMedida = null;
             if (recurso.Tipo == EnumTipoMaterialOMaquina.Material)
             {
+
                 tipoMaterial = await baseDeDatos.TipoMateriales
                 .FirstOrDefaultAsync(t => t.Nombre.ToLower() == dto.TipoMaterial.ToLower());
 
                 if (tipoMaterial == null)
                 {
-                    tipoMaterial = new TipoMaterial() { Nombre = dto.TipoMaterial };
+                    tipoMaterial = new TipoMaterial
+                    {
+                        Nombre = dto.TipoMaterial
+                    };
                     baseDeDatos.TipoMateriales.Add(tipoMaterial);
                     await baseDeDatos.SaveChangesAsync();
                 }
@@ -331,6 +335,19 @@ namespace Backend.Repositorios.Servicios
             baseDeDatos.Stocks.Update(stock);
             await baseDeDatos.SaveChangesAsync();
             return (true, "Stock actualizado con éxito.");
+        }
+
+        public async Task<(bool, string)> RecursoEliminarStock(RecursoEliminarStockDTO recursoEliminarDTO, int StockId)
+        {
+           if(recursoEliminarDTO == null)
+                return (false, "El recurso no puede ser nulo.");
+            var stock = await baseDeDatos.Stocks.FirstOrDefaultAsync(s => s.Id == StockId);
+
+            if (stock == null)
+                return (false, "El stock no existe.");
+            baseDeDatos.Stocks.Remove(stock);
+            await baseDeDatos.SaveChangesAsync();
+            return (true, "Stock eliminado con éxito.");
         }
     }
 }
