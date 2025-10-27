@@ -285,7 +285,7 @@ namespace Backend.Repositorios.Servicios
             recurso.CodigoISO = dto.CodigoISO.ToUpper();
             recurso.Descripcion = dto.Descripcion;
 
-            recurso.Tipo = dto.Tipo == "Material" ? EnumTipoMaterialOMaquina.Material : EnumTipoMaterialOMaquina.Maquina;
+            recurso.Tipo = (EnumTipoMaterialOMaquina)dto.Tipo;
 
             TipoMaterial? tipoMaterial = null;
             UnidadMedida? unidadMedida = null;

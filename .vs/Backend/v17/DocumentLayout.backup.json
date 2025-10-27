@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "DTO\\DTOs-Recursos\\RecursosActualizarDTO.cs",
               "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Recursos\\RecursosActualizarDTO.cs",
               "RelativeToolTip": "DTO\\DTOs-Recursos\\RecursosActualizarDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAARAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T04:58:31.502Z",
               "EditorCaption": ""
@@ -89,7 +89,7 @@
               "RelativeDocumentMoniker": "Repositorios\\Servicios\\RecursosServicio.cs",
               "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\RecursosServicio.cs",
               "RelativeToolTip": "Repositorios\\Servicios\\RecursosServicio.cs",
-              "ViewState": "AgIAABYBAAAAAAAAAAAuwCABAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAsBAAAAAAAAAAAwwCABAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T22:29:29.323Z",
               "EditorCaption": ""
@@ -104,8 +104,7 @@
               "RelativeToolTip": "Repositorios\\Implementaciones\\IRecursosServicio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T20:39:31.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-26T20:39:31.727Z"
             },
             {
               "$type": "Document",
@@ -117,8 +116,7 @@
               "RelativeToolTip": "Backend\\Controllers\\ControladorRecursos.cs",
               "ViewState": "AgIAAFEAAAAAAAAAAADwv2QAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T21:35:18.071Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T21:35:18.071Z"
             },
             {
               "$type": "Document",
