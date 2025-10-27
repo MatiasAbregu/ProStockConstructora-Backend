@@ -239,6 +239,7 @@ namespace Backend.Repositorios.Servicios
                 return (true, new RecursoStockVerDTO()
                 {
                     StockId = stockId,
+                    IdMaterial = recurso.MaterialesyMaquinasId,
                     CodigoISO = recurso.MaterialesyMaquinas.CodigoISO,
                     Nombre = recurso.MaterialesyMaquinas.Nombre,
                     TipoRecurso = (EnumTipoMaterialoMaquina)recurso.MaterialesyMaquinas.Tipo,
@@ -258,8 +259,8 @@ namespace Backend.Repositorios.Servicios
 
         public async Task<(bool, string)> RecursosActualizarStock(RecursosActualizarDTO dto, int depositoId)
         {
-            try
-            {
+            //try
+            //{
                 if (string.IsNullOrWhiteSpace(dto.Nombre))
                     return (false, "El nombre del recurso no puede estar vacío.");
 
@@ -316,12 +317,12 @@ namespace Backend.Repositorios.Servicios
 
                 await baseDeDatos.SaveChangesAsync();
                 return (true, "Stock actualizado con éxito.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return (false, "Error interno al actualizar el stock del recurso.");
-            }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.Message);
+            //    return (false, "Error interno al actualizar el stock del recurso.");
+            //}
         }
     }
 }

@@ -105,7 +105,7 @@ namespace Backend.Controllers
                 return BadRequest("El recurso no puede ser nulo.");
             var exito = await recursosServicio.RecursosActualizarStock(recursoActualizarDTO, DepositoId);
             if (!exito.Item1)
-                return StatusCode(500, "Error al actualizar stock.");
+                return StatusCode(500, exito.Item2);
             return Ok("Stock actualizado con exito.");
         }
     }
