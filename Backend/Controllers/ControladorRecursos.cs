@@ -98,6 +98,8 @@ namespace Backend.Controllers
             return Ok( $"Recurso trasladado al deposito {recursosTransladarAdepositoDTO.DepositoDestinoId} con exito.");
         }
 
+
+
         [HttpPut("deposito/actualizarstock/{DepositoId:int}")]
         public async Task<IActionResult> RecursosActualizarStock([FromBody] RecursosActualizarDTO recursoActualizarDTO, int DepositoId)
         {
