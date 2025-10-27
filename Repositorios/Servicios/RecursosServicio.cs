@@ -285,38 +285,50 @@ namespace Backend.Repositorios.Servicios
             recurso.CodigoISO = dto.CodigoISO.ToUpper();
             recurso.Descripcion = dto.Descripcion;
 
-            recurso.Tipo = dto.Tipo == "Material" ? EnumTipoMaterialOMaquina.Material : EnumTipoMaterialOMaquina.Maquina;
+            recurso.Tipo = (EnumTipoMaterialOMaquina)dto.Tipo;
 
             TipoMaterial? tipoMaterial = null;
             UnidadMedida? unidadMedida = null;
-            if (recurso.Tipo == EnumTipoMaterialOMaquina.Material && recurso.TipoMaterial.Id == 0)
+            if (recurso.Tipo == EnumTipoMaterialOMaquina.Material)
             {
-                tipoMaterial = await baseDeDatos.TipoMateriales.FirstOrDefaultAsync(t => t.Nombre == dto.TipoMaterial);
+                tipoMaterial = await baseDeDatos.TipoMateriales
+                .FirstOrDefaultAsync(t => t.Nombre.ToLower() == dto.TipoMaterial.ToLower());
 
-                if (!string.IsNullOrWhiteSpace(dto.UnidadMedida))
+                if (tipoMaterial == null)
                 {
-                    var unidad = await baseDeDatos.UnidadMedidas.FirstOrDefaultAsync(u => u.Nombre == dto.UnidadMedida);
-
-                    if (unidad == null)
-                    {
-                        unidad = new UnidadMedida
-                        {
-                            Nombre = dto.UnidadMedida,
-                            Simbolo = dto.UnidadMedida
-                        };
-                        baseDeDatos.UnidadMedidas.Add(unidad);
-                        await baseDeDatos.SaveChangesAsync();
-                    }
-                    recurso.UnidadMedida = unidad;
+                    tipoMaterial = new TipoMaterial() { Nombre = dto.TipoMaterial };
+                    baseDeDatos.TipoMateriales.Add(tipoMaterial);
+                    await baseDeDatos.SaveChangesAsync();
                 }
+
+                unidadMedida = await baseDeDatos.UnidadMedidas
+                    .FirstOrDefaultAsync(u => u.Nombre.ToLower() == dto.UnidadDeMedida.ToLower());
+
+                if (unidadMedida == null)
+                {
+                    unidadMedida = new UnidadMedida
+                    {
+                        Nombre = dto.UnidadDeMedida,
+                        Simbolo = dto.UnidadDeMedida
+                    };
+                    baseDeDatos.UnidadMedidas.Add(unidadMedida);
+                    await baseDeDatos.SaveChangesAsync();
+                }
+             
+                recurso.UnidadMedida = unidadMedida;
+                recurso.TipoMaterial = tipoMaterial;
             }
             else
             {
                 recurso.TipoMaterial = null;
+                recurso.TipoMaterialId = null;
                 recurso.UnidadMedida = null;
+                recurso.UnidadMedidaId = null;
             }
             stock.Cantidad = dto.Cantidad;
 
+            baseDeDatos.MaterialesyMaquinas.Update(recurso);
+            baseDeDatos.Stocks.Update(stock);
             await baseDeDatos.SaveChangesAsync();
             return (true, "Stock actualizado con éxito.");
         }
