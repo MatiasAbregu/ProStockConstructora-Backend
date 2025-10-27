@@ -259,38 +259,38 @@ namespace Backend.Repositorios.Servicios
 
         public async Task<(bool, string)> RecursosActualizarStock(RecursosActualizarDTO dto, int depositoId)
         {
-            //try
-            //{
-                if (string.IsNullOrWhiteSpace(dto.Nombre))
-                    return (false, "El nombre del recurso no puede estar vacío.");
+            if (string.IsNullOrWhiteSpace(dto.Nombre))
+                return (false, "El nombre del recurso no puede estar vacío.");
 
-                if (string.IsNullOrWhiteSpace(dto.CodigoISO))
-                    return (false, "El código ISO no puede estar vacío.");
+            if (string.IsNullOrWhiteSpace(dto.CodigoISO))
+                return (false, "El código ISO no puede estar vacío.");
 
-                if (dto.Cantidad < 0)
-                    return (false, "La cantidad no puede ser negativa.");
+            if (dto.Cantidad < 0)
+                return (false, "La cantidad no puede ser negativa.");
 
-                var stock = await baseDeDatos.Stocks
-                    .FirstOrDefaultAsync(s => s.DepositoId == depositoId &&
-                                              s.MaterialesyMaquinasId == dto.RecursoId);
+            var stock = await baseDeDatos.Stocks
+                .FirstOrDefaultAsync(s => s.DepositoId == depositoId &&
+                                          s.MaterialesyMaquinasId == dto.RecursoId);
 
-                if (stock == null)
-                    return (false, "El recurso no existe en ese depósito.");
+            if (stock == null)
+                return (false, "El recurso no existe en ese depósito.");
 
-                var recurso = await baseDeDatos.MaterialesyMaquinas
-                    .FirstOrDefaultAsync(r => r.Id == dto.RecursoId);
+            var recurso = await baseDeDatos.MaterialesyMaquinas
+                .FirstOrDefaultAsync(r => r.Id == dto.RecursoId);
 
-                if (recurso == null)
-                    return (false, "El recurso no existe.");
+            if (recurso == null)
+                return (false, "El recurso no existe.");
 
-                recurso.Nombre = dto.Nombre;
-                recurso.CodigoISO = dto.CodigoISO.ToUpper();
+            recurso.Nombre = dto.Nombre;
+            recurso.CodigoISO = dto.CodigoISO.ToUpper();
 
-                recurso.Tipo = dto.TipoRecursoTipoMaterial == "Material"
-                    ? EnumTipoMaterialOMaquina.Material
-                    : EnumTipoMaterialOMaquina.Maquina;
+            recurso.Tipo = dto.TipoRecursoTipoMaterial == "Material"
+                ? EnumTipoMaterialOMaquina.Material
+                : EnumTipoMaterialOMaquina.Maquina;
 
-                if (recurso.Tipo == EnumTipoMaterialOMaquina.Material && !string.IsNullOrWhiteSpace(dto.UnidadMedida))
+            if (recurso.Tipo == EnumTipoMaterialOMaquina.Material)
+            {
+                if (!string.IsNullOrWhiteSpace(dto.UnidadMedida))
                 {
                     var unidad = await baseDeDatos.UnidadMedidas
                         .FirstOrDefaultAsync(u => u.Nombre == dto.UnidadMedida);
@@ -302,27 +302,25 @@ namespace Backend.Repositorios.Servicios
                             Nombre = dto.UnidadMedida,
                             Simbolo = dto.UnidadMedida
                         };
+
                         baseDeDatos.UnidadMedidas.Add(unidad);
                         await baseDeDatos.SaveChangesAsync();
                     }
 
                     recurso.UnidadMedida = unidad;
                 }
-                else
-                {
-                    recurso.UnidadMedida = null;
-                }
+            }
+            else
+            {
+                recurso.UnidadMedidaId = null;
+                recurso.UnidadMedida = null;
+            }
 
-                stock.Cantidad = dto.Cantidad;
+            // Actualizar stock
+            stock.Cantidad = dto.Cantidad;
 
-                await baseDeDatos.SaveChangesAsync();
-                return (true, "Stock actualizado con éxito.");
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine(ex.Message);
-            //    return (false, "Error interno al actualizar el stock del recurso.");
-            //}
+            await baseDeDatos.SaveChangesAsync();
+            return (true, "Stock actualizado con éxito.");
         }
     }
 }
