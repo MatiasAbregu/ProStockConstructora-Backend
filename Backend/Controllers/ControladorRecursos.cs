@@ -81,7 +81,7 @@ namespace Backend.Controllers
         {
             var res = await recursosServicio.VerificarRecursoPorCodigoISO(CodigoISO);
             if (res.Item1)
-                return StatusCode(200, "No existe");
+                return StatusCode(200, "existe");
             else 
                 return StatusCode(404, "Tampoco existe");
         }

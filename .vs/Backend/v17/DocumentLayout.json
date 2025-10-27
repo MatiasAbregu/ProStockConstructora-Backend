@@ -58,8 +58,7 @@
               "RelativeToolTip": "DTO\\DTOs-Recursos\\RecursosCargarDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T22:15:21.911Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T22:15:21.911Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "Backend.Models\\Modelos\\Recursos.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T21:12:54.189Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T21:12:54.189Z"
             },
             {
               "$type": "Document",
@@ -84,8 +82,7 @@
               "RelativeToolTip": "Repositorios\\Implementaciones\\IRecursosServicio.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-26T20:39:31.727Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-26T20:39:31.727Z"
             },
             {
               "$type": "Document",
@@ -95,7 +92,7 @@
               "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorRecursos.cs",
               "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Backend\\Controllers\\ControladorRecursos.cs",
               "RelativeToolTip": "Backend\\Controllers\\ControladorRecursos.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAkwFUAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAkwFMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-25T21:35:18.071Z",
               "EditorCaption": ""
@@ -110,8 +107,7 @@
               "RelativeToolTip": "Repositorios\\Servicios\\RecursosServicio.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAkwFgAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-25T22:29:29.323Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-25T22:29:29.323Z"
             }
           ]
         }
