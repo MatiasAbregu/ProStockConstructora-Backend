@@ -10,6 +10,7 @@ namespace Backend.DTO.DTOs_Obras
     public class ObraActualizarDTO 
     {
         public int Id { get; set; }
+        public string CodigoObra { get; set; }
         public string NombreObra { get; set; }
         public EnumEstadoObra Estado { get; set; }
     }

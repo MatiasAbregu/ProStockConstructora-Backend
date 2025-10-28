@@ -26,14 +26,19 @@ namespace Backend.Repositorios.Servicios
         {
             try
             {
-                BD.Modelos.Deposito deposito = await baseDeDatos.Depositos.FirstOrDefaultAsync(d => d.Id == id);
+                Deposito? deposito = await baseDeDatos.Depositos
+                    .Include(d => d.Ubicacion).ThenInclude(u => u.Provincia)
+                    .FirstOrDefaultAsync(d => d.Id == id);
+
                 if (deposito == null) return (true, null);
                 VerDepositoDTO depositoVer = new VerDepositoDTO
                 {
                     Id = deposito.Id,
+                    CodigoDeposito = deposito.CodigoDeposito,
+                    NombreDeposito = deposito.NombreDeposito,
                     TipoDeposito = deposito.TipoDeposito.ToString(),
-                    NombreObra = (await baseDeDatos.Obras.FirstOrDefaultAsync(o => o.Id == deposito.ObraId))?.NombreObra ?? "Obra no encontrada",
-                    Ubicacion = (await baseDeDatos.Ubicaciones.FirstOrDefaultAsync(u => u.Id == deposito.UbicacionId))?.Domicilio ?? "Ubicación no encontrada"
+                    Ubicacion = deposito.Ubicacion.Domicilio ?? "Ubicación no encontrada",
+                    Provincia = deposito.Ubicacion.Provincia.Nombre
                 };
                 return (true, depositoVer);
             }
@@ -48,15 +53,19 @@ namespace Backend.Repositorios.Servicios
         {
             try
             {
-                var depositos = await baseDeDatos.Depositos.Where(o => o.ObraId == obraId).ToListAsync();
+                var depositos = await baseDeDatos.Depositos.Where(o => o.ObraId == obraId)
+                    .Include(o => o.Ubicacion).ThenInclude(u => u.Provincia).ToListAsync();
+
                 if (depositos != null && depositos.Count > 0)
                 {
                     return (true, depositos.Select(deposito => new VerDepositoDTO
                     {
                         Id = deposito.Id,
+                        CodigoDeposito = deposito.CodigoDeposito,
+                        NombreDeposito = deposito.NombreDeposito,
                         TipoDeposito = deposito.TipoDeposito.ToString(),
-                        NombreObra = (baseDeDatos.Obras.FirstOrDefault(o => o.Id == deposito.ObraId))?.NombreObra ?? "Obra no encontrada",
-                        Ubicacion = (baseDeDatos.Ubicaciones.FirstOrDefault(u => u.Id == deposito.UbicacionId))?.Domicilio ?? "Ubicación no encontrada"
+                        Ubicacion = deposito.Ubicacion.Domicilio ?? "Ubicación no encontrada",
+                        Provincia = deposito.Ubicacion.Provincia.Nombre
                     }).ToList());
                 }
                 else
@@ -64,15 +73,16 @@ namespace Backend.Repositorios.Servicios
                     return (true, null);
                 }
             }
-            catch (Exception ex) { return (false, null); };
+            catch (Exception ex) { return (false, null); }
+            ;
         }
 
         public async Task<(bool, string)> CrearDeposito(DepositoAsociarDTO e)
         {
             try
             {
-                bool existeDeposito = await baseDeDatos.Depositos.AnyAsync(d => d.ObraId == e.ObraId
-                && d.UbicacionId == e.Ubicacion.Id);
+                bool existeDeposito = await baseDeDatos.Depositos
+                    .AnyAsync(d => d.ObraId == e.ObraId && d.UbicacionId == e.Ubicacion.Id);
                 if (existeDeposito) return (false, "Ya existe un depósito asociado a esa obra y ubicación.");
 
                 Ubicacion? resUbicacion = null;
@@ -81,16 +91,18 @@ namespace Backend.Repositorios.Servicios
                 {
                     resUbicacion = baseDeDatos.Ubicaciones
                         .FirstOrDefault(u => u.CodigoUbicacion == e.Ubicacion.CodigoUbicacion.ToUpper());
+
                     if (resUbicacion == null)
-                    {                  
-                        if(e.Ubicacion.Provincia.Id == 0)
+                    {
+                        if (e.Ubicacion.Provincia.Id == 0)
                         {
                             resProvincia = baseDeDatos.Provincias
                             .FirstOrDefault(p => p.Nombre == e.Ubicacion.Provincia.NombreProvincia.ToUpper());
 
                             if (resProvincia == null)
                             {
-                                resProvincia = new Provincia() { Nombre = e.Ubicacion.Provincia.NombreProvincia.ToUpper() };
+                                resProvincia = new Provincia() 
+                                { Nombre = e.Ubicacion.Provincia.NombreProvincia.ToUpper() };
                                 baseDeDatos.Provincias.Add(resProvincia);
                                 await baseDeDatos.SaveChangesAsync();
                             }
@@ -104,11 +116,14 @@ namespace Backend.Repositorios.Servicios
                         };
                         baseDeDatos.Ubicaciones.Add(resUbicacion);
                         await baseDeDatos.SaveChangesAsync();
-                    }     
+                    }
                 }
 
                 Deposito nuevoDeposito = new Deposito
                 {
+                    CodigoDeposito = e.CodigoDeposito,
+                    NombreDeposito = e.NombreDeposito,
+                    TipoDeposito = (BD.Enums.EnumTipoDeposito)e.TipoDeposito,
                     ObraId = e.ObraId,
                     UbicacionId = e.Ubicacion.Id != 0 ? e.Ubicacion.Id : resUbicacion!.Id
                 };
@@ -124,15 +139,18 @@ namespace Backend.Repositorios.Servicios
             }
         }
 
-
         public async Task<(bool, string)> ActualizarDeposito(DepositoAsociarDTO e)
         {
             try
             {
-                BD.Modelos.Deposito deposito = await baseDeDatos.Depositos.FirstOrDefaultAsync(d => d.Id == e.Id);
+                Deposito deposito = await baseDeDatos.Depositos.FirstOrDefaultAsync(d => d.Id == e.Id);
                 if (deposito == null) return (false, "No existe un depósito con ese ID.");
+
+                deposito.CodigoDeposito = e.CodigoDeposito;
+                deposito.NombreDeposito = e.NombreDeposito;
                 deposito.ObraId = e.ObraId;
                 deposito.UbicacionId = e.Ubicacion.Id;
+
                 baseDeDatos.Depositos.Update(deposito);
                 await baseDeDatos.SaveChangesAsync();
                 return (true, "Depósito actualizado exitosamente.");

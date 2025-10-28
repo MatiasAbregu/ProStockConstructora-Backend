@@ -1,4 +1,5 @@
 ﻿using Backend.BD.Enums;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,10 +9,13 @@ using System.Threading.Tasks;
 
 namespace Backend.BD.Modelos
 {
+    [Index(nameof(CodigoObra), IsUnique = true)]
     public class Obra
     {
         [Key]
         public int Id { get; set; }
+
+        public string CodigoObra { get; set; }
 
         [MaxLength(100)]
         public required string NombreObra { get; set; }

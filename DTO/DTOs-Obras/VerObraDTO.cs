@@ -9,7 +9,8 @@ namespace Backend.DTOs
     public class VerObraDTO
     {
         public int Id { get; set; }
-        public required string Nombre { get; set; }
+        public string CodigoObra { get; set; }
+        public string NombreObra { get; set; }
         public required string Estado { get; set; }
     }
 }
