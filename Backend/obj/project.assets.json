@@ -1160,6 +1160,9 @@
       "Backend.DTO/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Backend.BD": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Backend.DTO.dll": {}
         },

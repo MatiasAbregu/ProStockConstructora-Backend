@@ -77,7 +77,7 @@ builder.Services.AddScoped<IObraServicio, ObraServicio>();
 builder.Services.AddScoped<IDepositoServicio, DepositoServicio>();
 builder.Services.AddScoped<IRolesServicio, RolesServicio>();
 builder.Services.AddScoped<IRecursosServicio, RecursosServicio>();
-
+builder.Services.AddScoped<INotaDePedidoServicio, NotaDePedidoServicio>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

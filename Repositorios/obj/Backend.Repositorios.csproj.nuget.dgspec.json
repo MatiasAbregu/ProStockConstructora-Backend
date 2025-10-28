@@ -116,7 +116,11 @@
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend.Models\\Backend.BD.csproj": {
+                "projectPath": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend.Models\\Backend.BD.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

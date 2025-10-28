@@ -16,7 +16,8 @@ namespace Backend.BD.Modelos
         [Key]
         public int Id { get; set; }
         public required string NumeroNotaPedido { get; set; }
-
+        public required string Material { get; set; }
+        public int Cantidad { get; set; }
         public required int DepositoDestinoId { get; set; }
         public Deposito DepositoDestino { get; set; }
 
@@ -24,6 +25,7 @@ namespace Backend.BD.Modelos
         public EstadoNotaPedido Estado { get; set; } = EstadoNotaPedido.Pendiente;
 
         public required string UsuarioId {  get; set; }
+
         public Usuario Usuario { get; set; }
 
         // HACER EN DTO
