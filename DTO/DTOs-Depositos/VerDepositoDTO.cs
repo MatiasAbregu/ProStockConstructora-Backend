@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.DTO.DTOs_Ubicacion;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +13,6 @@ namespace Backend.DTO.DTOs_Depositos
         public string CodigoDeposito { get; set; }
         public string NombreDeposito { get; set; }
         public string TipoDeposito { get; set; }
-        public string Ubicacion { get; set; }
-        public string Provincia { get; set; }
+        public UbicacionDTO Ubicacion { get; set; }
     }
 }

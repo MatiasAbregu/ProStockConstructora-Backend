@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Backend.BD.Migrations
 {
     /// <inheritdoc />
-    public partial class NuevaBaseDeDatosPorDeposito : Migration
+    public partial class NotaDePedido : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -490,9 +490,7 @@ namespace Backend.BD.Migrations
                     DepositoDestinoId = table.Column<int>(type: "int", nullable: false),
                     FechaEmision = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     Estado = table.Column<int>(type: "int", nullable: false),
-                    SolicitadoPor = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    UsuarioId = table.Column<string>(type: "varchar(255)", nullable: true)
+                    UsuarioId = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -502,7 +500,8 @@ namespace Backend.BD.Migrations
                         name: "FK_NotaDePedidos_AspNetUsers_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_NotaDePedidos_Depositos_DepositoDestinoId",
                         column: x => x.DepositoDestinoId,
@@ -649,10 +648,10 @@ namespace Backend.BD.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "1a64a28d-439e-4228-9c63-cf159e71c318", null, "Jefe de obra", "JEFEDEOBRA" },
-                    { "808e5653-89dc-4bbb-a63d-a0a56d7cd17b", null, "Superadministrador", "SUPERADMINISTRADOR" },
-                    { "e4d7a50d-1ffb-4e52-bf60-14c12299e588", null, "Administrador", "ADMINISTRADOR" },
-                    { "efb8c58a-8dab-4b91-83b9-848578d6166b", null, "Jefe de depósito", "JEFEDEDEPOSITO" }
+                    { "426d2f6d-3b01-4695-82ae-c2d502f91be3", null, "Superadministrador", "SUPERADMINISTRADOR" },
+                    { "647c168b-26d4-4d88-a6eb-f8bfefe729f3", null, "Jefe de depósito", "JEFEDEDEPOSITO" },
+                    { "9fc094f0-4a8a-4f16-baf0-21f2787dc3e3", null, "Jefe de obra", "JEFEDEOBRA" },
+                    { "a4d4d35a-d208-4312-93dd-bd6f38dc9ee9", null, "Administrador", "ADMINISTRADOR" }
                 });
 
             migrationBuilder.CreateIndex(
