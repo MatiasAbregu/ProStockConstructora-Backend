@@ -618,41 +618,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-<<<<<<< HEAD
-                            Id = "a7af1bf2-41ed-478d-bc5d-ddf480aa402d",
-=======
-                            Id = "426d2f6d-3b01-4695-82ae-c2d502f91be3",
->>>>>>> 3beb129c11faea75d0575605c7a6ceb6dd904640
+                            Id = "8f2d7f38-dd15-4d5f-a3df-ddcfd7a1d1ac",
                             Name = "Superadministrador",
                             NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
-<<<<<<< HEAD
-                            Id = "45ed6ccc-318f-4ffa-9e62-03dcde77c410",
-=======
-                            Id = "a4d4d35a-d208-4312-93dd-bd6f38dc9ee9",
->>>>>>> 3beb129c11faea75d0575605c7a6ceb6dd904640
+                            Id = "cb7f0055-9727-4e3f-85f2-a53bfc55163f",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-<<<<<<< HEAD
-                            Id = "99a440d2-1b6d-442e-a564-589bf86fef21",
-=======
-                            Id = "647c168b-26d4-4d88-a6eb-f8bfefe729f3",
->>>>>>> 3beb129c11faea75d0575605c7a6ceb6dd904640
+                            Id = "669c5cc6-d930-492a-9470-36282d965b58",
                             Name = "Jefe de depósito",
                             NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
-<<<<<<< HEAD
-                            Id = "8191878d-01d9-4aa3-b598-0101f20c5a69",
-=======
-                            Id = "9fc094f0-4a8a-4f16-baf0-21f2787dc3e3",
->>>>>>> 3beb129c11faea75d0575605c7a6ceb6dd904640
+                            Id = "04ca0bdc-fa9e-42f0-aa20-d449cb7f3fd7",
                             Name = "Jefe de obra",
                             NormalizedName = "JEFEDEOBRA"
                         });

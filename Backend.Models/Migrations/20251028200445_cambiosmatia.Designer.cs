@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.BD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251028192045_newdb")]
-    partial class newdb
+    [Migration("20251028200445_cambiosmatia")]
+    partial class cambiosmatia
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -209,11 +209,8 @@ namespace Backend.BD.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("SolicitadoPor")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("UsuarioId")
+                        .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
@@ -624,25 +621,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a7af1bf2-41ed-478d-bc5d-ddf480aa402d",
+                            Id = "8f2d7f38-dd15-4d5f-a3df-ddcfd7a1d1ac",
                             Name = "Superadministrador",
                             NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "45ed6ccc-318f-4ffa-9e62-03dcde77c410",
+                            Id = "cb7f0055-9727-4e3f-85f2-a53bfc55163f",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "99a440d2-1b6d-442e-a564-589bf86fef21",
+                            Id = "669c5cc6-d930-492a-9470-36282d965b58",
                             Name = "Jefe de depósito",
                             NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
-                            Id = "8191878d-01d9-4aa3-b598-0101f20c5a69",
+                            Id = "04ca0bdc-fa9e-42f0-aa20-d449cb7f3fd7",
                             Name = "Jefe de obra",
                             NormalizedName = "JEFEDEOBRA"
                         });
@@ -848,7 +845,9 @@ namespace Backend.BD.Migrations
 
                     b.HasOne("Backend.BD.Models.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId");
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("DepositoDestino");
 

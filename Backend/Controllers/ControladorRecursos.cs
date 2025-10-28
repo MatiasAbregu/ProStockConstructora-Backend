@@ -48,7 +48,7 @@ namespace Backend.Controllers
             ValueTuple<bool, List<RecursosPagPrincipalDTO>>
             resultado = await recursosServicio.RecursosVerDTO(EmpresaId);
             if (!resultado.Item1)
-                return StatusCode(500, "No hay recursos disponibles");
+                return StatusCode(200, "No hay recursos disponibles");
             else if (resultado.Item2 == null || resultado.Item2.Count == 0)
                 return StatusCode(200, "No hay materiales y maquinarias registradas.");
             return Ok(resultado.Item2);
