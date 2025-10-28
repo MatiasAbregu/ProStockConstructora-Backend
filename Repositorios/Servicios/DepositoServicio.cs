@@ -1,12 +1,12 @@
 using Backend.BD;
 using Backend.BD.Modelos;
 using Backend.DTO.DTOs_Depositos;
+using Backend.DTO.DTOs_Ubicacion;
 using Backend.Repositorios.Implementaciones;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -37,8 +37,17 @@ namespace Backend.Repositorios.Servicios
                     CodigoDeposito = deposito.CodigoDeposito,
                     NombreDeposito = deposito.NombreDeposito,
                     TipoDeposito = deposito.TipoDeposito.ToString(),
-                    Ubicacion = deposito.Ubicacion.Domicilio ?? "Ubicación no encontrada",
-                    Provincia = deposito.Ubicacion.Provincia.Nombre
+                    Ubicacion = new UbicacionDTO()
+                    {
+                        Id = deposito.Ubicacion.Id,
+                        CodigoUbicacion = deposito.Ubicacion.CodigoUbicacion,
+                        UbicacionDomicilio = deposito.Ubicacion.Domicilio,
+                        Provincia = new ProvinciaDTO()
+                        {
+                            Id = deposito.Ubicacion.Provincia.Id,
+                            NombreProvincia = deposito.Ubicacion.Provincia.Nombre
+                        }
+                    }
                 };
                 return (true, depositoVer);
             }
@@ -64,8 +73,17 @@ namespace Backend.Repositorios.Servicios
                         CodigoDeposito = deposito.CodigoDeposito,
                         NombreDeposito = deposito.NombreDeposito,
                         TipoDeposito = deposito.TipoDeposito.ToString(),
-                        Ubicacion = deposito.Ubicacion.Domicilio ?? "Ubicación no encontrada",
-                        Provincia = deposito.Ubicacion.Provincia.Nombre
+                        Ubicacion = new UbicacionDTO()
+                        {
+                            Id = deposito.Ubicacion.Id,
+                            CodigoUbicacion = deposito.Ubicacion.CodigoUbicacion,
+                            UbicacionDomicilio = deposito.Ubicacion.Domicilio,
+                            Provincia = new ProvinciaDTO()
+                            {
+                                Id = deposito.Ubicacion.Provincia.Id,
+                                NombreProvincia = deposito.Ubicacion.Provincia.Nombre
+                            }
+                        }
                     }).ToList());
                 }
                 else
@@ -82,8 +100,8 @@ namespace Backend.Repositorios.Servicios
             try
             {
                 bool existeDeposito = await baseDeDatos.Depositos
-                    .AnyAsync(d => d.ObraId == e.ObraId && d.UbicacionId == e.Ubicacion.Id);
-                if (existeDeposito) return (false, "Ya existe un depósito asociado a esa obra y ubicación.");
+                    .AnyAsync(d => d.CodigoDeposito == e.CodigoDeposito);
+                if (existeDeposito) return (false, "Ya existe un depósito con ese código.");
 
                 Ubicacion? resUbicacion = null;
                 Provincia? resProvincia = null;
@@ -101,7 +119,7 @@ namespace Backend.Repositorios.Servicios
 
                             if (resProvincia == null)
                             {
-                                resProvincia = new Provincia() 
+                                resProvincia = new Provincia()
                                 { Nombre = e.Ubicacion.Provincia.NombreProvincia.ToUpper() };
                                 baseDeDatos.Provincias.Add(resProvincia);
                                 await baseDeDatos.SaveChangesAsync();

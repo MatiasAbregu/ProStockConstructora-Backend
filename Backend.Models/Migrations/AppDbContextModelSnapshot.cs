@@ -206,11 +206,8 @@ namespace Backend.BD.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("SolicitadoPor")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("UsuarioId")
+                        .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
@@ -621,25 +618,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "808e5653-89dc-4bbb-a63d-a0a56d7cd17b",
+                            Id = "426d2f6d-3b01-4695-82ae-c2d502f91be3",
                             Name = "Superadministrador",
                             NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "e4d7a50d-1ffb-4e52-bf60-14c12299e588",
+                            Id = "a4d4d35a-d208-4312-93dd-bd6f38dc9ee9",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "efb8c58a-8dab-4b91-83b9-848578d6166b",
+                            Id = "647c168b-26d4-4d88-a6eb-f8bfefe729f3",
                             Name = "Jefe de depósito",
                             NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
-                            Id = "1a64a28d-439e-4228-9c63-cf159e71c318",
+                            Id = "9fc094f0-4a8a-4f16-baf0-21f2787dc3e3",
                             Name = "Jefe de obra",
                             NormalizedName = "JEFEDEOBRA"
                         });
@@ -845,7 +842,9 @@ namespace Backend.BD.Migrations
 
                     b.HasOne("Backend.BD.Models.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId");
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("DepositoDestino");
 

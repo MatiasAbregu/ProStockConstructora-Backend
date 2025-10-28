@@ -44,7 +44,7 @@ namespace Backend.Controllers
         {
             ValueTuple<bool, string> res = await depositoServicio.CrearDeposito(e);
             if (res.Item1) return StatusCode(201, res.Item2);
-            else if (res.Item2.Contains("ya existe")) return StatusCode(409, res.Item2);
+            else if (res.Item2.Contains("existe")) return StatusCode(409, res.Item2);
             else return StatusCode(500, res.Item2);
         }
 
