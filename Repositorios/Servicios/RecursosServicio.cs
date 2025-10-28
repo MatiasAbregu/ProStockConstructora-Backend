@@ -216,8 +216,7 @@ namespace Backend.Repositorios.Servicios
 
                 stockOrigen.Cantidad -= materialYmaquinaTransladarDeposito.Cantidad;
 
-                var stockDestino = await baseDeDatos.Stocks
-                    .FirstOrDefaultAsync(s => s.DepositoId == materialYmaquinaTransladarDeposito.DepositoDestinoId &&
+                var stockDestino = await baseDeDatos.Stocks.FirstOrDefaultAsync(s => s.DepositoId == materialYmaquinaTransladarDeposito.DepositoDestinoId &&
                                               s.MaterialesyMaquinasId == materialYmaquinaTransladarDeposito.MaterialYmaquinaId);
                 if (stockDestino != null)
                 {

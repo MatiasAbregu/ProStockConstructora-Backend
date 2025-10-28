@@ -71,8 +71,10 @@ namespace Backend.Controllers
         {
             var res = await recursosServicio.ObtenerRecursoPorStockId(stockId);
 
-            if (res.Item1) return StatusCode(200, res.Item2);
-            else return StatusCode(404, res.Item2);
+            if (res.Item1) 
+                return StatusCode(200, res.Item2);
+            else 
+                return StatusCode(404, "No se encontro el stock.");
         }
 
         [HttpGet("verificar/{CodigoISO}")]
