@@ -3,16 +3,34 @@
   "WorkspaceRootPath": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\repositorios\\servicios\\obraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\obraservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|c:\\users\\matia\\onedrive\\documentos\\prostockconstructora\\backend\\backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 07088cc7c7920afb9b3a778987b093cbb89f6370
     },
     {
       "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\backend\\controllers\\controladorrecursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorrecursos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\repositorios\\servicios\\recursosservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\recursosservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+=======
+      "AbsoluteMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|c:\\users\\matia\\onedrive\\documentos\\prostockconstructora\\backend\\backend\\controllers\\controladorobra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D21DA362-7A4F-420A-B71F-15040A8B3699}|Backend\\Backend.csproj|solutionrelative:backend\\controllers\\controladorobra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|c:\\users\\matia\\onedrive\\documentos\\prostockconstructora\\backend\\repositorios\\servicios\\depositoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97AAE56B-18BC-4968-A0E7-0B7328190838}|Repositorios\\Backend.Repositorios.csproj|solutionrelative:repositorios\\servicios\\depositoservicio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|c:\\users\\matia\\onedrive\\documentos\\prostockconstructora\\backend\\dto\\dtos-depositos\\depositoasociardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|solutionrelative:dto\\dtos-depositos\\depositoasociardto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+>>>>>>> 07088cc7c7920afb9b3a778987b093cbb89f6370
     },
     {
       "AbsoluteMoniker": "D:0:0:{B3B07782-2B7A-4AB9-B766-CB9BFF68C4F7}|DTO\\Backend.DTO.csproj|d:\\proyecto backend prostock constructora\\prostockconstructora-backend\\dto\\dtos-recursos\\recursospagprincipaldto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,7 +48,11 @@
       "DocumentGroups": [
         {
           "DockedHeight": 200,
+<<<<<<< HEAD
           "SelectedChildIndex": 4,
+=======
+          "SelectedChildIndex": 7,
+>>>>>>> 07088cc7c7920afb9b3a778987b093cbb89f6370
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,6 +68,7 @@
             },
             {
               "$type": "Bookmark",
+<<<<<<< HEAD
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
@@ -57,12 +80,113 @@
               "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\Repositorios\\Servicios\\ObraServicio.cs",
               "RelativeToolTip": "Repositorios\\Servicios\\ObraServicio.cs",
               "ViewState": "AgIAAD4AAAAAAAAAAAAwwAAAAAAAAAAAAAAAAA==",
+=======
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend\\Program.cs",
+              "RelativeDocumentMoniker": "Backend\\Program.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend\\Program.cs",
+              "RelativeToolTip": "Backend\\Program.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T21:05:59.925Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ControladorObra.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorObra.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorObra.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorObra.cs",
+              "RelativeToolTip": "Backend\\Controllers\\ControladorObra.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAcwEAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T19:52:39.344Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UbicacionDTO.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\DTO\\DTOs-Ubicacion\\UbicacionDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Ubicacion\\UbicacionDTO.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\DTO\\DTOs-Ubicacion\\UbicacionDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Ubicacion\\UbicacionDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T19:09:35.437Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "VerDepositoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Depositos\\VerDepositoDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAvwA8AAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T19:09:18.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DepositoAsociarDTO.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\DTO\\DTOs-Depositos\\DepositoAsociarDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\DTOs-Depositos\\DepositoAsociarDTO.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\DTO\\DTOs-Depositos\\DepositoAsociarDTO.cs",
+              "RelativeToolTip": "DTO\\DTOs-Depositos\\DepositoAsociarDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T03:27:34.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ControladorDeposito.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorDeposito.cs",
+              "RelativeDocumentMoniker": "Backend\\Controllers\\ControladorDeposito.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Backend\\Controllers\\ControladorDeposito.cs",
+              "RelativeToolTip": "Backend\\Controllers\\ControladorDeposito.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAcwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-28T03:21:17.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DepositoServicio.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\DepositoServicio.cs",
+              "RelativeDocumentMoniker": "Repositorios\\Servicios\\DepositoServicio.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\DepositoServicio.cs",
+              "RelativeToolTip": "Repositorios\\Servicios\\DepositoServicio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGsAAAAoAAAAAAAAAA==",
+>>>>>>> 07088cc7c7920afb9b3a778987b093cbb89f6370
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T21:12:38.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+<<<<<<< HEAD
               "DocumentIndex": 3,
               "Title": "RecursosPagPrincipalDTO.cs",
               "DocumentMoniker": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Recursos\\RecursosPagPrincipalDTO.cs",
@@ -70,6 +194,15 @@
               "ToolTip": "D:\\Proyecto Backend ProStock Constructora\\ProStockConstructora-Backend\\DTO\\DTOs-Recursos\\RecursosPagPrincipalDTO.cs",
               "RelativeToolTip": "DTO\\DTOs-Recursos\\RecursosPagPrincipalDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+=======
+              "DocumentIndex": 7,
+              "Title": "IDepositoServicio.cs",
+              "DocumentMoniker": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Implementaciones\\IDepositoServicio.cs",
+              "RelativeDocumentMoniker": "Repositorios\\Implementaciones\\IDepositoServicio.cs",
+              "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Implementaciones\\IDepositoServicio.cs",
+              "RelativeToolTip": "Repositorios\\Implementaciones\\IDepositoServicio.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAABYAAAAAAAAAA==",
+>>>>>>> 07088cc7c7920afb9b3a778987b093cbb89f6370
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-28T20:47:57.279Z",
               "EditorCaption": ""
