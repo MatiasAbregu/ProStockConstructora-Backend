@@ -19,11 +19,7 @@ namespace Backend.Repositorios.Servicios
 {
     public class ObraServicio : IObraServicio
     {
-
         private readonly AppDbContext baseDeDatos;
-        private readonly IDepositoServicio depositoServicio;
-        private readonly IObraServicio obraServicio;
-
 
         public ObraServicio(AppDbContext baseDeDatos)
         {
@@ -42,41 +38,13 @@ namespace Backend.Repositorios.Servicios
                 {
                     obrasVer.Add(new VerObraDTO
                     {
-                        EmpresaId = o.EmpresaId,
-                        Nombre = o.NombreObra,
-                        Estado = o.Estado.ToString()
+                        Id = o.Id,
+                        CodigoObra = o.CodigoObra,
+                        NombreObra = o.NombreObra,                       
+                        Estado = o.Estado.ToString() == "EnProceso" ? "En proceso" : o.Estado.ToString()
                     });
                 }
 
-                return (true, obrasVer);
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.InnerException.Message}");
-                return (false, null);
-            }
-        }
-
-        public async Task<(bool, List<VerObraConDepositoDTO>)> ObtenerObrasConDeposito(int EmpresaId)
-        {
-            try
-            {
-                List<VerObraConDepositoDTO> obrasVer = [];
-                var obrasConDepositos = await (from o in baseDeDatos.Obras
-                                               join d in baseDeDatos.Depositos on o.Id equals d.ObraId
-                                               where o.EmpresaId == EmpresaId
-                                               select new { Obra = o, Deposito = d }).ToListAsync();
-                foreach (var item in obrasConDepositos)
-                {
-                    obrasVer.Add(new VerObraConDepositoDTO
-                    {
-                        Id = item.Obra.Id,
-                        Nombre = item.Obra.NombreObra,
-                        Estado = item.Obra.Estado.ToString(),
-                        DepositoId = item.Deposito.Id,
-                        TipoDeposito = item.Deposito.TipoDeposito.ToString()
-                    });
-                }
                 return (true, obrasVer);
             }
             catch (Exception ex)
@@ -94,9 +62,10 @@ namespace Backend.Repositorios.Servicios
                 if (o == null) return (true, null);
                 VerObraDTO obraVer = new VerObraDTO
                 {
-                    EmpresaId = o.EmpresaId,
-                    Nombre = o.NombreObra,
-                    Estado = o.Estado.ToString()
+                    Id = o.Id,
+                    CodigoObra = o.CodigoObra,
+                    NombreObra = o.NombreObra,
+                    Estado = o.Estado.ToString() == "EnProceso" ? "En proceso" : o.Estado.ToString()
                 };
                 return (true, obraVer);
             }
@@ -107,21 +76,22 @@ namespace Backend.Repositorios.Servicios
             }
         }
 
-        public async Task<(bool, string)> CrearObra(ObraAsociarDTO obraDTO)
+        public async Task<(bool, string)> CrearObra(CrearObraDTO obraDTO)
         {
             try
             {
                 bool existeObra = await baseDeDatos.Obras
-                    .AnyAsync(ob => obraDTO.NombreObra.ToLower() == ob.NombreObra.ToLower() 
+                    .AnyAsync(ob => obraDTO.CodigoObra.ToLower() == ob.CodigoObra.ToLower()
                     && ob.EmpresaId == obraDTO.EmpresaId);
                 if (existeObra)
-                    return (false, "Ya existe una obra con ese nombre en la empresa.");
+                    return (false, "Ya existe una obra con ese código en la empresa.");
 
                 var nuevaObra = new Obra
                 {
+                    CodigoObra = obraDTO.CodigoObra,                    
                     NombreObra = obraDTO.NombreObra,
                     EmpresaId = obraDTO.EmpresaId,
-                    Estado = EnumEstadoObra.EnProceso
+                    Estado = (EnumEstadoObra)obraDTO.Estado
                 };
                 await baseDeDatos.Obras.AddAsync(nuevaObra);
                 await baseDeDatos.SaveChangesAsync();
@@ -140,9 +110,11 @@ namespace Backend.Repositorios.Servicios
             {
                 Obra obraUpdate = await baseDeDatos.Obras.FirstOrDefaultAsync(ob => ob.Id == id);
                 if (obraUpdate == null) return (false, "No existe una obra con ese ID.");
+
+                obraUpdate.CodigoObra = o.CodigoObra;
                 obraUpdate.NombreObra = o.NombreObra;
-
-
+                obraUpdate.Estado = (EnumEstadoObra)o.Estado;        
+                
                 await baseDeDatos.SaveChangesAsync();
                 return (true, "Obra actualizada con éxito.");
             }
@@ -150,23 +122,6 @@ namespace Backend.Repositorios.Servicios
             {
                 Console.WriteLine($"Error: {ex.InnerException.Message}");
                 return (false, "Error al actualizar la obra.");
-            }
-        }
-
-        public async Task<(bool, string)> ActualizarEstadoObra(int id, EnumEstadoObra nuevoEstado)
-        {
-            try
-            {
-                Obra obra = await baseDeDatos.Obras.FirstOrDefaultAsync(o => o.Id == id);
-                if (obra == null) return (false, "No existe una obra con ese ID.");
-                obra.Estado = nuevoEstado;
-                await baseDeDatos.SaveChangesAsync();
-                return (true, "Estado de la obra actualizado con éxito.");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.InnerException.Message}");
-                return (false, "Error al actualizar el estado de la obra.");
             }
         }
     }

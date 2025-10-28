@@ -13,7 +13,7 @@ namespace Backend.BD.Modelos
         public int Id { get; set; } 
 
         public required int MaterialesyMaquinasId { get; set; }
-        public MaterialesyMaquinas MaterialesyMaquinas { get; set; }
+        public Recursos MaterialesyMaquinas { get; set; }
 
         public required int DepositoId { get; set; }
         public Deposito Deposito { get; set; }

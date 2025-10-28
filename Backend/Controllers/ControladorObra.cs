@@ -27,7 +27,7 @@ namespace Backend.Controllers
             this.baseDeDatos = baseDeDatos;
             this.obraServicio = obraServicio;
         }
-        [HttpGet("ObtenerObras/{EmpresaId}")]
+        [HttpGet("empresa/{EmpresaId:int}")]
         public async Task<IActionResult> ObtenerObras(int EmpresaId)
         {
             ValueTuple<bool, List<VerObraDTO>>
@@ -39,7 +39,7 @@ namespace Backend.Controllers
             return Ok(resultado.Item2);
         }
 
-        [HttpGet("ObtenerObraPorId/{id}")]
+        [HttpGet("{id:int}")]
         public async Task<IActionResult> ObtenerObraPorId(int id)
         {
             ValueTuple<bool, VerObraDTO>
@@ -51,58 +51,37 @@ namespace Backend.Controllers
             return Ok(resultado.Item2);
         }
 
-        [HttpGet("ObtenerObrasConDeposito/{EmpresaId}")]
-        public async Task<IActionResult> ObtenerObrasConDeposito(int EmpresaId)
-        {
-            ValueTuple<bool, List<DTO.DTOs_Obras.VerObraConDepositoDTO>>
-            resultado = await obraServicio.ObtenerObrasConDeposito(EmpresaId);
-            if (!resultado.Item1)
-                return StatusCode(500, "Error al obtener las obras con depósitos.");
-            else if (resultado.Item2 == null || resultado.Item2.Count == 0)
-                return StatusCode(200, "No hay obras con depósitos registrados.");
-            return Ok(resultado.Item2);
-        }
 
-        [HttpPost("CrearObra")]
-        public async Task<IActionResult> CrearObra([FromBody] DTO.DTOs_Obras.CrearObraDTO obraDTO)
+        [HttpPost]
+        public async Task<IActionResult> CrearObra([FromBody] CrearObraDTO obraDTO)
         {
-           ValueTuple<bool, string> resultado = await obraServicio.CrearObra(new ObraAsociarDTO
-            {
-                EmpresaId = obraDTO.EmpresaId,
-                NombreObra = obraDTO.NombreObra,
-                EstadoObra = obraDTO.Estado
-           });
+           ValueTuple<bool, string> resultado = await obraServicio.CrearObra(obraDTO);
             if (!resultado.Item1)
                 return StatusCode(500, resultado.Item2);
             return Ok("Obra creada exitosamente.");
         }
 
-        [HttpPut("ActualizarObra/{id}")]
-        public async Task<IActionResult> ActualizarObra(int id, [FromBody] DTO.DTOs_Obras.ObraActualizarDTO obraDTO)
+        [HttpPut("{id:int}")]
+        public async Task<IActionResult> ActualizarObra(int id, [FromBody] ObraActualizarDTO obraDTO)
         {
             if (id != obraDTO.Id)
                 return BadRequest("El ID de la obra no coincide.");
-            ValueTuple<bool, string> resultado = await obraServicio.ActualizarObra(id, new ObraActualizarDTO
-            {
-                Id = obraDTO.Id,
-                NombreObra = obraDTO.NombreObra,
-                EstadoObra = obraDTO.EstadoObra,
-            });
+            ValueTuple<bool, string> resultado = await obraServicio.ActualizarObra(id, obraDTO);
             if (!resultado.Item1)
                 return StatusCode(500, resultado.Item2);
             return Ok("Obra actualizada exitosamente.");
         }
 
-        [HttpDelete("EliminarObra/{id}")]
-        public async Task<IActionResult> EliminarObra(int id)
-        {
-            var obra = await baseDeDatos.Obras.FindAsync(id);
-            if (obra == null)
-                return NotFound("No se encontró la obra con el ID proporcionado.");
-            baseDeDatos.Obras.Remove(obra);
-            await baseDeDatos.SaveChangesAsync();
-            return Ok("Obra eliminada exitosamente.");
-        }
+        //[HttpDelete("{id:int}")]
+        //public async Task<IActionResult> EliminarObra(int id)
+        //{
+        //    var obra = await baseDeDatos.Obras.FindAsync(id);
+        //    if (obra == null)
+        //        return NotFound("No se encontró la obra con el ID proporcionado.");
+        //    baseDeDatos.Obras.Remove(obra);
+        //    await baseDeDatos.SaveChangesAsync();
+        //    return Ok("Obra eliminada exitosamente.");
+        //}
     }
 }
    

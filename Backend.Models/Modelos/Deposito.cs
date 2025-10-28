@@ -1,4 +1,5 @@
 ﻿using Backend.BD.Enums;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,17 +9,20 @@ using System.Threading.Tasks;
 
 namespace Backend.BD.Modelos
 {
+    [Index(nameof(CodigoDeposito), IsUnique = true)]
     public class Deposito
     {
         [Key]
         public int Id { get; set; }
+
+        public string CodigoDeposito { get; set; }
+        public string NombreDeposito { get; set; }
 
         public EnumTipoDeposito TipoDeposito { get; set; } = EnumTipoDeposito.Disponible;
 
         [Required(ErrorMessage = "La obra del deposito es obligatorio.")]
         public required int ObraId { get; set; }
         public Obra Obra { get; set; }
-
 
         [Required(ErrorMessage = "La ubicacion del deposito es obligatorio.")]
         public required int UbicacionId { get; set; }

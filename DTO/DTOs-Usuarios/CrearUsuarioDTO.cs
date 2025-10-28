@@ -8,7 +8,6 @@ namespace Backend.DTO.DTOs_Usuarios
     public class CrearUsuarioDTO
     {
         public string NombreUsuario { get; set; }
-        public string Contrasena {  get; set; }
         public List<string> Roles { get; set; }
         public int EmpresaId { get; set; }
         public string? Email { get; set; } = null;

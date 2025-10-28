@@ -15,12 +15,11 @@ namespace Backend.Repositorios.Servicios
     public class NotaDePedidoServicio : INotaDePedidoServicio
     {
         private readonly AppDbContext context;
-        private readonly INotaDePedidoServicio notaDePedidoServicio;
 
-        public NotaDePedidoServicio(AppDbContext context, INotaDePedidoServicio notaDePedidoServicio)
+        public NotaDePedidoServicio(AppDbContext context)
         {
             this.context = context;
-            this.notaDePedidoServicio = notaDePedidoServicio;
+            
         }
 
         public async Task<List<VerNotaDePedidoDTO>> ObtenerNotasDePedido(string NumeroNotaPedido)
@@ -96,7 +95,7 @@ namespace Backend.Repositorios.Servicios
             notaDePedidoExistente.DepositoDestinoId = notaDePedidoActualizadaDTO.DepositoDestinoId;
             notaDePedidoExistente.FechaEmision = notaDePedidoActualizadaDTO.FechaEmision;
             notaDePedidoExistente.Estado = notaDePedidoActualizadaDTO.Estado;
-            notaDePedidoExistente.UsuarioId = notaDePedidoActualizadaDTO.UsuarioId;
+            notaDePedidoExistente.UsuarioId= notaDePedidoActualizadaDTO.UsuarioId;
             await context.SaveChangesAsync();
             return true;
         }

@@ -1,4 +1,6 @@
 ﻿using Backend.BD;
+using Backend.DTO.DTOs_NotaDePedido;
+using Backend.Repositorios.Implementaciones;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,25 +12,29 @@ namespace Backend.Controllers
     public class ControladorNotaDePedido : ControllerBase
     {
         private readonly AppDbContext baseDeDatos;
+        private readonly INotaDePedidoServicio notaDePedidoServicio;
 
-        public ControladorNotaDePedido(AppDbContext BaseDeDatos )
+        public ControladorNotaDePedido(AppDbContext baseDeDatos, INotaDePedidoServicio notaDePedidoServicio)
         {
-            baseDeDatos = BaseDeDatos;
+            this.baseDeDatos = baseDeDatos;
+            this.notaDePedidoServicio = notaDePedidoServicio;
         }
-        [HttpGet("obtener-notaspedidos")]
-        public async Task<ActionResult> ObtenerNotasDePedido()
+        [HttpGet("obtener-notaspedidos/Numero/{NumeroNotaPedido}")]
+        public async Task<ActionResult<VerNotaDePedidoDTO>> ObtenerNotasDePedido(string NumeroNotaPedido)
         {
-           var notaPedidos = await baseDeDatos.NotaDePedidos.ToListAsync();
+            var notaPedidos = await notaDePedidoServicio.ObtenerNotasDePedido(NumeroNotaPedido);
+            //var notaPedidos = await baseDeDatos.NotaDePedidos.ToListAsync();
             if (notaPedidos == null || notaPedidos.Count == 0)
             {
                 return StatusCode(200, "No hay notas de pedido registradas.");
             }
             return Ok(notaPedidos);
         }
-        [HttpGet("obtener-notaspedidos/{id}")]
-        public async Task<ActionResult> ObtenerNotaDePedidoPorId([FromRoute] int id)
+        [HttpGet("obtener-notaspedidos/{id:int}")]
+        public async Task<ActionResult<VerNotaDePedidoDTO>> ObtenerNotaDePedidoPorId([FromRoute] int id)
         {
-            var notaPedido = await baseDeDatos.NotaDePedidos.FirstOrDefaultAsync(np => np.Id == id);
+            var notaPedido = await notaDePedidoServicio.ObtenerNotaDePedidoPorCodigo(id.ToString());
+            //var notaPedido = await baseDeDatos.NotaDePedidos.FirstOrDefaultAsync(np => np.Id == id);
             if (notaPedido == null)
             {
                 return StatusCode(404, "No existe una nota de pedido con ese ID.");
@@ -54,7 +60,7 @@ namespace Backend.Controllers
                 return StatusCode(500, "Error al crear la nota de pedido.");
             }
         }
-        [HttpPut("actualizar-notapedido/{id}")]
+        [HttpPut("actualizar-notapedido/{id:int}")]
         public async Task<ActionResult> ActualizarNotaDePedido([FromRoute] int id, [FromBody] BD.Modelos.NotaDePedido notaDePedidoActualizada)
         {
             try
@@ -78,10 +84,10 @@ namespace Backend.Controllers
             {
                 return StatusCode(500, "Error al actualizar la nota de pedido.");
             }
-            
+
 
         }
-        [HttpDelete("eliminar-notapedido/{id}")]
+        [HttpDelete("eliminar-notapedido/{id:int}")]
         public async Task<ActionResult> EliminarNotaDePedido([FromRoute] int id)
         {
             try
@@ -99,7 +105,6 @@ namespace Backend.Controllers
             {
                 return StatusCode(500, "Error al eliminar la nota de pedido.");
             }
-
-    
-    }   }
+        }
+    }
 }

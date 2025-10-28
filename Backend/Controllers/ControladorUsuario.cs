@@ -40,6 +40,14 @@ namespace Backend.Controllers
             return StatusCode(204, "Todavía no hay usuarios añadidos a la empresa.");
         }
 
+        [HttpGet("obtener-usuario/{id}")]
+        public async Task<ActionResult> ObtenerUsuarioPorId(string id)
+        {
+            ValueTuple<bool, VerUsuarioDTO> res = await usuarioServicio.ObtenerUsuarioPorId(id);
+            if (res.Item1) return StatusCode(200, res.Item2);
+            return StatusCode(404, "Ese usuario no existe.");
+        }
+
         [HttpPost]
         public async Task<ActionResult> CrearUsuario(CrearUsuarioDTO usuario)
         {
@@ -48,12 +56,17 @@ namespace Backend.Controllers
             if (resultado.Succeeded) return StatusCode(200, "¡Usuario creado con éxito!");
             else
             {
-                string errores = "";
-                foreach (IdentityError error in resultado.Errors)
+                string error = "";
+                foreach (IdentityError errorListado in resultado.Errors)
                 {
-                    errores += error.Description + ", ";
+                    if (errorListado.Code == "DuplicateUserName")
+                    {
+                        error = "¡Error, el nombre de usuario ya está en uso!";
+                        break;
+                    }
                 }
-                return StatusCode(400, $"¡No se pudo crear el usuario! Errores: ${errores}");
+
+                return StatusCode(400, error);
             }
         }
 
@@ -70,9 +83,9 @@ namespace Backend.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> DesactivarUsuario(string id)
+        public async Task<ActionResult> CambiarEstadoUsuario(string id)
         {
-            ValueTuple<bool, string> res = await usuarioServicio.DesactivarUsuario(id);
+            ValueTuple<bool, string> res = await usuarioServicio.CambiarEstadoUsuario(id);
 
             if(res.Item2.Contains("Error")) return StatusCode(500, res.Item2);
             else if(!res.Item1) return StatusCode(404, res.Item2);

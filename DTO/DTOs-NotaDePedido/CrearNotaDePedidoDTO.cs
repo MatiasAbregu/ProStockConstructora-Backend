@@ -15,6 +15,6 @@ namespace Backend.DTO.DTOs_NotaDePedido
         public int DepositoDestinoId { get; set; }
         public DateTime FechaEmision { get; set; }
         public EstadoNotaPedido Estado { get; set; } = EstadoNotaPedido.Pendiente;
-        public int UsuarioId { get; set; }
+        public string UsuarioId { get; set; }
     }
 }

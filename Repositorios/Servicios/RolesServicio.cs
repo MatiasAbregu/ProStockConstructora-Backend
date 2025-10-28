@@ -1,4 +1,5 @@
 ﻿using Backend.BD;
+using Backend.DTO.DTOs_Roles;
 using Backend.Repositorios.Implementaciones;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -21,9 +22,15 @@ namespace Backend.Repositorios.Servicios
             this.gestorRoles = gestorRoles;
         }
 
-        public (bool, List<IdentityRole>) ObtenerRoles()
+        public (bool, List<VerRol>) ObtenerRoles()
         {
-            var rolesListado = gestorRoles.Roles.Where(r => r.NormalizedName != "SUPERADMINISTRADOR").ToList();
+            var rolesListado = gestorRoles.Roles.Where(r => r.NormalizedName != "SUPERADMINISTRADOR")
+                .Select(r =>
+                new VerRol()
+                {
+                    NormalizedName = r.NormalizedName,
+                    Name = r.Name    
+                }).ToList();
             if (rolesListado == null || rolesListado.Count == 0)
             {
                 return (false, null);

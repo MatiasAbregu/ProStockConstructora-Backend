@@ -30,6 +30,14 @@ namespace Backend.BD.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CodigoDeposito")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("NombreDeposito")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
                     b.Property<int>("ObraId")
                         .HasColumnType("int");
 
@@ -40,6 +48,9 @@ namespace Backend.BD.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CodigoDeposito")
+                        .IsUnique();
 
                     b.HasIndex("ObraId");
 
@@ -57,9 +68,6 @@ namespace Backend.BD.Migrations
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Cantidad")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdRecurso")
                         .HasColumnType("int");
 
                     b.Property<int>("MaterialesyMaquinasId")
@@ -143,7 +151,7 @@ namespace Backend.BD.Migrations
                     b.ToTable("Empresa");
                 });
 
-            modelBuilder.Entity("Backend.BD.Modelos.MaterialesyMaquinas", b =>
+            modelBuilder.Entity("Backend.BD.Modelos.MovimientoDeposito", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -151,36 +159,30 @@ namespace Backend.BD.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("CodigoISO")
-                        .IsRequired()
-                        .HasColumnType("varchar(255)");
-
-                    b.Property<string>("Descripcion")
-                        .HasColumnType("longtext");
-
-                    b.Property<string>("Nombre")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
-                    b.Property<int>("Tipo")
+                    b.Property<int>("Cantidad")
                         .HasColumnType("int");
 
-                    b.Property<int?>("TipoMaterialId")
+                    b.Property<int>("DepositoDestinoId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("UnidadMedidaId")
+                    b.Property<int>("DepositoOrigenId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Fecha")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<int>("MaterialOMaquinaId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CodigoISO")
-                        .IsUnique();
+                    b.HasIndex("DepositoDestinoId");
 
-                    b.HasIndex("TipoMaterialId");
+                    b.HasIndex("DepositoOrigenId");
 
-                    b.HasIndex("UnidadMedidaId");
+                    b.HasIndex("MaterialOMaquinaId");
 
-                    b.ToTable("MaterialesyMaquinas");
+                    b.ToTable("MovimientoDepositos");
                 });
 
             modelBuilder.Entity("Backend.BD.Modelos.NotaDePedido", b =>
@@ -204,11 +206,8 @@ namespace Backend.BD.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(255)");
 
-                    b.Property<string>("SolicitadoPor")
-                        .IsRequired()
-                        .HasColumnType("longtext");
-
                     b.Property<string>("UsuarioId")
+                        .IsRequired()
                         .HasColumnType("varchar(255)");
 
                     b.HasKey("Id");
@@ -231,6 +230,10 @@ namespace Backend.BD.Migrations
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("CodigoObra")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
                     b.Property<int>("EmpresaId")
                         .HasColumnType("int");
 
@@ -243,6 +246,9 @@ namespace Backend.BD.Migrations
                         .HasColumnType("varchar(100)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CodigoObra")
+                        .IsUnique();
 
                     b.HasIndex("EmpresaId");
 
@@ -288,6 +294,46 @@ namespace Backend.BD.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Provincias");
+                });
+
+            modelBuilder.Entity("Backend.BD.Modelos.Recursos", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CodigoISO")
+                        .IsRequired()
+                        .HasColumnType("varchar(255)");
+
+                    b.Property<string>("Descripcion")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Nombre")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<int>("Tipo")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TipoMaterialId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("UnidadMedidaId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CodigoISO")
+                        .IsUnique();
+
+                    b.HasIndex("TipoMaterialId");
+
+                    b.HasIndex("UnidadMedidaId");
+
+                    b.ToTable("MaterialesyMaquinas");
                 });
 
             modelBuilder.Entity("Backend.BD.Modelos.Remito", b =>
@@ -572,25 +618,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "4c5674ac-2d68-4036-bd35-8a48a25bf299",
+                            Id = "426d2f6d-3b01-4695-82ae-c2d502f91be3",
                             Name = "Superadministrador",
                             NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "9bd62dc3-a042-436c-892b-7ae6ae8ea52c",
+                            Id = "a4d4d35a-d208-4312-93dd-bd6f38dc9ee9",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "c98b1007-19c2-4abd-a5c0-2284af9939a5",
+                            Id = "647c168b-26d4-4d88-a6eb-f8bfefe729f3",
                             Name = "Jefe de depósito",
                             NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
-                            Id = "4498e7d2-f37c-4891-82e8-92779cc5de86",
+                            Id = "9fc094f0-4a8a-4f16-baf0-21f2787dc3e3",
                             Name = "Jefe de obra",
                             NormalizedName = "JEFEDEOBRA"
                         });
@@ -723,7 +769,7 @@ namespace Backend.BD.Migrations
 
             modelBuilder.Entity("Backend.BD.Modelos.DetalleNotaDePedido", b =>
                 {
-                    b.HasOne("Backend.BD.Modelos.MaterialesyMaquinas", "MaterialesyMaquinas")
+                    b.HasOne("Backend.BD.Modelos.Recursos", "MaterialesyMaquinas")
                         .WithMany()
                         .HasForeignKey("MaterialesyMaquinasId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -759,19 +805,31 @@ namespace Backend.BD.Migrations
                     b.Navigation("Remito");
                 });
 
-            modelBuilder.Entity("Backend.BD.Modelos.MaterialesyMaquinas", b =>
+            modelBuilder.Entity("Backend.BD.Modelos.MovimientoDeposito", b =>
                 {
-                    b.HasOne("Backend.BD.Modelos.TipoMaterial", "TipoMaterial")
+                    b.HasOne("Backend.BD.Modelos.Deposito", "DepositoDestino")
                         .WithMany()
-                        .HasForeignKey("TipoMaterialId");
+                        .HasForeignKey("DepositoDestinoId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.HasOne("Backend.BD.Modelos.UnidadMedida", "UnidadMedida")
+                    b.HasOne("Backend.BD.Modelos.Deposito", "DepositoOrigen")
                         .WithMany()
-                        .HasForeignKey("UnidadMedidaId");
+                        .HasForeignKey("DepositoOrigenId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("TipoMaterial");
+                    b.HasOne("Backend.BD.Modelos.Recursos", "MaterialOMaquina")
+                        .WithMany()
+                        .HasForeignKey("MaterialOMaquinaId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
-                    b.Navigation("UnidadMedida");
+                    b.Navigation("DepositoDestino");
+
+                    b.Navigation("DepositoOrigen");
+
+                    b.Navigation("MaterialOMaquina");
                 });
 
             modelBuilder.Entity("Backend.BD.Modelos.NotaDePedido", b =>
@@ -784,7 +842,9 @@ namespace Backend.BD.Migrations
 
                     b.HasOne("Backend.BD.Models.Usuario", "Usuario")
                         .WithMany()
-                        .HasForeignKey("UsuarioId");
+                        .HasForeignKey("UsuarioId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("DepositoDestino");
 
@@ -821,6 +881,21 @@ namespace Backend.BD.Migrations
                     b.Navigation("Usuario");
                 });
 
+            modelBuilder.Entity("Backend.BD.Modelos.Recursos", b =>
+                {
+                    b.HasOne("Backend.BD.Modelos.TipoMaterial", "TipoMaterial")
+                        .WithMany()
+                        .HasForeignKey("TipoMaterialId");
+
+                    b.HasOne("Backend.BD.Modelos.UnidadMedida", "UnidadMedida")
+                        .WithMany()
+                        .HasForeignKey("UnidadMedidaId");
+
+                    b.Navigation("TipoMaterial");
+
+                    b.Navigation("UnidadMedida");
+                });
+
             modelBuilder.Entity("Backend.BD.Modelos.Remito", b =>
                 {
                     b.HasOne("Backend.BD.Modelos.Deposito", "Deposito")
@@ -854,7 +929,7 @@ namespace Backend.BD.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Backend.BD.Modelos.MaterialesyMaquinas", "MaterialesyMaquinas")
+                    b.HasOne("Backend.BD.Modelos.Recursos", "MaterialesyMaquinas")
                         .WithMany()
                         .HasForeignKey("MaterialesyMaquinasId")
                         .OnDelete(DeleteBehavior.Cascade)

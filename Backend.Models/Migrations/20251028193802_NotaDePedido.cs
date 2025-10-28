@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Backend.BD.Migrations
 {
     /// <inheritdoc />
-    public partial class nuevosroles : Migration
+    public partial class NotaDePedido : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -181,6 +181,8 @@ namespace Backend.BD.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CodigoObra = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     NombreObra = table.Column<string>(type: "varchar(100)", maxLength: 100, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Estado = table.Column<int>(type: "int", nullable: false),
@@ -415,6 +417,10 @@ namespace Backend.BD.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    CodigoDeposito = table.Column<string>(type: "varchar(255)", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
+                    NombreDeposito = table.Column<string>(type: "longtext", nullable: false)
+                        .Annotation("MySql:CharSet", "utf8mb4"),
                     TipoDeposito = table.Column<int>(type: "int", nullable: false),
                     ObraId = table.Column<int>(type: "int", nullable: false),
                     UbicacionId = table.Column<int>(type: "int", nullable: false)
@@ -438,6 +444,42 @@ namespace Backend.BD.Migrations
                 .Annotation("MySql:CharSet", "utf8mb4");
 
             migrationBuilder.CreateTable(
+                name: "MovimientoDepositos",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    DepositoOrigenId = table.Column<int>(type: "int", nullable: false),
+                    DepositoDestinoId = table.Column<int>(type: "int", nullable: false),
+                    MaterialOMaquinaId = table.Column<int>(type: "int", nullable: false),
+                    Cantidad = table.Column<int>(type: "int", nullable: false),
+                    Fecha = table.Column<DateTime>(type: "datetime(6)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MovimientoDepositos", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_MovimientoDepositos_Depositos_DepositoDestinoId",
+                        column: x => x.DepositoDestinoId,
+                        principalTable: "Depositos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MovimientoDepositos_Depositos_DepositoOrigenId",
+                        column: x => x.DepositoOrigenId,
+                        principalTable: "Depositos",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_MovimientoDepositos_MaterialesyMaquinas_MaterialOMaquinaId",
+                        column: x => x.MaterialOMaquinaId,
+                        principalTable: "MaterialesyMaquinas",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
+            migrationBuilder.CreateTable(
                 name: "NotaDePedidos",
                 columns: table => new
                 {
@@ -448,9 +490,7 @@ namespace Backend.BD.Migrations
                     DepositoDestinoId = table.Column<int>(type: "int", nullable: false),
                     FechaEmision = table.Column<DateTime>(type: "datetime(6)", nullable: false),
                     Estado = table.Column<int>(type: "int", nullable: false),
-                    SolicitadoPor = table.Column<string>(type: "longtext", nullable: false)
-                        .Annotation("MySql:CharSet", "utf8mb4"),
-                    UsuarioId = table.Column<string>(type: "varchar(255)", nullable: true)
+                    UsuarioId = table.Column<string>(type: "varchar(255)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
@@ -460,7 +500,8 @@ namespace Backend.BD.Migrations
                         name: "FK_NotaDePedidos_AspNetUsers_UsuarioId",
                         column: x => x.UsuarioId,
                         principalTable: "AspNetUsers",
-                        principalColumn: "Id");
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_NotaDePedidos_Depositos_DepositoDestinoId",
                         column: x => x.DepositoDestinoId,
@@ -506,7 +547,6 @@ namespace Backend.BD.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NotaDePedidoId = table.Column<int>(type: "int", nullable: false),
-                    IdRecurso = table.Column<int>(type: "int", nullable: false),
                     MaterialesyMaquinasId = table.Column<int>(type: "int", nullable: false),
                     Cantidad = table.Column<int>(type: "int", nullable: false)
                 },
@@ -608,10 +648,10 @@ namespace Backend.BD.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "4498e7d2-f37c-4891-82e8-92779cc5de86", null, "Jefe de obra", "JEFEDEOBRA" },
-                    { "4c5674ac-2d68-4036-bd35-8a48a25bf299", null, "Superadministrador", "SUPERADMINISTRADOR" },
-                    { "9bd62dc3-a042-436c-892b-7ae6ae8ea52c", null, "Administrador", "ADMINISTRADOR" },
-                    { "c98b1007-19c2-4abd-a5c0-2284af9939a5", null, "Jefe de depósito", "JEFEDEDEPOSITO" }
+                    { "426d2f6d-3b01-4695-82ae-c2d502f91be3", null, "Superadministrador", "SUPERADMINISTRADOR" },
+                    { "647c168b-26d4-4d88-a6eb-f8bfefe729f3", null, "Jefe de depósito", "JEFEDEDEPOSITO" },
+                    { "9fc094f0-4a8a-4f16-baf0-21f2787dc3e3", null, "Jefe de obra", "JEFEDEOBRA" },
+                    { "a4d4d35a-d208-4312-93dd-bd6f38dc9ee9", null, "Administrador", "ADMINISTRADOR" }
                 });
 
             migrationBuilder.CreateIndex(
@@ -654,6 +694,12 @@ namespace Backend.BD.Migrations
                 name: "UserNameIndex",
                 table: "AspNetUsers",
                 column: "NormalizedUserName",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Depositos_CodigoDeposito",
+                table: "Depositos",
+                column: "CodigoDeposito",
                 unique: true);
 
             migrationBuilder.CreateIndex(
@@ -709,6 +755,21 @@ namespace Backend.BD.Migrations
                 column: "UnidadMedidaId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_MovimientoDepositos_DepositoDestinoId",
+                table: "MovimientoDepositos",
+                column: "DepositoDestinoId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MovimientoDepositos_DepositoOrigenId",
+                table: "MovimientoDepositos",
+                column: "DepositoOrigenId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_MovimientoDepositos_MaterialOMaquinaId",
+                table: "MovimientoDepositos",
+                column: "MaterialOMaquinaId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_NotaDePedidos_DepositoDestinoId",
                 table: "NotaDePedidos",
                 column: "DepositoDestinoId");
@@ -723,6 +784,12 @@ namespace Backend.BD.Migrations
                 name: "IX_NotaDePedidos_UsuarioId",
                 table: "NotaDePedidos",
                 column: "UsuarioId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Obras_CodigoObra",
+                table: "Obras",
+                column: "CodigoObra",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Obras_EmpresaId",
@@ -802,6 +869,9 @@ namespace Backend.BD.Migrations
 
             migrationBuilder.DropTable(
                 name: "DetalleRemitos");
+
+            migrationBuilder.DropTable(
+                name: "MovimientoDepositos");
 
             migrationBuilder.DropTable(
                 name: "ObraUsuarios");
