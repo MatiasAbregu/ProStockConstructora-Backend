@@ -108,7 +108,7 @@ namespace Backend.Repositorios.Servicios
                 if (e.Ubicacion.Id == 0)
                 {
                     resUbicacion = baseDeDatos.Ubicaciones
-                        .FirstOrDefault(u => u.CodigoUbicacion == e.Ubicacion.CodigoUbicacion.ToUpper());
+                        .FirstOrDefault(u => u.CodigoUbicacion.ToUpper() == e.Ubicacion.CodigoUbicacion.ToUpper());
 
                     if (resUbicacion == null)
                     {
