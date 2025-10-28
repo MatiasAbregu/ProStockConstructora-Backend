@@ -70,8 +70,7 @@
               "RelativeToolTip": "DTO\\DTOs-Depositos\\DepositoAsociarDTO.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T03:27:34.265Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T03:27:34.265Z"
             },
             {
               "$type": "Document",
@@ -83,8 +82,7 @@
               "RelativeToolTip": "Backend\\Controllers\\ControladorDeposito.cs",
               "ViewState": "AgIAACkAAAAAAAAAAAAwwB0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T03:21:17.047Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T03:21:17.047Z"
             },
             {
               "$type": "Document",
@@ -94,7 +92,7 @@
               "RelativeDocumentMoniker": "Repositorios\\Servicios\\DepositoServicio.cs",
               "ToolTip": "C:\\Users\\matia\\OneDrive\\Documentos\\ProStockConstructora\\Backend\\Repositorios\\Servicios\\DepositoServicio.cs",
               "RelativeToolTip": "Repositorios\\Servicios\\DepositoServicio.cs",
-              "ViewState": "AgIAADIAAAAAAAAAAAAowEEAAABHAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwDMAAABdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-27T22:01:13.238Z",
               "EditorCaption": ""
@@ -109,8 +107,7 @@
               "RelativeToolTip": "Repositorios\\Servicios\\ObraServicio.cs",
               "ViewState": "AgIAABQAAAAAAAAAAAAQwDgAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-28T15:00:23.742Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-28T15:00:23.742Z"
             },
             {
               "$type": "Document",
@@ -122,8 +119,7 @@
               "RelativeToolTip": "Repositorios\\Implementaciones\\IDepositoServicio.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAsAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-27T22:01:48.107Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-10-27T22:01:48.107Z"
             }
           ]
         }
