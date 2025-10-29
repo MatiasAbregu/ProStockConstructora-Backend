@@ -618,25 +618,41 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
+<<<<<<< HEAD
                             Id = "08a1558b-9022-463c-97fc-4f13269bb4a4",
+=======
+                            Id = "48e425d5-57f1-41bd-af38-9dd30c21610d",
+>>>>>>> bde984c50c75b2902cbe216a98488c2916155973
                             Name = "Superadministrador",
                             NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "209e6a07-c0bc-426d-b7a2-986d8c8947c9",
+=======
+                            Id = "aa3b1211-c06d-431a-aabb-5311ed2bd75d",
+>>>>>>> bde984c50c75b2902cbe216a98488c2916155973
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "8f740be6-1734-49ab-ad91-ef71de65a50c",
+=======
+                            Id = "a2782717-c186-4cca-9591-0ebf0404e41b",
+>>>>>>> bde984c50c75b2902cbe216a98488c2916155973
                             Name = "Jefe de depósito",
                             NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "433c898a-315f-42a8-bef5-a80d5f805fd1",
+=======
+                            Id = "158b0e08-bafc-4dbf-8dbc-9245a4178988",
+>>>>>>> bde984c50c75b2902cbe216a98488c2916155973
                             Name = "Jefe de obra",
                             NormalizedName = "JEFEDEOBRA"
                         });
