@@ -111,6 +111,10 @@ namespace Backend.Repositorios.Servicios
                 Obra obraUpdate = await baseDeDatos.Obras.FirstOrDefaultAsync(ob => ob.Id == id);
                 if (obraUpdate == null) return (false, "No existe una obra con ese ID.");
 
+                bool existeCodigo = await baseDeDatos.Obras
+                            .AnyAsync(ob => ob.CodigoObra == o.CodigoObra && o.Id != ob.Id);
+                if (existeCodigo) return (false, "Ya existe una obra con ese código.");
+
                 obraUpdate.CodigoObra = o.CodigoObra;
                 obraUpdate.NombreObra = o.NombreObra;
                 obraUpdate.Estado = (EnumEstadoObra)o.Estado;        

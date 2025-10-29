@@ -51,20 +51,21 @@ namespace Backend.Controllers
         [HttpPut("actualizar/{id:int}")]
         public async Task<ActionResult<string>> ActualizarDeposito([FromRoute] int id, [FromBody] DepositoAsociarDTO e)
         {
-            if (id != e.Id) return StatusCode(400, "No se pudo realizar la operación");
+            if (id != e.Id) return StatusCode(409, "No se pudo realizar la operación");
             ValueTuple<bool, string> res = await depositoServicio.ActualizarDeposito(e);
             if (res.Item1) return StatusCode(200, res.Item2);
-            else if (res.Item2.Contains("ya existe")) return StatusCode(409, res.Item2);
+            else if (res.Item2.Contains("ya")) return StatusCode(409, res.Item2);
             else return StatusCode(500, res.Item2);
         }
-        [HttpDelete("eliminar/{id:int}")]
-        public async Task<ActionResult<string>> EliminarDeposito([FromRoute] int id)
-        {
-            ValueTuple<bool, string> res = await depositoServicio.EliminarDeposito(id);
-            if (res.Item1) return StatusCode(200, res.Item2);
-            else if (res.Item2.Contains("No existe")) return StatusCode(404, res.Item2);
-            else return StatusCode(500, res.Item2);
-        }
+
+        //[HttpDelete("eliminar/{id:int}")]
+        //public async Task<ActionResult<string>> EliminarDeposito([FromRoute] int id)
+        //{
+        //    ValueTuple<bool, string> res = await depositoServicio.EliminarDeposito(id);
+        //    if (res.Item1) return StatusCode(200, res.Item2);
+        //    else if (res.Item2.Contains("No existe")) return StatusCode(404, res.Item2);
+        //    else return StatusCode(500, res.Item2);
+        //}
 
     }
 }

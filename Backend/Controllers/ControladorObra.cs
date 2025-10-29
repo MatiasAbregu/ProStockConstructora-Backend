@@ -68,7 +68,7 @@ namespace Backend.Controllers
                 return BadRequest("El ID de la obra no coincide.");
             ValueTuple<bool, string> resultado = await obraServicio.ActualizarObra(id, obraDTO);
             if (!resultado.Item1)
-                return StatusCode(500, resultado.Item2);
+                return StatusCode(409, resultado.Item2);
             return Ok("Obra actualizada exitosamente.");
         }
 
