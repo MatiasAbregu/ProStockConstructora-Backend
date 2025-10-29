@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.BD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251028193802_NotaDePedido")]
-    partial class NotaDePedido
+    [Migration("20251029044508_Inicio")]
+    partial class Inicio
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -621,25 +621,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "426d2f6d-3b01-4695-82ae-c2d502f91be3",
+                            Id = "48e425d5-57f1-41bd-af38-9dd30c21610d",
                             Name = "Superadministrador",
                             NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "a4d4d35a-d208-4312-93dd-bd6f38dc9ee9",
+                            Id = "aa3b1211-c06d-431a-aabb-5311ed2bd75d",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "647c168b-26d4-4d88-a6eb-f8bfefe729f3",
+                            Id = "a2782717-c186-4cca-9591-0ebf0404e41b",
                             Name = "Jefe de depósito",
                             NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
-                            Id = "9fc094f0-4a8a-4f16-baf0-21f2787dc3e3",
+                            Id = "158b0e08-bafc-4dbf-8dbc-9245a4178988",
                             Name = "Jefe de obra",
                             NormalizedName = "JEFEDEOBRA"
                         });

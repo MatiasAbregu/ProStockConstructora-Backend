@@ -9,12 +9,12 @@ namespace Backend.DTO.DTOs_NotaDePedido
 {
     public class CrearNotaDePedidoDTO
     {
-        public string NumeroNotaPedido { get; set; } = string.Empty;
-        public string Material { get; set; }
-        public int Cantidad { get; set; }
+        public string NumeroNotaPedido { get; set; } 
         public int DepositoDestinoId { get; set; }
         public DateTime FechaEmision { get; set; }
         public EstadoNotaPedido Estado { get; set; } = EstadoNotaPedido.Pendiente;
         public string UsuarioId { get; set; }
+
+        public List<DetalleNotaDePedidoDTO> ListaDePedido { get; set; }
     }
 }
