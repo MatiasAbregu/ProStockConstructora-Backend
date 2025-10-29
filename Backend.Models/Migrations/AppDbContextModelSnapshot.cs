@@ -618,25 +618,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "8f2d7f38-dd15-4d5f-a3df-ddcfd7a1d1ac",
+                            Id = "08a1558b-9022-463c-97fc-4f13269bb4a4",
                             Name = "Superadministrador",
                             NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "cb7f0055-9727-4e3f-85f2-a53bfc55163f",
+                            Id = "209e6a07-c0bc-426d-b7a2-986d8c8947c9",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "669c5cc6-d930-492a-9470-36282d965b58",
+                            Id = "8f740be6-1734-49ab-ad91-ef71de65a50c",
                             Name = "Jefe de depósito",
                             NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
-                            Id = "04ca0bdc-fa9e-42f0-aa20-d449cb7f3fd7",
+                            Id = "433c898a-315f-42a8-bef5-a80d5f805fd1",
                             Name = "Jefe de obra",
                             NormalizedName = "JEFEDEOBRA"
                         });

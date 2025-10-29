@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Backend.BD.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251028193802_NotaDePedido")]
-    partial class NotaDePedido
+    [Migration("20251028211854_averQpasa")]
+    partial class averQpasa
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -621,25 +621,25 @@ namespace Backend.BD.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "426d2f6d-3b01-4695-82ae-c2d502f91be3",
+                            Id = "08a1558b-9022-463c-97fc-4f13269bb4a4",
                             Name = "Superadministrador",
                             NormalizedName = "SUPERADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "a4d4d35a-d208-4312-93dd-bd6f38dc9ee9",
+                            Id = "209e6a07-c0bc-426d-b7a2-986d8c8947c9",
                             Name = "Administrador",
                             NormalizedName = "ADMINISTRADOR"
                         },
                         new
                         {
-                            Id = "647c168b-26d4-4d88-a6eb-f8bfefe729f3",
+                            Id = "8f740be6-1734-49ab-ad91-ef71de65a50c",
                             Name = "Jefe de depósito",
                             NormalizedName = "JEFEDEDEPOSITO"
                         },
                         new
                         {
-                            Id = "9fc094f0-4a8a-4f16-baf0-21f2787dc3e3",
+                            Id = "433c898a-315f-42a8-bef5-a80d5f805fd1",
                             Name = "Jefe de obra",
                             NormalizedName = "JEFEDEOBRA"
                         });

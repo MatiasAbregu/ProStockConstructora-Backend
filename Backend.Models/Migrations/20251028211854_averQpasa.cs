@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Backend.BD.Migrations
 {
     /// <inheritdoc />
-    public partial class NotaDePedido : Migration
+    public partial class averQpasa : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -648,10 +648,10 @@ namespace Backend.BD.Migrations
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { "426d2f6d-3b01-4695-82ae-c2d502f91be3", null, "Superadministrador", "SUPERADMINISTRADOR" },
-                    { "647c168b-26d4-4d88-a6eb-f8bfefe729f3", null, "Jefe de depósito", "JEFEDEDEPOSITO" },
-                    { "9fc094f0-4a8a-4f16-baf0-21f2787dc3e3", null, "Jefe de obra", "JEFEDEOBRA" },
-                    { "a4d4d35a-d208-4312-93dd-bd6f38dc9ee9", null, "Administrador", "ADMINISTRADOR" }
+                    { "08a1558b-9022-463c-97fc-4f13269bb4a4", null, "Superadministrador", "SUPERADMINISTRADOR" },
+                    { "209e6a07-c0bc-426d-b7a2-986d8c8947c9", null, "Administrador", "ADMINISTRADOR" },
+                    { "433c898a-315f-42a8-bef5-a80d5f805fd1", null, "Jefe de obra", "JEFEDEOBRA" },
+                    { "8f740be6-1734-49ab-ad91-ef71de65a50c", null, "Jefe de depósito", "JEFEDEDEPOSITO" }
                 });
 
             migrationBuilder.CreateIndex(
